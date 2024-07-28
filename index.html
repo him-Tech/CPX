@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Consultoria</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="font-inter bg-[#F8FBFA]">
+    <!-- Hero section start -->
+    <div class="max-lg:hidden flex items-end justify-center">
+      <div
+        class="relative w-full lg:w-[800px] xl:w-[960px] h-[600px] sm:h-[804px] bg-cover bg-right lg:flex-shrink-0 bg-[#E2632B] rounded-tr-[30vw] md:bg-[url(./assets/svg/heroOrangeBg.svg)]"
+      >
+        <!-- yellow circle -->
+        <div
+          class="size-[252px] rounded-full bg-[#FFD476] opacity-20 bg-blend-screen blur-[32px] absolute top-[46px] left-10"
+        ></div>
+        <!-- Vertical line 1 -->
+        <div
+          class="w-[1px] h-[114px] bg-[#030605] flex-shrink-0 absolute top-[80px] left-7 xl:left-[60px] z-10"
+        ></div>
+
+        <!-- Vertical line 2 -->
+        <div
+          class="w-[1px] h-full bg-[#030605] opacity-[0.32] absolute top-0 left-[65px] xl:left-[130px] flex-shrink-0"
+        ></div>
+        <!-- Vertical line 3 -->
+        <div
+          class="w-[1px] h-full bg-[#030605] opacity-[0.32] absolute top-0 left-[275px] xl:left-[400px] flex-shrink-0"
+        ></div>
+      </div>
+      <!-- horizontal line 1 -->
+      <div
+        class="max-lg:hidden w-full h-[74px] border-b border-b-[#030605] border-r border-r-[#030605] opacity-[0.32]"
+      ></div>
+      <!-- horizontal line 2 -->
+      <div
+        class="max-lg:hidden w-[65px] xl:w-[130px] h-[74px] border-b border-b-[#030605] opacity-[0.32] flex-shrink-0"
+      ></div>
+    </div>
+    <div
+      class="lg:-mt-[702px] max-lg:bg-[#E2632B] max-lg:rounded-tr-[28vw] max-lg:pt-20 max-lg:pb-20 flex justify-end items-center max-lg:pr-4 pl-4 relative z-20"
+    >
+      <div
+        class="max-w-[1310px] w-full ml-auto flex flex-col lg:flex-row justify-center items-center max-md:gap-7 max-lg:gap-12"
+      >
+        <!-- logo and button -->
+        <div class="flex flex-col max-lg:items-center max-lg:justify-center">
+          <div
+            class="max-w-[35vw] md:max-w-[280px] lg:max-w-[345px] w-full max-h-[223px] h-full lg:ml-[83px]"
+          >
+            <img
+              src="./assets/img/heroLogo.png"
+              class="w-full h-full object-cover"
+              alt="hero logo"
+            />
+          </div>
+          <h2
+            class="mt-[30px] md:mt-[60px] lg:mt-[138px] text-white text-[4vw] md:text-[26px] font-medium leading-[34px] uppercase text-center whitespace-nowrap"
+          >
+            QUALITY AND PRECISION IN YOUR WORK
+          </h2>
+          <div
+            class="w-full mt-[30px] md:mt-[60px] lg:mt-[104px] flex items-center justify-end"
+          >
+            <button
+              class="w-fit flex-shrink-0 clear-start py-3 md:py-4 px-4 md:px-[18px] flex items-center justify-center gap-[10px] bg-white text-black hover:bg-black hover:text-white group duration-300 whitespace-nowrap"
+            >
+              <span class="text-sm md:text-base font-medium leading-[20px]"
+                >Explore Now</span
+              >
+              <svg
+                width="34"
+                height="6"
+                viewBox="0 0 34 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="group-hover:fill-white fill-black duration-300"
+                  d="M34 3L29 0.113246L29 5.88675L34 3ZM4.37114e-08 3.5L29.5 3.5L29.5 2.5L-4.37114e-08 2.5L4.37114e-08 3.5Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- hero right image with text -->
+        <div
+          style="background-image: url(./assets/img/heroRight.png)"
+          class="max-w-[80vw] md:max-w-[700px] lg:max-w-[806px] w-full h-[63vw] md:h-[500px] lg:h-[628px] -ml-[12px] bg-contain max-lg:bg-center bg-no-repeat lg:bg-cover pl-[5vw] md:pl-[68px] lg:pl-[47px] pt-[2.5vw] md:pt-[17px]"
+        >
+          <h2
+            class="max-w-[40vw] md:max-w-[474px] w-full text-[4vw] md:text-[48px] leading-[4.4vw] md:leading-[54px] text-white"
+          >
+            CONSULTING AND ENGINEERING PROJECTS
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- Hero section end -->
+
+    <!-- Bottom hero section -->
+    <div class="flex items-end lg:pt-[74px] mb-[50px] relative">
+      <div
+        class="w-[65px] xl:w-[130px] h-[1px] bg-[#AAADAC] flex-shrink-0"
+      ></div>
+      <div
+        class="w-full border-x border-x-[#AAADAC] border-b border-b-[#AAADAC] relative flex items-end justify-end"
+      >
+        <!-- Pill image -->
+        <div
+          class="w-[210px] xl:w-[270px] h-[478px] absolute -top-[184px] left-0 z-20 rounded-[200px] bg-cover bg-center"
+          style="background-image: url(./assets/img/heroPill.png)"
+        ></div>
+        <!-- Gray pill -->
+        <div
+          class="w-[210px] xl:w-[270px] h-[418px] rounded-b-[200px] bg-[#E0E3E1] absolute left-[270px] xl:left-[310px] top-0"
+        ></div>
+        <!-- Main content -->
+        <div
+          class="max-w-[1024px] w-full flex items-end justify-between gap-4 relative z-20 -mr-[30px] pt-[96px] pb-[60px]"
+        >
+          <div
+            class="w-[130px] h-[200px] bg-cover bg-center bg-no-repeat bg-[url(./assets/img/heroScrollDown.png)] translate-y-6 flex-shrink-0"
+          ></div>
+          <img
+            src="./assets/svg/heroBelowRightArrow.svg"
+            alt="arrow right"
+            class="pb-[29px]"
+          />
+          <div class="flex flex-col items-center justify-center gap-[104px]">
+            <div class="flex items-center justify-center gap-20">
+              <div class="flex flex-col max-w-[137px] w-full">
+                <h3
+                  class="text-[94px] font-bold leading-[124px] tracking-[-1px] text-black"
+                >
+                  14
+                </h3>
+                <p
+                  class="text-[24px] font-medium leading-[32px] tracking-[1px]"
+                >
+                  Years of experience
+                </p>
+              </div>
+              <div class="flex flex-col max-w-[190px] w-full">
+                <h3
+                  class="text-[94px] font-bold leading-[124px] tracking-[-1px] text-black"
+                >
+                  300
+                </h3>
+                <p
+                  class="text-[24px] font-medium leading-[32px] tracking-[1px]"
+                >
+                  Projects completed
+                </p>
+              </div>
+            </div>
+            <!-- input area -->
+            <div class="flex flex-col gap-[38px] items-start justify-center">
+              <h3
+                class="text-[42px] font-bold leading-[46px] tracking-[-0.84px]"
+              >
+                Start your project today.
+              </h3>
+              <form class="flex items-center justify-start h-[66px]">
+                <input
+                  type="text"
+                  placeholder="Your email address"
+                  class="w-[358px] h-full bg-white px-[26px] text-xl font-medium leading-[26px] outline-none"
+                />
+                <button
+                  type="submit"
+                  class="px-[36px] text-xl font-black leading-[26px] text-white bg-[#030605] h-full whitespace-nowrap"
+                >
+                  Let's Chat
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[65px] xl:w-[130px] flex-shrink-0"></div>
+      <!-- Vertical line -->
+      <div
+        class="w-[1px] h-[114px] bg-[#030605] flex-shrink-0 absolute top-[125px] right-[32px] xl:right-[65px]"
+      ></div>
+    </div>
+  </body>
+</html>
