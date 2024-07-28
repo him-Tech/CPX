@@ -52,7 +52,7 @@
       ></div>
     </div>
     <div
-      class="lg:-mt-[702px] max-lg:bg-[#E2632B] max-lg:rounded-tr-[28vw] max-lg:pt-20 max-lg:pb-20 flex justify-end items-center max-lg:pr-4 pl-4 relative z-20"
+      class="lg:-mt-[702px] max-lg:bg-[#E2632B] max-lg:rounded-tr-[28vw] max-lg:pt-20 max-lg:pb-[100px] flex justify-end items-center max-lg:pr-4 pl-4 relative z-20"
     >
       <div
         class="max-w-[1310px] w-full ml-auto flex flex-col lg:flex-row justify-center items-center max-md:gap-7 max-lg:gap-12"
@@ -115,75 +115,81 @@
     <!-- Bottom hero section start -->
     <div class="flex items-end lg:pt-[74px] mb-[50px] relative">
       <div
-        class="w-[65px] xl:w-[130px] h-[1px] bg-[#AAADAC] flex-shrink-0"
+        class="max-md:hidden w-[65px] xl:w-[130px] h-[1px] bg-[#AAADAC] flex-shrink-0"
       ></div>
       <div
         class="w-full border-x border-x-[#AAADAC] border-b border-b-[#AAADAC] relative flex items-end justify-end"
       >
         <!-- Pill image -->
         <div
-          class="w-[210px] xl:w-[270px] h-[478px] absolute -top-[184px] left-0 z-20 rounded-[200px] bg-cover bg-center"
+          class="w-[22vw] lg:w-[210px] xl:w-[270px] h-[46vw] lg:h-[478px] absolute -top-[90px] lg:-top-[184px] left-4 md:left-0 z-20 rounded-[200px] bg-cover bg-center"
           style="background-image: url(./assets/img/heroPill.png)"
         ></div>
         <!-- Gray pill -->
         <div
-          class="w-[210px] xl:w-[270px] h-[418px] rounded-b-[200px] bg-[#E0E3E1] absolute left-[270px] xl:left-[310px] top-0"
+          class="w-[22vw] lg:w-[210px] xl:w-[270px] h-[39vw] lg:h-[418px] rounded-b-[200px] bg-[#E0E3E1] absolute left-[33vw] md:left-[235px] lg:left-[270px] xl:left-[310px] top-0"
         ></div>
         <!-- Main content -->
         <div
-          class="max-w-[1024px] w-full flex items-end justify-between gap-4 relative z-20 -mr-[30px] pt-[96px] pb-[60px]"
+          class="max-w-[1024px] w-full flex flex-col lg:flex-row items-end justify-between gap-[5vw] lg:gap-4 relative z-20 lg:-mr-[30px] pt-[30px] lg:pt-[96px] pb-10 lg:pb-[60px] max-lg:px-4"
         >
           <div
-            class="w-[130px] h-[200px] bg-cover bg-center bg-no-repeat bg-[url(./assets/img/heroScrollDown.png)] translate-y-6 flex-shrink-0"
+            class="w-[17vw] md:w-[130px] h-[26vw] md:h-[200px] bg-cover bg-center bg-no-repeat bg-[url(./assets/img/heroScrollDown.png)] lg:translate-y-6 flex-shrink-0"
           ></div>
           <img
             src="./assets/svg/heroBelowRightArrow.svg"
             alt="arrow right"
-            class="pb-[29px]"
+            class="lg:pb-[29px]"
           />
-          <div class="flex flex-col items-center justify-center gap-[104px]">
-            <div class="flex items-center justify-center gap-20">
+          <div
+            class="flex flex-col items-center justify-center gap-[7vw] lg:gap-[104px]"
+          >
+            <div
+              class="w-full flex items-center justify-center gap-[10vw] lg:gap-20"
+            >
               <div class="flex flex-col max-w-[137px] w-full">
                 <h3
-                  class="text-[94px] font-bold leading-[124px] tracking-[-1px] text-black"
+                  class="text-[11vw] lg:text-[94px] font-bold leading-[13vw] lg:leading-[124px] tracking-[-1px] text-black"
                 >
                   14
                 </h3>
                 <p
-                  class="text-[24px] font-medium leading-[32px] tracking-[1px]"
+                  class="text-[4.5vw] sm:text-[3vw] lg:text-[24px] font-medium leading-[5vw] sm:leading-[3.9vw] lg:leading-[32px] tracking-[1px]"
                 >
                   Years of experience
                 </p>
               </div>
               <div class="flex flex-col max-w-[190px] w-full">
                 <h3
-                  class="text-[94px] font-bold leading-[124px] tracking-[-1px] text-black"
+                  class="text-[11vw] lg:text-[94px] font-bold leading-[13vw] lg:leading-[124px] tracking-[-1px] text-black"
                 >
                   300
                 </h3>
                 <p
-                  class="text-[24px] font-medium leading-[32px] tracking-[1px]"
+                  class="text-[4.5vw] sm:text-[3vw] lg:text-[24px] font-medium leading-[5vw] sm:leading-[3.9vw] lg:leading-[32px] tracking-[1px]"
                 >
                   Projects completed
                 </p>
               </div>
             </div>
             <!-- input area -->
-            <div class="flex flex-col gap-[38px] items-start justify-center">
+            <div
+              class="w-full flex flex-col gap-[4.5vw] lg:gap-[38px] items-center lg:items-start justify-center"
+            >
               <h3
-                class="text-[42px] font-bold leading-[46px] tracking-[-0.84px]"
+                class="text-[6.5vw] lg:text-[42px] font-bold leading-[46px] tracking-[-0.84px]"
               >
                 Start your project today.
               </h3>
-              <form class="flex items-center justify-start h-[66px]">
+              <form class="flex items-center justify-start h-10 sm:h-[66px]">
                 <input
                   type="text"
                   placeholder="Your email address"
-                  class="w-[358px] h-full bg-white px-[26px] text-xl font-medium leading-[26px] outline-none"
+                  class="w-full lg:w-[358px] h-full bg-white px-3 sm:px-[26px] text-xl font-medium leading-[26px] outline-none"
                 />
                 <button
                   type="submit"
-                  class="px-[36px] text-xl font-black leading-[26px] text-white bg-[#030605] h-full whitespace-nowrap"
+                  class="px-4 sm:px-[36px] text-lg md:text-xl font-black leading-[26px] text-white bg-[#030605] h-full whitespace-nowrap"
                 >
                   Let's Chat
                 </button>
@@ -192,10 +198,10 @@
           </div>
         </div>
       </div>
-      <div class="w-[65px] xl:w-[130px] flex-shrink-0"></div>
+      <div class="max-md:hidden w-[65px] xl:w-[130px] flex-shrink-0"></div>
       <!-- Vertical line -->
       <div
-        class="w-[1px] h-[114px] bg-[#030605] flex-shrink-0 absolute top-[125px] right-[32px] xl:right-[65px]"
+        class="max-md:hidden w-[1px] h-[114px] bg-[#030605] flex-shrink-0 absolute top-[125px] right-[32px] xl:right-[65px]"
       ></div>
     </div>
     <!-- Bottom hero section end -->
