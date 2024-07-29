@@ -3,20 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              inter: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
     <title>Consultoria</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./output.css" />
   </head>
   <body id="body" class="bg-[#F8FBFA] font-inter">
     <!-- Navbar and sidebar start -->
@@ -391,7 +379,7 @@
     <!-- Hero section end -->
 
     <!-- Bottom hero section start -->
-    <div class="flex items-end lg:pt-[74px] mb-[50px] relative">
+    <div class="flex items-end lg:pt-[74px] mb-6 sm:mb-[50px] relative">
       <div
         class="max-md:hidden w-[65px] xl:w-[130px] h-[1px] bg-[#AAADAC] flex-shrink-0"
       ></div>
@@ -487,34 +475,37 @@
     <!-- Bottom hero section end -->
 
     <!-- About us section start -->
-    <div>
-      <!-- rectangle one -->
+    <!-- top about us start -->
+    <div
+      class="max-lg:hidden w-[540px] xl:w-[640px] h-[160px] bg-[#E0E3E1] mt-[60px]"
+    ></div>
+    <!-- top about us end ->
+    <!-- middle about us start -->
+    <div class="flex items-start justify-start gap-5 xl:gap-[30px]">
       <div
-        class="bg-[#E0E3E1] h-[12.5vw] mt-[3.4vw] max-w-[48.61vw] w-full max-lg:hidden"
+        class="max-lg:hidden w-[305px] xl:w-[405px] h-[440px] bg-[#E0E3E1] z-[15]"
       ></div>
-
-      <div class="flex gap-[1.944vw] relative max-lg:flex-col">
-        <!-- rectangle second  -->
-        <div
-          class="bg-[#E0E3E1] h-[200px] lg:h-[27.083vw] max-w-[27.722vw] w-full max-lg:hidden"
-        ></div>
-
-        <div class="mt-[1.944vw] lg:overflow-hidden">
-          <div class="mr-[9.028vw] max-lg:w-full">
+      <!-- main content -->
+      <div
+        class="max-w-[1005px] w-full pt-5 xl:pt-[30px] max-md:pl-4 max-lg:pl-[65px]"
+      >
+        <div class="w-full pr-4 md:pr-[65px] xl:pr-[130px] z-[1] relative">
+          <div
+            class="w-full h-[50vw] md:h-[428px] rounded-br-[30vw] lg:rounded-br-[300px] overflow-hidden"
+          >
             <img
               src="./assets/img/home.png"
-              alt="home_img"
-              width="875"
-              height="428"
-              class="max-lg:w-full rounded-br-[20vw] lg:rounded-br-[300px]"
+              class="w-full h-full object-cover"
+              alt="about-us"
             />
           </div>
-          <!-- content -->
+        </div>
+        <div class="w-full pl-6 xl:pl-[47px] relative">
           <div
-            class="bg-[#E0E3E1] w-full lg:rounded-tr-[44%] py-[40px] sm:py-[50px] sm:pb-[4.583vw] lg:pt-[19.097vw] lg:-mt-[19.444vw] flex flex-col lg:max-w-[66.528vw] px-4 lg:ml-[4.444vw] xl:pl-[6.556vw]"
+            class="w-full md:h-[784px] bg-[#E0E3E1] rounded-tr-[15vw] sm:rounded-tr-[30vw] lg:rounded-tr-[400px] sm:-mt-[90px] md:-mt-[273px] max-sm:pr-10 max-md:pr-10 max-lg:pr-[70px] pl-6 lg:pl-[8.681vw] pb-[4.583vw] max-sm:pt-10 max-md:pt-[16vw] flex flex-col items-start justify-end gap-[5.903vw]"
           >
             <p
-              class="text-[#030605] font-Inter text-base lg:text-[1.389vw] font-normal !leading-[170%] lg:max-w-[44.444vw] w-full lg:pt-[2.153vw]"
+              class="lg:max-w-[55.4vw] xl:max-w-[48.4vw] w-full text-lg sm:text-xl leading-[30px] sm:leading-[34px] text-[#030605]"
             >
               Founded in 2011, CPX is a Portugal-based Engineering company
               renowned for excellence and innovation in consulting and project
@@ -525,44 +516,51 @@
               and deliver customized solutions that exceed expectations,
               providing a tailored experience for each client.
             </p>
-
-            <!-- button  -->
             <div
-              class="mt-6 sm:mt-[4.944vw] flex justify-between items-center gap-[27%] lg:max-w-[44.444vw] w-full pr-[1.111vw] lg:pr-0"
+              class="lg:max-w-[48.4vw] w-full pr-[75px] flex items-center justify-between gap-4"
             >
               <button
-                class="bg-[#E2632B] py-2 sm:py-4 px-4 sm:px-7 text-center text-white font-black text-sm sm:text-base leading-[125%] hover:text-[#E2632B] hover:bg-transparent border border-[#E2632B] duration-700"
+                class="relative z-[25] py-3 sm:py-4 px-5 sm:px-7 bg-[#E2632B] text-base font-black leading-[20px] text-white box-border border border-[#E2632B] hover:bg-transparent hover:text-[#E2632B] duration-300"
               >
                 About Us
               </button>
               <img
                 src="./assets/svg/aboutUrRightArrow.svg"
-                alt="arrow"
-                class="xl:pr-20"
+                alt="about us arrow right"
               />
             </div>
           </div>
+          <!-- vertical line -->
+          <div
+            class="max-lg:hidden w-[1px] h-[365px] bg-[#AAADAC] absolute -bottom-[130px] left-0"
+          ></div>
         </div>
-
+      </div>
+    </div>
+    <!-- middle about us end -->
+    <!-- bottom about us start -->
+    <div class="relative z-10 -mt-[850px] max-md:hidden">
+      <div class="w-full flex items-end">
+        <div class="w-[65px] xl:w-[130px] flex-shrink-0"></div>
         <div
-          class="bg-[#030605] max-lg:hidden opacity-[0.32] w-[1px] h-[400px] lg:h-[42.361vw] absolute ml-[65px] xl:ml-[130px] -bottom-[4.514vw]"
+          class="relative w-full h-[703px] border-x lg:border-b border-x-[#AAADAC] lg:border-b-[#AAADAC]"
+        >
+          <!-- horizontal line -->
+          <div
+            class="w-[46vw] h-[1px] bg-[#AAADAC] absolute right-0 top-[160px]"
+          ></div>
+        </div>
+        <div
+          class="w-[65px] xl:w-[130px] flex-shrink-0 border-b border-b-[#AAADAC]"
         ></div>
-
+      </div>
+      <div class="w-full px-[65px] xl:px-[130px]">
         <div
-          class="bg-[#030605] max-lg:hidden opacity-[0.32] w-[1px] h-[650px] lg:h-[56.25vw] absolute mr-[9.028vw] -bottom-[4.514vw] right-0"
-        ></div>
-
-        <div
-          class="bg-[#030605] max-lg:hidden opacity-[0.32] w-[940px] lg:w-[90.97vw] h-[1px] absolute right-0 bottom-[11.111vw] mt-[2.847vw]"
-        ></div>
-        <div
-          class="bg-[#030605] max-lg:hidden opacity-[0.32] w-[1px] h-[291px] absolute left-[29%] -bottom-[4.514vw]"
-        ></div>
-        <div
-          class="bg-[#030605] max-lg:hidden opacity-[0.32] w-[500px] lg:w-[46.528vw] h-[1px] absolute lg:right-[9.028vw] top-[17.361vw]"
+          class="w-full border-x border-x-[#AAADAC] h-[219px] box-border"
         ></div>
       </div>
     </div>
+    <!-- bottom about us end -->
     <!-- About us section end -->
 
     <!-- Our services section start -->
