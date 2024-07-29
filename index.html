@@ -20,7 +20,7 @@
   </head>
   <body id="body" class="bg-[#F8FBFA] font-inter">
     <!-- Navbar and sidebar start -->
-    <div class="max-w-[1409px] w-full mx-auto px-4 relative">
+    <div class="w-full mx-auto px-4 relative">
       <!-- navbar -->
       <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
         <!-- logo -->
@@ -300,7 +300,7 @@
     <!-- Hero section start -->
     <div class="max-lg:hidden flex items-end justify-center">
       <div
-        class="relative w-full lg:w-[800px] xl:w-[960px] h-[600px] sm:h-[804px] bg-cover bg-right lg:flex-shrink-0 bg-[#E2632B] rounded-tr-[30vw] md:bg-[url(./assets/svg/heroOrangeBg.svg)]"
+        class="relative w-full lg:w-[800px] xl:w-[960px] 2xl:w-[85%] h-[600px] sm:h-[804px] bg-cover bg-right lg:flex-shrink-0 bg-[#E2632B] rounded-tr-[30vw] md:bg-[url(./assets/svg/heroOrangeBg.svg)]"
       >
         <!-- yellow circle -->
         <div
@@ -333,7 +333,7 @@
       class="lg:-mt-[702px] max-lg:bg-[#E2632B] max-lg:rounded-tr-[28vw] max-lg:pt-20 max-lg:pb-[100px] flex justify-end items-center max-lg:pr-4 pl-4 relative z-20"
     >
       <div
-        class="max-w-[1310px] w-full ml-auto flex flex-col lg:flex-row justify-center items-center max-md:gap-7 max-lg:gap-12"
+        class="w-full xl:max-w-[1310px] 2xl:max-w-[95vw] ml-auto flex flex-col lg:flex-row justify-center 2xl:justify-end items-center max-md:gap-7 max-lg:gap-12 2xl:gap-[7vw]"
       >
         <!-- logo and button -->
         <div class="flex flex-col max-lg:items-center max-lg:justify-center">
@@ -378,7 +378,7 @@
         <!-- hero right image with text -->
         <div
           style="background-image: url(./assets/img/heroRight.png)"
-          class="max-w-[80vw] md:max-w-[700px] lg:max-w-[806px] w-full h-[63vw] md:h-[500px] lg:h-[628px] -ml-[12px] bg-contain max-lg:bg-center bg-no-repeat lg:bg-cover pl-[5vw] md:pl-[68px] lg:pl-[47px] pt-[2.5vw] md:pt-[17px]"
+          class="w-full max-w-[80vw] md:max-w-[700px] lg:max-w-[806px] h-[63vw] md:h-[500px] lg:h-[628px] -ml-[12px] bg-contain max-lg:bg-center bg-no-repeat lg:bg-cover pl-[5vw] md:pl-[68px] lg:pl-[47px] pt-[2.5vw] md:pt-[17px]"
         >
           <h2
             class="max-w-[40vw] md:max-w-[474px] w-full text-[4vw] md:text-[48px] leading-[4.4vw] md:leading-[54px] text-white"
@@ -637,23 +637,21 @@
     <!-- Our services section end -->
 
     <!-- Our portfolio section start -->
-    <div class="max-2xl:mr-auto 2xl:mx-auto max-w-[1440px] w-full">
+    <div class="w-full">
       <div
         class="flex items-end justify-between max-md:hidden md:px-[65px] xl:px-[130px] w-full mx-auto"
       >
         <div class="lg:h-[86px] h-[66px] w-[1px] bg-[#AAADac]"></div>
         <div class="lg:h-[90px] h-[70px] w-[1px] bg-[#AAADac]"></div>
       </div>
-      <div
-        class="bg-[url('/assets/img/portfolio.png')] bg-no-repeat relative md:pr-[65px] xl:pr-[130px] bg-contain"
-      >
+      <div class="relative md:pr-[65px] xl:pr-[130px]">
         <img
-          class="border-r-[#AAADac] border-r-[1px]"
-          src="/assets/img/portfolio.png"
+          class="border-r-[#AAADac] border-r-[1px] w-full"
+          src="./assets/img/portfolio.png"
           alt=""
         />
         <svg
-          class="absolute right-10 lg:right-[5%] xl:right-[7%] top-[50%]"
+          class="max-md:hidden absolute right-10 lg:right-[5%] xl:right-[110px] top-[50%]"
           xmlns="http://www.w3.org/2000/svg"
           width="54"
           height="6"
@@ -668,7 +666,7 @@
       </div>
       <div class="md:pr-[65px] xl:pr-[130px]">
         <div
-          class="bg-[#E0E3E1] relative py-12 xl:pb-[48px] rounded-bl-[150px] xl:rounded-bl-[300px] max-w-[1310px] w-full border-r-[#AAADac] border-r-[1px]"
+          class="bg-[#E0E3E1] relative py-12 xl:pb-[48px] rounded-bl-[150px] xl:rounded-bl-[300px] w-full border-r-[#AAADac] border-r-[1px]"
         >
           <div
             class="flex max-md:flex-col items-center justify-between mx-auto lg:ml-auto px-4 md:px-12 lg:px-[100px] max-w-[1160px] w-full xl:pl-[200px] xl:pr-6"
@@ -793,20 +791,26 @@
       </div>
     </div>
 
-    <div class="sm:max-xl:pr-4">
-      <div
-        class="max-w-[1310px] w-full h-[1px] bg-[#030605] opacity-[0.32] lg:mt-[76px] md:mt-[55px] sm:mt-[40px] mt-[35px]"
-      ></div>
-      <div
-        class="max-w-[1180px] w-full mx-auto max-xl:pl-4 lg:mt-[63px] md:my-[45px] sm:my-[30px] my-3 lg:mb-[50px] max-sm:text-center"
-      >
-        <a
-          href="/"
-          class="text-[#5C5E5E] md:text-[15px] text-[12px] font-medium"
+    <div>
+      <div class="w-full flex items-center">
+        <div
+          class="w-full h-[1px] bg-[#030605] opacity-[0.32] lg:mt-[76px] md:mt-[55px] sm:mt-[40px] mt-[35px]"
+        ></div>
+        <div class="max-md:hidden w-[65px] xl:w-[130px]"></div>
+      </div>
+      <div class="w-full flex items-center max-md:px-4">
+        <div class="w-[65px] xl:w-[130px] max-md:hidden"></div>
+        <div
+          class="w-full mx-auto lg:mt-[63px] md:my-[45px] sm:my-[30px] my-3 lg:mb-[50px] max-md:text-center"
         >
-          © Copyright 2024 CPX, Lda. - Consulting and Engineering Projects -
-          <span class="underline">geral@cpx.com.pt</span>
-        </a>
+          <a
+            href="/"
+            class="text-[#5C5E5E] md:text-[15px] text-[12px] font-medium"
+          >
+            © Copyright 2024 CPX, Lda. - Consulting and Engineering Projects -
+            <span class="underline">geral@cpx.com.pt</span>
+          </a>
+        </div>
       </div>
     </div>
     <!-- footer end -->
