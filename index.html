@@ -95,7 +95,7 @@
       <!-- Sidebar -->
       <div
         id="sidebarbtn"
-        class="absolute z-50 bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
+        class="absolute z-[70] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
       >
         <div class="flex flex-col gap-6">
           <svg
@@ -229,6 +229,10 @@
           </div>
         </div>
       </div>
+      <div
+        id="sidebar-overlay"
+        class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
+      ></div>
     </div>
     <!-- Navbar and sidebar end -->
 
@@ -316,7 +320,7 @@
         <!-- Hero right image with text -->
         <div
           style="background-image: url(./assets/img/heroRight.png)"
-          class="w-full max-w-[80vw] md:max-w-[700px] lg:max-w-[806px] h-[63vw] md:h-[500px] lg:h-[628px] -ml-[12px] bg-contain max-lg:bg-center bg-no-repeat lg:bg-cover pl-[5vw] md:pl-[68px] lg:pl-[47px] pt-[2.5vw] md:pt-[17px]"
+          class="w-full max-w-[80vw] md:max-w-[700px] lg:max-w-[806px] h-[63vw] md:h-[500px] lg:h-[628px] -ml-3 bg-contain max-lg:bg-center bg-no-repeat lg:bg-cover pl-[5vw] md:pl-[68px] lg:pl-[47px] pt-[2.5vw] md:pt-[17px]"
         >
           <h2
             class="max-w-[40vw] md:max-w-[474px] w-full text-[4vw] md:text-[48px] leading-[4.4vw] md:leading-[54px] text-white"
@@ -779,7 +783,7 @@
               Do you have a project in mind?
             </p>
             <p
-              class="md:text-[20px] max-sm:text-[14px] font-normal sm:leading-[34px] text-deepCharcoal"
+              class="md:text-xl max-sm:text-sm font-normal sm:leading-[34px] text-deepCharcoal"
             >
               No matter how big or small. We are happy to help.
             </p>

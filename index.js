@@ -54,20 +54,23 @@ $(document).ready(function () {
   let btn = document.getElementById("navbtn");
   let sidebar = document.getElementById("sidebarbtn");
   let navLinks = document.querySelectorAll(".nav-link");
+  let sidebarOverlay = document.getElementById("sidebar-overlay");
+
+  const handleSidebar = () => {
+    sidebar.style.left = "-105%";
+    bodyy.style.overflow = "auto";
+    sidebarOverlay.style.display = "none";
+  };
 
   btn.addEventListener("click", () => {
     sidebar.style.left = "0";
     bodyy.style.overflow = "hidden";
+    sidebarOverlay.style.display = "block";
   });
-  cancel.addEventListener("click", () => {
-    sidebar.style.left = "-105%";
-    bodyy.style.overflow = "auto";
-  });
+  cancel.addEventListener("click", handleSidebar);
+  sidebarOverlay.addEventListener("click", handleSidebar);
   navLinks.forEach(function (navLink) {
-    navLink.addEventListener("click", function () {
-      sidebar.style.left = "-105%";
-      bodyy.style.overflow = "auto";
-    });
+    navLink.addEventListener("click", handleSidebar);
   });
 
   document.addEventListener("click", (event) => {
