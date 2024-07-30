@@ -26,19 +26,19 @@
           </a>
           <a
             href="#aboutus"
-            class="text-[#030605] inter text-lg font-medium leading-[111%] border-b-[2px] border-transparent hover:border-b-[#030605] pb-1 duration-300 ease-in-out"
+            class="nav-link text-[#030605] inter text-lg font-medium leading-[111%] border-b-[2px] border-transparent hover:border-b-[#030605] pb-1 duration-300 ease-in-out"
           >
             About us
           </a>
           <a
             href="#services"
-            class="text-[#030605] inter text-lg font-medium leading-[111%] border-b-[2px] border-transparent hover:border-b-[#030605] pb-1 duration-300 ease-in-out"
+            class="nav-link text-[#030605] inter text-lg font-medium leading-[111%] border-b-[2px] border-transparent hover:border-b-[#030605] pb-1 duration-300 ease-in-out"
           >
             Services
           </a>
           <a
             href="#portfolio"
-            class="text-[#030605] inter text-lg font-medium leading-[111%] border-b-[2px] border-transparent hover:border-b-[#030605] pb-1 duration-300 ease-in-out"
+            class="nav-link text-[#030605] inter text-lg font-medium leading-[111%] border-b-[2px] border-transparent hover:border-b-[#030605] pb-1 duration-300 ease-in-out"
           >
             Projects
           </a>
@@ -160,19 +160,19 @@
           </a>
           <a
             href="#aboutus"
-            class="sm:text-2xl text-lg font-semibold hover:font-bold leading-normal text-white hover:opacity-80 duration-300 ease-in-out inter"
+            class="nav-link sm:text-2xl text-lg font-semibold hover:font-bold leading-normal text-white hover:opacity-80 duration-300 ease-in-out inter"
           >
             About Us
           </a>
           <a
             href="#services"
-            class="sm:text-2xl text-lg font-semibold hover:font-bold leading-normal text-white hover:opacity-80 duration-300 ease-in-out inter"
+            class="nav-link sm:text-2xl text-lg font-semibold hover:font-bold leading-normal text-white hover:opacity-80 duration-300 ease-in-out inter"
           >
             Services
           </a>
           <a
             href="#portfolio"
-            class="sm:text-2xl text-lg font-semibold hover:font-bold leading-normal text-white hover:opacity-80 duration-300 ease-in-out inter"
+            class="nav-link sm:text-2xl text-lg font-semibold hover:font-bold leading-normal text-white hover:opacity-80 duration-300 ease-in-out inter"
           >
             Projects
           </a>
@@ -465,6 +465,16 @@
             </div>
           </div>
         </div>
+        <!-- Yellow circle -->
+        <div
+          class="size-[304px] absolute -bottom-[135px] right-0 md:-right-[60px] xl:-right-[135px]"
+        >
+          <img
+            src="./assets/svg/yellowCircle.svg"
+            class="w-full h-full object-cover"
+            alt="yellow orb"
+          />
+        </div>
       </div>
       <div class="max-md:hidden w-[65px] xl:w-[130px] flex-shrink-0"></div>
       <!-- Vertical line -->
@@ -481,7 +491,10 @@
     ></div>
     <!-- top about us end ->
     <!-- middle about us start -->
-    <div class="flex items-start justify-start gap-5 xl:gap-[30px]">
+    <div
+      id="aboutus"
+      class="flex items-start justify-start gap-5 xl:gap-[30px]"
+    >
       <div
         class="max-lg:hidden w-[305px] xl:w-[405px] h-[440px] bg-[#E0E3E1] z-[15]"
       ></div>
@@ -500,7 +513,7 @@
             />
           </div>
         </div>
-        <div class="w-full pl-6 xl:pl-[47px] relative">
+        <div class="w-full pl-6 xl:pl-[47px] relative max-sm:mb-5 max-md:mb-6">
           <div
             class="w-full md:h-[784px] bg-[#E0E3E1] rounded-tr-[15vw] sm:rounded-tr-[30vw] lg:rounded-tr-[400px] sm:-mt-[90px] md:-mt-[273px] max-sm:pr-10 max-md:pr-10 max-lg:pr-[70px] pl-6 lg:pl-[8.681vw] pb-[4.583vw] max-sm:pt-10 max-md:pt-[16vw] flex flex-col items-start justify-end gap-[5.903vw]"
           >
@@ -517,7 +530,7 @@
               providing a tailored experience for each client.
             </p>
             <div
-              class="lg:max-w-[48.4vw] w-full pr-[75px] flex items-center justify-between gap-4"
+              class="lg:max-w-[48.4vw] w-full sm:pr-[75px] flex items-center justify-between gap-4"
             >
               <button
                 class="relative z-[25] py-3 sm:py-4 px-5 sm:px-7 bg-[#E2632B] text-base font-black leading-[20px] text-white box-border border border-[#E2632B] hover:bg-transparent hover:text-[#E2632B] duration-300"
@@ -564,7 +577,10 @@
     <!-- About us section end -->
 
     <!-- Our services section start -->
-    <div class="relative flex items-end overflow-hidden max-md:px-4">
+    <div
+      id="services"
+      class="relative flex items-end overflow-hidden max-md:px-4"
+    >
       <!-- orange circle -->
       <div
         class="absolute size-[300px] sm:size-[411px] -rotate-[15deg] rounded-[100px] opacity-[0.1] bg-[#E84F21] blur-[66px] top-[100px] -right-[96px] -Z-1"
@@ -714,7 +730,7 @@
     <!-- Our services section end -->
 
     <!-- Our portfolio section start -->
-    <div class="w-full">
+    <div id="portfolio" class="w-full">
       <div
         class="flex items-end justify-between max-md:hidden md:px-[65px] xl:px-[130px] w-full mx-auto"
       >
@@ -810,7 +826,7 @@
             class="lg:pt-[90px] md:pt-14 w-full mx-auto max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center"
           >
             <p
-              class="lg:text-[68px] md:text-[40px] sm:text-[25px] text-xl font-bold leading-[116%] text-[#030605] max-w-[738px] w-full max-sm:text-center lg:mb-[70px] md:mb-[45px] sm:mb-[30px] mb-4"
+              class="lg:text-[68px] md:text-[40px] sm:text-[25px] text-[22px] font-bold leading-[116%] text-[#030605] max-w-[738px] w-full max-sm:text-center lg:mb-[70px] md:mb-[45px] sm:mb-[30px] mb-4"
             >
               Do you have a project in mind?
             </p>
@@ -898,17 +914,21 @@
       var cancel = document.getElementById("cancel");
       var btn = document.getElementById("navbtn");
       var sidebar = document.getElementById("sidebarbtn");
+      var navLinks = document.querySelectorAll(".nav-link");
 
       btn.addEventListener("click", () => {
         sidebar.style.left = "0";
-        bodyy.style.height = "100vh";
         bodyy.style.overflow = "hidden";
       });
-
       cancel.addEventListener("click", () => {
         sidebar.style.left = "-105%";
-        bodyy.style.height = "100%";
         bodyy.style.overflow = "auto";
+      });
+      navLinks.forEach(function (navLink) {
+        navLink.addEventListener("click", function () {
+          sidebar.style.left = "-105%";
+          bodyy.style.overflow = "auto";
+        });
       });
 
       document.addEventListener("click", (event) => {
