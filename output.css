@@ -620,7 +620,7 @@ video {
 }
 
 .hero-number-text{
-  font-size: 11vw;
+  font-size: 10vw;
   font-weight: 700;
   line-height: 13vw;
   letter-spacing: -1px;
@@ -643,7 +643,7 @@ video {
   color: rgb(3 6 5 / var(--tw-text-opacity));
 }
 
-@media not all and (min-width: 640px){
+@media not all and (min-width: 768px){
   .service-subHead{
     text-align: center;
   }
@@ -674,7 +674,7 @@ video {
   color: rgb(92 94 94 / var(--tw-text-opacity));
 }
 
-@media not all and (min-width: 640px){
+@media not all and (min-width: 768px){
   .service-para{
     text-align: center;
   }
@@ -846,10 +846,6 @@ video {
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-}
-
-.-ml-3{
-  margin-left: -0.75rem;
 }
 
 .-mt-\[110px\]{
@@ -1092,20 +1088,12 @@ video {
   max-width: 1160px;
 }
 
-.max-w-\[137px\]{
-  max-width: 137px;
-}
-
 .max-w-\[150px\]{
   max-width: 150px;
 }
 
 .max-w-\[1536px\]{
   max-width: 1536px;
-}
-
-.max-w-\[190px\]{
-  max-width: 190px;
 }
 
 .max-w-\[200px\]{
@@ -1136,8 +1124,8 @@ video {
   max-width: 738px;
 }
 
-.max-w-\[80vw\]{
-  max-width: 80vw;
+.max-w-\[81vw\]{
+  max-width: 81vw;
 }
 
 .flex-shrink-0{
@@ -1614,6 +1602,10 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[6vw\]{
+  font-size: 6vw;
+}
+
 .font-black{
   font-weight: 900;
 }
@@ -1940,6 +1932,10 @@ video {
     flex-direction: column;
   }
 
+  .max-md\:items-center{
+    align-items: center;
+  }
+
   .max-md\:gap-7{
     gap: 1.75rem;
   }
@@ -2033,6 +2029,10 @@ video {
     margin-bottom: 30px;
   }
 
+  .sm\:-ml-3{
+    margin-left: -0.75rem;
+  }
+
   .sm\:-mt-\[90px\]{
     margin-top: -90px;
   }
@@ -2084,6 +2084,14 @@ video {
 
   .sm\:w-\[50\%\]{
     width: 50%;
+  }
+
+  .sm\:max-w-\[137px\]{
+    max-width: 137px;
+  }
+
+  .sm\:max-w-\[190px\]{
+    max-width: 190px;
   }
 
   .sm\:max-w-\[392px\]{
@@ -2374,6 +2382,18 @@ video {
     padding-top: 17px;
   }
 
+  .md\:pl-12{
+    padding-left: 3rem;
+  }
+
+  .md\:pr-7{
+    padding-right: 1.75rem;
+  }
+
+  .md\:pr-6{
+    padding-right: 1.5rem;
+  }
+
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -2407,6 +2427,10 @@ video {
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[58px\]{
+    font-size: 58px;
   }
 
   .md\:leading-\[54px\]{

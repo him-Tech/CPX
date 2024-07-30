@@ -22,14 +22,14 @@
   }
 
   .hero-number-text {
-    @apply text-[11vw] lg:text-[94px] font-bold leading-[13vw] lg:leading-[124px] tracking-[-1px] text-black;
+    @apply text-[10vw] lg:text-[94px] font-bold leading-[13vw] lg:leading-[124px] tracking-[-1px] text-black;
   }
 
   .service-subHead {
-    @apply max-sm:text-center font-black text-[24px] md:text-[28px] xl:text-[32px] leading-[200%] text-deepCharcoal;
+    @apply max-md:text-center font-black text-[24px] md:text-[28px] xl:text-[32px] leading-[200%] text-deepCharcoal;
   }
 
   .service-para {
-    @apply max-sm:text-center font-medium text-[18px] md:text-[20px] leading-[150%] text-graphiteGray tracking-[1px] line-clamp-3;
+    @apply max-md:text-center font-medium text-[18px] md:text-[20px] leading-[150%] text-graphiteGray tracking-[1px] line-clamp-3;
   }
 }
