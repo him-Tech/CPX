@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // animation for numbers start
+  // Animation for numbers start
   gsap.registerPlugin(ScrollTrigger);
 
   let stats = $(".statsBannerCard__statistic").toArray();
@@ -46,9 +46,9 @@ $(document).ready(function () {
   stats.forEach((stat) => {
     countOne(stat);
   });
-  // animation for numbers end
+  // Animation for numbers end
 
-  // for sidebar
+  // Handle sidebar start
   let bodyy = document.getElementById("body");
   let cancel = document.getElementById("cancel");
   let btn = document.getElementById("navbtn");
@@ -72,7 +72,9 @@ $(document).ready(function () {
   navLinks.forEach(function (navLink) {
     navLink.addEventListener("click", handleSidebar);
   });
+  // Handle sidebar end
 
+  // Language dropdown start
   document.addEventListener("click", (event) => {
     const dropdownMenu = document.getElementById("languageDropdown");
     const isDropdownButton = event.target.closest("#languageDropdownButton");
@@ -83,14 +85,17 @@ $(document).ready(function () {
       dropdownMenu.classList.add("hidden");
     }
 
-    if (event.target.closest("#languageDropdown a")) {
+    const link = event.target.closest("#languageDropdown a");
+    if (link) {
       event.preventDefault();
       document.getElementById("languageText").textContent =
-        event.target.getAttribute("data-value");
+        link.getAttribute("data-value");
       dropdownMenu.classList.add("hidden");
+      window.location.href = link.href;
     }
   });
 
+  // Sidebar language dropdown start
   document.addEventListener("click", (event) => {
     const sidebarDropdownMenu = document.getElementById(
       "sidebarLanguageDropdown"
@@ -105,11 +110,13 @@ $(document).ready(function () {
       sidebarDropdownMenu.classList.add("hidden");
     }
 
-    if (event.target.closest("#sidebarLanguageDropdown a")) {
+    const sidebarLink = event.target.closest("#sidebarLanguageDropdown a");
+    if (sidebarLink) {
       event.preventDefault();
       document.getElementById("sidebarLanguageText").textContent =
-        event.target.getAttribute("data-value");
+        sidebarLink.getAttribute("data-value");
       sidebarDropdownMenu.classList.add("hidden");
+      window.location.href = sidebarLink.href;
     }
   });
 });
