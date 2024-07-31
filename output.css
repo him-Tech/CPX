@@ -1583,8 +1583,8 @@ video {
   font-size: 4vw;
 }
 
-.text-\[6\.5vw\]{
-  font-size: 6.5vw;
+.text-\[6vw\]{
+  font-size: 6vw;
 }
 
 .text-base{
@@ -1600,10 +1600,6 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[6vw\]{
-  font-size: 6vw;
 }
 
 .font-black{
@@ -2315,11 +2311,6 @@ video {
     background-image: url(./assets/svg/heroOrangeBg.svg);
   }
 
-  .md\:px-12{
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .md\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2358,8 +2349,16 @@ video {
     padding-bottom: 65px;
   }
 
+  .md\:pl-12{
+    padding-left: 3rem;
+  }
+
   .md\:pl-\[68px\]{
     padding-left: 68px;
+  }
+
+  .md\:pr-6{
+    padding-right: 1.5rem;
   }
 
   .md\:pr-\[65px\]{
@@ -2380,18 +2379,6 @@ video {
 
   .md\:pt-\[17px\]{
     padding-top: 17px;
-  }
-
-  .md\:pl-12{
-    padding-left: 3rem;
-  }
-
-  .md\:pr-7{
-    padding-right: 1.75rem;
-  }
-
-  .md\:pr-6{
-    padding-right: 1.5rem;
   }
 
   .md\:text-5xl{
@@ -2415,8 +2402,8 @@ video {
     font-size: 48px;
   }
 
-  .md\:text-\[62px\]{
-    font-size: 62px;
+  .md\:text-\[58px\]{
+    font-size: 58px;
   }
 
   .md\:text-base{
@@ -2427,10 +2414,6 @@ video {
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[58px\]{
-    font-size: 58px;
   }
 
   .md\:leading-\[54px\]{
