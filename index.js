@@ -119,4 +119,15 @@ $(document).ready(function () {
       window.location.href = sidebarLink.href;
     }
   });
+
+  // To scroll window to top
+  let scrollToTopBtn = document.getElementById("scrollToTop");
+  scrollToTopBtn.addEventListener("click", () => {
+    const heroSection = document.getElementById("hero");
+    heroSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  });
 });

@@ -7,8 +7,21 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body id="body" class="bg-ivoryMist font-inter">
+    <!-- Back to top btn start -->
+    <button
+      id="scrollToTop"
+      class="fixed bottom-6 right-6 size-12 bg-sunsetRed rounded-full shadow-xl z-[70] animate-bounce flex items-center justify-center p-2"
+    >
+      <img
+        src="./assets/svg/backToTopArrow.svg"
+        alt="back to top"
+        class="w-full h-full object-cover"
+      />
+    </button>
+    <!-- Back to top btn end -->
+
     <!-- Navbar and sidebar start -->
-    <div class="max-w-[1536px] w-full mx-auto max-2xl:px-4 relative">
+    <div id="hero" class="max-w-[1536px] w-full mx-auto max-2xl:px-4 relative">
       <!-- Navbar -->
       <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
         <!-- Logo -->
@@ -417,7 +430,8 @@
               </h3>
               <form class="flex items-center justify-start h-10 sm:h-[66px]">
                 <input
-                  type="text"
+                  required
+                  type="email"
                   placeholder="Your email address"
                   class="w-full lg:w-[358px] h-full bg-white px-3 sm:px-[26px] text-base sm:text-xl font-medium leading-[26px] outline-none"
                 />
@@ -433,7 +447,7 @@
         </div>
         <!-- Yellow circle -->
         <div
-          class="size-[304px] absolute -bottom-[135px] right-0 md:-right-[60px] xl:-right-[135px]"
+          class="size-[304px] absolute -bottom-[135px] right-0 md:-right-[60px] xl:-right-[130px]"
         >
           <img
             src="./assets/svg/yellowCircle.svg"
