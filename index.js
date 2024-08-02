@@ -130,4 +130,13 @@ $(document).ready(function () {
       inline: "nearest",
     });
   });
+
+  // To show scroll window to top button after user scroll down
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      scrollToTopBtn.classList.remove("hidden");
+    } else {
+      scrollToTopBtn.classList.add("hidden");
+    }
+  });
 });

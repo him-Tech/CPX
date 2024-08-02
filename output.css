@@ -726,6 +726,10 @@ video {
   top: -90px;
 }
 
+.bottom-6{
+  bottom: 1.5rem;
+}
+
 .left-0{
   left: 0px;
 }
@@ -770,6 +774,10 @@ video {
   right: 0.75rem;
 }
 
+.right-6{
+  right: 1.5rem;
+}
+
 .right-\[32px\]{
   right: 32px;
 }
@@ -800,14 +808,6 @@ video {
 
 .top-\[80px\]{
   top: 80px;
-}
-
-.bottom-6{
-  bottom: 1.5rem;
-}
-
-.right-6{
-  right: 1.5rem;
 }
 
 .z-10{
@@ -924,6 +924,11 @@ video {
   display: none;
 }
 
+.size-12{
+  width: 3rem;
+  height: 3rem;
+}
+
 .size-\[252px\]{
   width: 252px;
   height: 252px;
@@ -937,11 +942,6 @@ video {
 .size-\[304px\]{
   width: 304px;
   height: 304px;
-}
-
-.size-12{
-  width: 3rem;
-  height: 3rem;
 }
 
 .h-10{
@@ -1471,12 +1471,16 @@ video {
      object-fit: cover;
 }
 
-.p-6{
-  padding: 1.5rem;
-}
-
 .p-2{
   padding: 0.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
+}
+
+.p-6{
+  padding: 1.5rem;
 }
 
 .px-10{
@@ -1890,11 +1894,6 @@ video {
 @media not all and (min-width: 1536px){
   .max-2xl\:overflow-hidden{
     overflow: hidden;
-  }
-
-  .max-2xl\:px-4{
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
 
@@ -2753,8 +2752,8 @@ video {
 }
 
 @media (min-width: 1280px){
-  .xl\:-right-\[135px\]{
-    right: -135px;
+  .xl\:-right-\[130px\]{
+    right: -130px;
   }
 
   .xl\:left-\[130px\]{
@@ -2779,10 +2778,6 @@ video {
 
   .xl\:right-\[65px\]{
     right: 65px;
-  }
-
-  .xl\:-right-\[130px\]{
-    right: -130px;
   }
 
   .xl\:h-\[418px\]{
