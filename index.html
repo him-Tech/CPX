@@ -291,11 +291,11 @@
         <!-- Logo and button -->
         <div class="flex flex-col max-lg:items-center max-lg:justify-center">
           <div
-            class="max-w-[35vw] md:max-w-[280px] lg:max-w-[345px] w-full max-h-[223px] h-full lg:ml-[83px]"
+            class="max-w-[35vw] overflow-hidden md:max-w-[280px] lg:max-w-[345px] w-full max-h-[223px] h-full lg:ml-[83px]"
           >
             <img
               src="./assets/img/heroLogo.png"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover hero-qx-img"
               alt="hero logo"
             />
           </div>
@@ -313,15 +313,17 @@
             </h2>
           </div>
           <h2
-            class="mt-[30px] md:mt-[60px] lg:mt-[138px] text-white text-[4vw] md:text-[24px] xl:text-[26px] font-medium leading-[34px] uppercase text-center whitespace-nowrap"
+            class="mt-[30px] overflow-hidden md:mt-[60px] lg:mt-[138px] text-white text-[4vw] md:text-[24px] xl:text-[26px] font-medium leading-[34px] uppercase text-center whitespace-nowrap"
           >
-            QUALITY AND PRECISION IN YOUR WORK
+            <span class="quality-text-animation origin-left flex">
+              QUALITY AND PRECISION IN YOUR WORK</span
+            >
           </h2>
           <div
-            class="w-full mt-[30px] md:mt-[60px] lg:mt-[104px] flex items-center justify-center sm:justify-end"
+            class="w-full overflow-hidden mt-[30px] md:mt-[60px] lg:mt-[104px] flex items-center justify-center sm:justify-end"
           >
             <button
-              class="w-fit flex-shrink-0 clear-start py-3 md:py-4 px-4 md:px-[18px] flex items-center justify-center gap-[10px] bg-white text-black hover:bg-black hover:text-white group transition-all duration-300 ease-in-out whitespace-nowrap group"
+              class="w-fit explore-btn-anim flex-shrink-0 clear-start py-3 md:py-4 px-4 md:px-[18px] flex items-center justify-center gap-[10px] bg-white text-black hover:bg-black hover:text-white group whitespace-nowrap group"
             >
               <span class="text-sm md:text-base font-medium leading-[20px]"
                 >Explore Now</span
@@ -369,7 +371,7 @@
       >
         <!-- Pill image -->
         <div
-          class="w-[22vw] lg:w-[210px] xl:w-[270px] h-[46vw] lg:h-[378px] xl:h-[478px] absolute -top-[90px] lg:-top-[184px] left-4 md:left-0 z-20 rounded-[200px] bg-cover bg-center"
+          class="hero-ovel-image w-[22vw] lg:w-[210px] xl:w-[270px] h-[46vw] lg:h-[378px] xl:h-[478px] absolute -top-[90px] lg:-top-[184px] left-4 md:left-0 z-20 rounded-[200px] bg-cover bg-center"
           style="background-image: url(./assets/img/heroPill.png)"
         ></div>
         <!-- Gray pill -->
@@ -913,7 +915,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- JS file -->
     <script src="./index.js"></script>
+    <script src="./animation.js"></script>
   </body>
 </html>
