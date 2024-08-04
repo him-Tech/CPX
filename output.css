@@ -810,6 +810,34 @@ video {
   top: 80px;
 }
 
+.left-\[2\.5vw\]{
+  left: 2.5vw;
+}
+
+.top-\[5vw\]{
+  top: 5vw;
+}
+
+.left-\[3\.5vw\]{
+  left: 3.5vw;
+}
+
+.left-\[6\.5vw\]{
+  left: 6.5vw;
+}
+
+.top-\[4vw\]{
+  top: 4vw;
+}
+
+.left-\[6\.2vw\]{
+  left: 6.2vw;
+}
+
+.top-\[3\.7vw\]{
+  top: 3.7vw;
+}
+
 .z-10{
   z-index: 10;
 }
