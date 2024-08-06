@@ -710,10 +710,6 @@ video {
   position: relative;
 }
 
-.sticky{
-  position: sticky;
-}
-
 .inset-0{
   inset: 0px;
 }
@@ -834,6 +830,10 @@ video {
   z-index: 20;
 }
 
+.z-\[10000\]{
+  z-index: 10000;
+}
+
 .z-\[1003\]{
   z-index: 1003;
 }
@@ -926,10 +926,6 @@ video {
 
 .mt-\[60px\]{
   margin-top: 60px;
-}
-
-.mt-\[500px\]{
-  margin-top: 500px;
 }
 
 .box-border{
@@ -1068,17 +1064,8 @@ video {
   height: 100vh;
 }
 
-.h-fit{
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .max-h-\[223px\]{
   max-height: 223px;
-}
-
-.min-h-\[80px\]{
-  min-height: 80px;
 }
 
 .min-h-\[30px\]{

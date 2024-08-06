@@ -133,148 +133,6 @@
         </div>
 
         <!-- Sidebar -->
-        <div
-          id="sidebarbtn"
-          class="absolute z-[70] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
-        >
-          <div class="flex flex-col gap-6">
-            <svg
-              class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
-              id="cancel"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="5"
-                y1="5"
-                x2="19"
-                y2="19"
-                stroke="white"
-                stroke-width="2"
-              />
-              <line
-                x1="5"
-                y1="19"
-                x2="19"
-                y2="5"
-                stroke="white"
-                stroke-width="2"
-              />
-            </svg>
-
-            <a href="/" class="sidebar-navlink"> Home </a>
-            <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
-            <a href="#services" class="nav-link sidebar-navlink"> Services </a>
-            <a href="#portfolio" class="nav-link sidebar-navlink">
-              Some of our work
-            </a>
-            <div class="flex gap-10 flex-col lg:hidden">
-              <button
-                class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
-                type="submit"
-              >
-                Contact Us
-              </button>
-              <div class="relative">
-                <button
-                  id="sidebarLanguageDropdownButton"
-                  class="flex items-center gap-3 max-w-[150px]"
-                >
-                  <!-- Language globe icon -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                      stroke="white"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998"
-                      stroke="white"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M15 3C16.95 8.84 16.95 15.16 15 21"
-                      stroke="white"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
-                      stroke="white"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001"
-                      stroke="white"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <p
-                    id="sidebarLanguageText"
-                    class="text-white text-xl font-medium leading-normal"
-                  >
-                    English
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M19.92 8.94995L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.94995"
-                      stroke="white"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div
-                  id="sidebarLanguageDropdown"
-                  class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
-                >
-                  <a
-                    href="index.html"
-                    class="language-text"
-                    data-value="English"
-                    >English</a
-                  >
-                  <a
-                    href="portugues.html"
-                    class="language-text"
-                    data-value="Português"
-                    >Português</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          id="sidebar-overlay"
-          class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
-        ></div>
       </div>
       <!-- Navbar and sidebar end -->
 
@@ -541,6 +399,131 @@
         class="max-lg:hidden w-[540px] xl:w-[640px] h-[160px] bg-seafoamWhite mt-[60px]"
       ></div>
     </div>
+    <div
+      id="sidebarbtn"
+      class="fixed z-[10000] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
+    >
+      <div class="flex flex-col gap-6">
+        <svg
+          class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
+          id="cancel"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line x1="5" y1="5" x2="19" y2="19" stroke="white" stroke-width="2" />
+          <line x1="5" y1="19" x2="19" y2="5" stroke="white" stroke-width="2" />
+        </svg>
+
+        <a href="/" class="sidebar-navlink"> Home </a>
+        <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
+        <a href="#services" class="nav-link sidebar-navlink"> Services </a>
+        <a href="#portfolio" class="nav-link sidebar-navlink">
+          Some of our work
+        </a>
+        <div class="flex gap-10 flex-col lg:hidden">
+          <button
+            class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
+            type="submit"
+          >
+            Contact Us
+          </button>
+          <div class="relative">
+            <button
+              id="sidebarLanguageDropdownButton"
+              class="flex items-center gap-3 max-w-[150px]"
+            >
+              <!-- Language globe icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 3C16.95 8.84 16.95 15.16 15 21"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p
+                id="sidebarLanguageText"
+                class="text-white text-xl font-medium leading-normal"
+              >
+                English
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M19.92 8.94995L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.94995"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div
+              id="sidebarLanguageDropdown"
+              class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
+            >
+              <a href="index.html" class="language-text" data-value="English"
+                >English</a
+              >
+              <a
+                href="portugues.html"
+                class="language-text"
+                data-value="Português"
+                >Português</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sidebar-overlay"
+      class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
+    ></div>
     <!-- Top about us end ->
     <!-- Middle about us start -->
     <div
