@@ -6,8 +6,22 @@
     <title>Consultoria</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body id="body" class="bg-ivoryMist font-inter">
+  <body id="body" class="bg-ivoryMist overflow-hidden font-inter">
+    <div
+      class="pointer-events-none w-10 h-10 fake-activity fixed bg-transparent"
+    ></div>
     <!-- Back to top btn start -->
+    <div
+      class="orange-moving-object ease-linear absolute z-[1004] opacity-0 pointer-events-none"
+    >
+      <img src="./assets/img/orangeLogoIcon.png" class="w-full" alt="" />
+    </div>
+    <div
+      class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none"
+    >
+      <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
+    </div>
+
     <button
       id="scrollToTop"
       class="hidden fixed bottom-6 right-6 size-12 bg-sunsetRed rounded-full shadow-xl z-[70] animate-bounce p-2"
@@ -21,15 +35,27 @@
     <!-- Back to top btn end -->
 
     <!-- Navbar and sidebar start -->
-    <div id="hero" class="max-w-[1536px] w-full mx-auto px-4 relative">
+    <div
+      id="hero"
+      class="max-w-[1536px] relative z-[1003] bg-white navbar-wrapper w-full mx-auto px-4"
+    >
       <!-- Navbar -->
       <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
         <!-- Logo -->
-        <img
-          class="md:w-[247px] w-[150px] sm:w-[200px]"
-          src="/assets/img/logo.png"
-          alt="logo"
-        />
+        <div class="flex gap-2 logo-wrappper">
+          <div class="final-pos">
+            <img
+              class="h-[70px] opacity-0 md:h-[90px]"
+              src="/assets/img/logoIcon.png"
+              alt="logo"
+            />
+          </div>
+          <img
+            class="h-[70px] logo-text md:h-[90px]"
+            src="/assets/img/logotext.png"
+            alt="logo-text"
+          />
+        </div>
         <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
           <a href="/" class="nav-link navbar-navlink"> Home </a>
           <a href="#aboutus" class="nav-link navbar-navlink"> About us </a>
@@ -250,7 +276,7 @@
 
     <!-- Hero section start -->
     <div
-      class="max-w-[1536px] w-full mx-auto max-lg:hidden flex items-end justify-center"
+      class="max-w-[1536px] relative overflow-hidden w-full mx-auto max-lg:hidden flex items-end justify-center"
     >
       <div
         class="relative w-full lg:w-[800px] xl:w-[960px] h-[600px] sm:h-[804px] bg-cover bg-right lg:flex-shrink-0 bg-sunsetRed rounded-tr-[30vw] md:bg-[url(./assets/svg/heroOrangeBg.svg)]"
@@ -294,8 +320,8 @@
             class="max-w-[35vw] overflow-hidden md:max-w-[280px] lg:max-w-[345px] w-full max-h-[223px] h-full lg:ml-[83px]"
           >
             <img
-              src="./assets/img/heroLogo.png"
-              class="w-full h-full object-cover hero-qx-img"
+              src="./assets/img/whiteLogoIcon.png"
+              class="w-full h-full opacity-0 object-cover initial-pos hero-qx-img"
               alt="hero logo"
             />
           </div>

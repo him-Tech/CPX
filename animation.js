@@ -1,4 +1,86 @@
+// initial-pos
+
 gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
+  setTimeout(() => {
+    const initialelement = document.querySelector(".initial-pos");
+    const initialPos = initialelement.getBoundingClientRect();
+
+    const finalelement = document.querySelector(".final-pos");
+    const finalPos = finalelement.getBoundingClientRect();
+    console.log(finalPos);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "top -500",
+        scrub: 1,
+        pin: true,
+      },
+    });
+    gsap.set(".initial-pos", { opacity: 0 });
+    gsap.set("body", { overflow: "auto" });
+    tl.fromTo(
+      ".white-moving-object",
+      {
+        width: initialPos.width + "px",
+        height: initialPos.height + "px",
+        left: initialPos.left + "px",
+        top: initialPos.top + "px",
+        opacity: 1,
+      },
+      {
+        width: finalPos.width + "px",
+        height: finalPos.height + "px",
+        left: finalPos.left + "px",
+        top: finalPos.top + "px",
+        opacity: 1,
+      },
+      "same"
+    )
+      .fromTo(
+        ".orange-moving-object",
+        {
+          width: initialPos.width + "px",
+          height: initialPos.height + "px",
+          left: initialPos.left + "px",
+          top: initialPos.top + "px",
+          opacity: 1,
+        },
+        {
+          width: finalPos.width + "px",
+          height: finalPos.height + "px",
+          left: finalPos.left + "px",
+          top: finalPos.top + "px",
+          opacity: 1,
+        },
+        "same"
+      )
+      .fromTo(
+        ".orange-moving-object",
+        {
+          zIndex: 1004,
+        },
+        {
+          zIndex: 1006,
+          delay: -0.1,
+        }
+      )
+      .fromTo(
+        ".fake-activity",
+        {
+          width: "40px",
+          height: "40px",
+        },
+        {
+          width: "100px",
+          height: "100px",
+        }
+      );
+  }, 1000);
+});
+
 // hero-qx-img
 
 gsap.fromTo(
