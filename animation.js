@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
           zIndex: 1006,
-          delay: -0.1,
+          delay: -0.4,
         }
       )
       .fromTo(
