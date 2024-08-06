@@ -1068,8 +1068,25 @@ video {
   height: 100vh;
 }
 
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .max-h-\[223px\]{
   max-height: 223px;
+}
+
+.min-h-\[80px\]{
+  min-height: 80px;
+}
+
+.min-h-\[30px\]{
+  min-height: 30px;
+}
+
+.min-h-full{
+  min-height: 100%;
 }
 
 .w-10{
@@ -2318,6 +2335,10 @@ video {
 
   .md\:mt-\[60px\]{
     margin-top: 60px;
+  }
+
+  .md\:block{
+    display: block;
   }
 
   .md\:h-\[100px\]{
