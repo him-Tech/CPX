@@ -11,16 +11,6 @@
       class="pointer-events-none w-10 h-10 fake-activity fixed bg-transparent"
     ></div>
     <!-- Back to top btn start -->
-    <div
-      class="orange-moving-object ease-linear absolute z-[1004] opacity-0 pointer-events-none"
-    >
-      <img src="./assets/img/orangeLogoIcon.png" class="w-full" alt="" />
-    </div>
-    <div
-      class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none"
-    >
-      <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
-    </div>
 
     <button
       id="scrollToTop"
@@ -34,201 +24,63 @@
     </button>
     <!-- Back to top btn end -->
 
-    <!-- Navbar and sidebar start -->
-    <div
-      id="hero"
-      class="max-w-[1536px] relative z-[1003] bg-white navbar-wrapper w-full mx-auto px-4"
-    >
-      <!-- Navbar -->
-      <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
-        <!-- Logo -->
-        <div class="flex gap-2 logo-wrappper">
-          <div class="final-pos">
-            <img
-              class="h-[70px] opacity-0 md:h-[90px]"
-              src="/assets/img/logoIcon.png"
-              alt="logo"
-            />
-          </div>
-          <img
-            class="h-[70px] logo-text md:h-[90px]"
-            src="/assets/img/logotext.png"
-            alt="logo-text"
-          />
-        </div>
-        <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
-          <a href="/" class="nav-link navbar-navlink"> Home </a>
-          <a href="#aboutus" class="nav-link navbar-navlink"> About us </a>
-          <a href="#services" class="nav-link navbar-navlink"> Services </a>
-          <a href="#portfolio" class="nav-link navbar-navlink">
-            Some of our work
-          </a>
-        </div>
-        <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
-          <button
-            class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
-            type="submit"
-          >
-            Contact Us
-          </button>
-          <div class="relative">
-            <button
-              id="languageDropdownButton"
-              class="flex items-center gap-1 w-[120px]"
-            >
-              <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
-              <p
-                id="languageText"
-                class="lg:text-graphiteGray text-white text-base font-medium leading-normal"
-              >
-                English
-              </p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M19.92 8.94995L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.94995"
-                  stroke="#494341"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div
-              id="languageDropdown"
-              class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg"
-            >
-              <a href="index.html" class="language-text" data-value="English"
-                >English</a
-              >
-              <a
-                href="portugues.html"
-                class="language-text"
-                data-value="Português"
-                >Português</a
-              >
-            </div>
-          </div>
-        </div>
-        <svg
-          id="navbtn"
-          class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="#FB923C"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect y="4" width="24" height="2" />
-          <rect y="11" width="24" height="2" />
-          <rect y="18" width="24" height="2" />
-        </svg>
-      </div>
-
-      <!-- Sidebar -->
+    <div id="nav-hero-wrapper" class="">
       <div
-        id="sidebarbtn"
-        class="absolute z-[70] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
+        class="orange-moving-object ease-linear absolute z-[1004] opacity-0 pointer-events-none"
       >
-        <div class="flex flex-col gap-6">
-          <svg
-            class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
-            id="cancel"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="5"
-              y1="5"
-              x2="19"
-              y2="19"
-              stroke="white"
-              stroke-width="2"
+        <img src="./assets/img/orangeLogoIcon.png" class="w-full" alt="" />
+      </div>
+      <div
+        class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none"
+      >
+        <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
+      </div>
+      <!-- Navbar and sidebar start -->
+      <div
+        id="hero"
+        class="max-w-[1536px] relative z-[1003] bg-white navbar-wrapper w-full mx-auto px-4"
+      >
+        <!-- Navbar -->
+        <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
+          <!-- Logo -->
+          <div class="flex gap-2 logo-wrappper">
+            <div class="final-pos">
+              <img
+                class="h-[70px] opacity-0 md:h-[90px]"
+                src="/assets/img/logoIcon.png"
+                alt="logo"
+              />
+            </div>
+            <img
+              class="h-[70px] logo-text md:h-[90px]"
+              src="/assets/img/logotext.png"
+              alt="logo-text"
             />
-            <line
-              x1="5"
-              y1="19"
-              x2="19"
-              y2="5"
-              stroke="white"
-              stroke-width="2"
-            />
-          </svg>
-
-          <a href="/" class="sidebar-navlink"> Home </a>
-          <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
-          <a href="#services" class="nav-link sidebar-navlink"> Services </a>
-          <a href="#portfolio" class="nav-link sidebar-navlink">
-            Some of our work
-          </a>
-          <div class="flex gap-10 flex-col lg:hidden">
+          </div>
+          <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
+            <a href="/" class="nav-link navbar-navlink"> Home </a>
+            <a href="#aboutus" class="nav-link navbar-navlink"> About us </a>
+            <a href="#services" class="nav-link navbar-navlink"> Services </a>
+            <a href="#portfolio" class="nav-link navbar-navlink">
+              Some of our work
+            </a>
+          </div>
+          <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
             <button
-              class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
+              class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
               type="submit"
             >
               Contact Us
             </button>
             <div class="relative">
               <button
-                id="sidebarLanguageDropdownButton"
-                class="flex items-center gap-3 max-w-[150px]"
+                id="languageDropdownButton"
+                class="flex items-center gap-1 w-[120px]"
               >
-                <!-- Language globe icon -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15 3C16.95 8.84 16.95 15.16 15 21"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
                 <p
-                  id="sidebarLanguageText"
-                  class="text-white text-xl font-medium leading-normal"
+                  id="languageText"
+                  class="lg:text-graphiteGray text-white text-base font-medium leading-normal"
                 >
                   English
                 </p>
@@ -241,7 +93,7 @@
                 >
                   <path
                     d="M19.92 8.94995L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.94995"
-                    stroke="white"
+                    stroke="#494341"
                     stroke-width="1.5"
                     stroke-miterlimit="10"
                     stroke-linecap="round"
@@ -250,8 +102,8 @@
                 </svg>
               </button>
               <div
-                id="sidebarLanguageDropdown"
-                class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
+                id="languageDropdown"
+                class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg"
               >
                 <a href="index.html" class="language-text" data-value="English"
                   >English</a
@@ -265,267 +117,422 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        id="sidebar-overlay"
-        class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
-      ></div>
-    </div>
-    <!-- Navbar and sidebar end -->
-
-    <!-- Hero section start -->
-    <div
-      class="max-w-[1536px] relative overflow-hidden w-full mx-auto max-lg:hidden flex items-end justify-center"
-    >
-      <div
-        class="relative w-full lg:w-[800px] xl:w-[960px] h-[600px] sm:h-[804px] bg-cover bg-right lg:flex-shrink-0 bg-sunsetRed rounded-tr-[30vw] md:bg-[url(./assets/svg/heroOrangeBg.svg)]"
-      >
-        <!-- Yellow circle -->
-        <div
-          class="size-[252px] rounded-full bg-sunshineYellow opacity-20 bg-blend-screen blur-[32px] absolute top-[46px] left-10"
-        ></div>
-        <!-- Vertical line 1 -->
-        <div
-          class="w-[1px] h-[114px] bg-deepCharcoal flex-shrink-0 absolute top-[80px] left-7 xl:left-[60px] z-10"
-        ></div>
-
-        <!-- Vertical line 2 -->
-        <div
-          class="w-[1px] h-full bg-deepCharcoal opacity-[0.32] absolute top-0 left-[65px] xl:left-[130px] flex-shrink-0"
-        ></div>
-        <!-- Vertical line 3 -->
-        <div
-          class="w-[1px] h-full bg-deepCharcoal opacity-[0.32] absolute top-0 left-[275px] xl:left-[400px] flex-shrink-0"
-        ></div>
-      </div>
-      <!-- Horizontal line 1 -->
-      <div
-        class="max-lg:hidden w-full h-[74px] border-b border-b-deepCharcoal border-r border-r-deepCharcoal opacity-[0.32]"
-      ></div>
-      <!-- Horizontal line 2 -->
-      <div
-        class="max-lg:hidden w-[65px] xl:w-[130px] h-[74px] border-b border-b-deepCharcoal opacity-[0.32] flex-shrink-0"
-      ></div>
-    </div>
-    <div
-      class="max-w-[1536px] w-full mx-auto lg:-mt-[702px] max-lg:bg-sunsetRed max-lg:rounded-tr-[28vw] max-lg:pt-20 max-lg:pb-[100px] flex justify-end items-center max-lg:pr-4 pl-4 relative z-20"
-    >
-      <div
-        class="w-full xl:max-w-[1310px] ml-auto flex flex-col lg:flex-row justify-center 2xl:justify-end items-center max-md:gap-7 max-lg:gap-12"
-      >
-        <!-- Logo and button -->
-        <div class="flex flex-col max-lg:items-center max-lg:justify-center">
-          <div
-            class="max-w-[35vw] overflow-hidden md:max-w-[280px] lg:max-w-[345px] w-full max-h-[223px] h-full lg:ml-[83px]"
+          <svg
+            id="navbtn"
+            class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="#FB923C"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <img
-              src="./assets/img/whiteLogoIcon.png"
-              class="w-full h-full opacity-0 object-cover initial-pos hero-qx-img"
-              alt="hero logo"
-            />
+            <rect y="4" width="24" height="2" />
+            <rect y="11" width="24" height="2" />
+            <rect y="18" width="24" height="2" />
+          </svg>
+        </div>
+
+        <!-- Sidebar -->
+        <div
+          id="sidebarbtn"
+          class="absolute z-[70] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
+        >
+          <div class="flex flex-col gap-6">
+            <svg
+              class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
+              id="cancel"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                y1="5"
+                x2="19"
+                y2="19"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="5"
+                y1="19"
+                x2="19"
+                y2="5"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+
+            <a href="/" class="sidebar-navlink"> Home </a>
+            <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
+            <a href="#services" class="nav-link sidebar-navlink"> Services </a>
+            <a href="#portfolio" class="nav-link sidebar-navlink">
+              Some of our work
+            </a>
+            <div class="flex gap-10 flex-col lg:hidden">
+              <button
+                class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
+                type="submit"
+              >
+                Contact Us
+              </button>
+              <div class="relative">
+                <button
+                  id="sidebarLanguageDropdownButton"
+                  class="flex items-center gap-3 max-w-[150px]"
+                >
+                  <!-- Language globe icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 3C16.95 8.84 16.95 15.16 15 21"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p
+                    id="sidebarLanguageText"
+                    class="text-white text-xl font-medium leading-normal"
+                  >
+                    English
+                  </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M19.92 8.94995L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.94995"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id="sidebarLanguageDropdown"
+                  class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
+                >
+                  <a
+                    href="index.html"
+                    class="language-text"
+                    data-value="English"
+                    >English</a
+                  >
+                  <a
+                    href="portugues.html"
+                    class="language-text"
+                    data-value="Português"
+                    >Português</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="sidebar-overlay"
+          class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
+        ></div>
+      </div>
+      <!-- Navbar and sidebar end -->
+
+      <!-- Hero section start -->
+      <div
+        class="max-w-[1536px] relative overflow-hidden w-full mx-auto max-lg:hidden flex items-end justify-center"
+      >
+        <div
+          class="relative w-full lg:w-[800px] xl:w-[960px] h-[600px] sm:h-[804px] bg-cover bg-right lg:flex-shrink-0 bg-sunsetRed rounded-tr-[30vw] md:bg-[url(./assets/svg/heroOrangeBg.svg)]"
+        >
+          <!-- Yellow circle -->
+          <div
+            class="size-[252px] rounded-full bg-sunshineYellow opacity-20 bg-blend-screen blur-[32px] absolute top-[46px] left-10"
+          ></div>
+          <!-- Vertical line 1 -->
+          <div
+            class="w-[1px] h-[114px] bg-deepCharcoal flex-shrink-0 absolute top-[80px] left-7 xl:left-[60px] z-10"
+          ></div>
+
+          <!-- Vertical line 2 -->
+          <div
+            class="w-[1px] h-full bg-deepCharcoal opacity-[0.32] absolute top-0 left-[65px] xl:left-[130px] flex-shrink-0"
+          ></div>
+          <!-- Vertical line 3 -->
+          <div
+            class="w-[1px] h-full bg-deepCharcoal opacity-[0.32] absolute top-0 left-[275px] xl:left-[400px] flex-shrink-0"
+          ></div>
+        </div>
+        <!-- Horizontal line 1 -->
+        <div
+          class="max-lg:hidden w-full h-[74px] border-b border-b-deepCharcoal border-r border-r-deepCharcoal opacity-[0.32]"
+        ></div>
+        <!-- Horizontal line 2 -->
+        <div
+          class="max-lg:hidden w-[65px] xl:w-[130px] h-[74px] border-b border-b-deepCharcoal opacity-[0.32] flex-shrink-0"
+        ></div>
+      </div>
+      <div
+        class="max-w-[1536px] w-full mx-auto lg:-mt-[702px] max-lg:bg-sunsetRed max-lg:rounded-tr-[28vw] max-lg:pt-20 max-lg:pb-[100px] flex justify-end items-center max-lg:pr-4 pl-4 relative z-20"
+      >
+        <div
+          class="w-full xl:max-w-[1310px] ml-auto flex flex-col lg:flex-row justify-center 2xl:justify-end items-center max-md:gap-7 max-lg:gap-12"
+        >
+          <!-- Logo and button -->
+          <div class="flex flex-col max-lg:items-center max-lg:justify-center">
+            <div
+              class="max-w-[35vw] overflow-hidden md:max-w-[280px] lg:max-w-[345px] w-full max-h-[223px] h-full lg:ml-[83px]"
+            >
+              <img
+                src="./assets/img/whiteLogoIcon.png"
+                class="w-full h-full opacity-0 object-cover initial-pos hero-qx-img"
+                alt="hero logo"
+              />
+            </div>
+            <!-- Hero right image with text -->
+            <div class="sm:hidden mt-[30px] w-full relative">
+              <img
+                src="./assets/img/heroRight.png"
+                alt="hero"
+                class="w-full mx-auto"
+              />
+              <h2
+                class="absolute top-[3.7vw] left-[6.2vw] max-w-[40vw] w-full text-[4vw] leading-[4.4vw] text-white"
+              >
+                <div class="overflow-hidden">
+                  <span class="flex hero-main-right-text-mobile"
+                    >CONSULTING AND
+                  </span>
+                </div>
+                <div class="overflow-hidden">
+                  <span class="flex hero-main-right-text-mobile"
+                    >ENGINEERING</span
+                  >
+                </div>
+                <div class="overflow-hidden">
+                  <span class="flex hero-main-right-text-mobile">PROJECTS</span>
+                </div>
+              </h2>
+            </div>
+            <h2
+              class="mt-[30px] overflow-hidden md:mt-[60px] lg:mt-[138px] text-white text-[4vw] md:text-[24px] xl:text-[26px] font-medium leading-[34px] uppercase text-center whitespace-nowrap"
+            >
+              <span class="quality-text-animation origin-left flex">
+                QUALITY AND PRECISION IN YOUR WORK</span
+              >
+            </h2>
+            <div
+              class="w-full overflow-hidden mt-[30px] md:mt-[60px] lg:mt-[104px] flex items-center justify-center sm:justify-end"
+            >
+              <button
+                class="w-fit explore-btn-anim flex-shrink-0 clear-start py-3 md:py-4 px-4 md:px-[18px] flex items-center justify-center gap-[10px] bg-white text-black hover:bg-black hover:text-white group whitespace-nowrap group"
+              >
+                <span class="text-sm md:text-base font-medium leading-[20px]"
+                  >Explore Now</span
+                >
+                <svg
+                  width="34"
+                  height="6"
+                  viewBox="0 0 34 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="group-hover:translate-x-1 transition-all duration-300 ease-linear"
+                >
+                  <path
+                    class="group-hover:fill-white fill-black duration-300 transition-all ease-in-out"
+                    d="M34 3L29 0.113246L29 5.88675L34 3ZM4.37114e-08 3.5L29.5 3.5L29.5 2.5L-4.37114e-08 2.5L4.37114e-08 3.5Z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <!-- Hero right image with text -->
-          <div class="sm:hidden mt-[30px] w-full relative">
-            <img
-              src="./assets/img/heroRight.png"
-              alt="hero"
-              class="w-full mx-auto"
-            />
+          <div
+            style="background-image: url(./assets/img/heroRight.png)"
+            class="max-sm:hidden w-full max-w-[81vw] md:max-w-[700px] lg:max-w-[806px] h-[63vw] md:h-[500px] lg:h-[628px] sm:-ml-3 max-lg:bg-center bg-no-repeat bg-contain lg:bg-cover pl-[5vw] md:pl-[68px] lg:pl-[47px] pt-[2.5vw] md:pt-[17px]"
+          >
             <h2
-              class="absolute top-[3.7vw] left-[6.2vw] max-w-[40vw] w-full text-[4vw] leading-[4.4vw] text-white"
+              class="max-w-[40vw] md:max-w-[474px] w-full text-[4vw] md:text-[48px] leading-[4.4vw] md:leading-[54px] text-white"
             >
               <div class="overflow-hidden">
-                <span class="flex hero-main-right-text-mobile"
+                <span class="flex hero-main-right-text-desktop"
                   >CONSULTING AND
                 </span>
               </div>
               <div class="overflow-hidden">
-                <span class="flex hero-main-right-text-mobile"
+                <span class="flex hero-main-right-text-desktop"
                   >ENGINEERING</span
                 >
               </div>
               <div class="overflow-hidden">
-                <span class="flex hero-main-right-text-mobile">PROJECTS</span>
+                <span class="flex hero-main-right-text-desktop">PROJECTS</span>
               </div>
             </h2>
           </div>
-          <h2
-            class="mt-[30px] overflow-hidden md:mt-[60px] lg:mt-[138px] text-white text-[4vw] md:text-[24px] xl:text-[26px] font-medium leading-[34px] uppercase text-center whitespace-nowrap"
-          >
-            <span class="quality-text-animation origin-left flex">
-              QUALITY AND PRECISION IN YOUR WORK</span
-            >
-          </h2>
-          <div
-            class="w-full overflow-hidden mt-[30px] md:mt-[60px] lg:mt-[104px] flex items-center justify-center sm:justify-end"
-          >
-            <button
-              class="w-fit explore-btn-anim flex-shrink-0 clear-start py-3 md:py-4 px-4 md:px-[18px] flex items-center justify-center gap-[10px] bg-white text-black hover:bg-black hover:text-white group whitespace-nowrap group"
-            >
-              <span class="text-sm md:text-base font-medium leading-[20px]"
-                >Explore Now</span
-              >
-              <svg
-                width="34"
-                height="6"
-                viewBox="0 0 34 6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="group-hover:translate-x-1 transition-all duration-300 ease-linear"
-              >
-                <path
-                  class="group-hover:fill-white fill-black duration-300 transition-all ease-in-out"
-                  d="M34 3L29 0.113246L29 5.88675L34 3ZM4.37114e-08 3.5L29.5 3.5L29.5 2.5L-4.37114e-08 2.5L4.37114e-08 3.5Z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <!-- Hero right image with text -->
-        <div
-          style="background-image: url(./assets/img/heroRight.png)"
-          class="max-sm:hidden w-full max-w-[81vw] md:max-w-[700px] lg:max-w-[806px] h-[63vw] md:h-[500px] lg:h-[628px] sm:-ml-3 max-lg:bg-center bg-no-repeat bg-contain lg:bg-cover pl-[5vw] md:pl-[68px] lg:pl-[47px] pt-[2.5vw] md:pt-[17px]"
-        >
-          <h2
-            class="max-w-[40vw] md:max-w-[474px] w-full text-[4vw] md:text-[48px] leading-[4.4vw] md:leading-[54px] text-white"
-          >
-            <div class="overflow-hidden">
-              <span class="flex hero-main-right-text-desktop"
-                >CONSULTING AND
-              </span>
-            </div>
-            <div class="overflow-hidden">
-              <span class="flex hero-main-right-text-desktop">ENGINEERING</span>
-            </div>
-            <div class="overflow-hidden">
-              <span class="flex hero-main-right-text-desktop">PROJECTS</span>
-            </div>
-          </h2>
         </div>
       </div>
-    </div>
-    <!-- Hero section end -->
-
-    <!-- Bottom hero section start -->
-    <div
-      class="max-w-[1536px] w-full mx-auto flex items-end lg:pt-[74px] mb-6 sm:mb-[50px] relative"
-    >
+      <!-- Bottom hero section start -->
       <div
-        class="max-md:hidden w-[65px] xl:w-[130px] h-[1px] bg-mistGreen flex-shrink-0"
-      ></div>
-      <div
-        class="w-full border-x border-x-mistGreen border-b border-b-mistGreen relative flex items-end justify-end"
+        class="max-w-[1536px] w-full mx-auto flex items-end lg:pt-[74px] mb-6 sm:mb-[50px] relative"
       >
-        <!-- Pill image -->
         <div
-          class="hero-ovel-image w-[22vw] lg:w-[210px] xl:w-[270px] h-[46vw] lg:h-[378px] xl:h-[478px] absolute -top-[90px] lg:-top-[184px] left-4 md:left-0 z-20 rounded-[200px] bg-cover bg-center"
-          style="background-image: url(./assets/img/heroPill.png)"
+          class="max-md:hidden w-[65px] xl:w-[130px] h-[1px] bg-mistGreen flex-shrink-0"
         ></div>
-        <!-- Gray pill -->
         <div
-          class="w-[22vw] lg:w-[210px] xl:w-[270px] h-[39vw] lg:h-[318px] xl:h-[418px] rounded-b-[200px] bg-seafoamWhite absolute left-[33vw] md:left-[235px] lg:left-[270px] xl:left-[310px] top-0"
-        ></div>
-        <!-- Main content -->
-        <div
-          class="max-w-[1024px] w-full flex flex-col lg:flex-row items-end justify-between gap-[5vw] lg:gap-4 relative z-20 lg:-mr-[30px] pt-[30px] lg:pt-[96px] pb-10 lg:pb-[60px] max-lg:px-4"
+          class="w-full border-x border-x-mistGreen border-b border-b-mistGreen relative flex items-end justify-end"
         >
-          <a
-            href="#aboutus"
-            class="w-[17vw] md:w-[130px] h-[26vw] md:h-[200px] lg:translate-y-6 flex-shrink-0"
+          <!-- Pill image -->
+          <div
+            class="hero-ovel-image w-[22vw] lg:w-[210px] xl:w-[270px] h-[46vw] lg:h-[378px] xl:h-[478px] absolute -top-[90px] lg:-top-[184px] left-4 md:left-0 z-20 rounded-[200px] bg-cover bg-center"
+            style="background-image: url(./assets/img/heroPill.png)"
+          ></div>
+          <!-- Gray pill -->
+          <div
+            class="w-[22vw] lg:w-[210px] xl:w-[270px] h-[39vw] lg:h-[318px] xl:h-[418px] rounded-b-[200px] bg-seafoamWhite absolute left-[33vw] md:left-[235px] lg:left-[270px] xl:left-[310px] top-0"
+          ></div>
+          <!-- Main content -->
+          <div
+            class="max-w-[1024px] w-full flex flex-col lg:flex-row items-end justify-between gap-[5vw] lg:gap-4 relative z-20 lg:-mr-[30px] pt-[30px] lg:pt-[96px] pb-10 lg:pb-[60px] max-lg:px-4"
+          >
+            <a
+              href="#aboutus"
+              class="w-[17vw] md:w-[130px] h-[26vw] md:h-[200px] lg:translate-y-6 flex-shrink-0"
+            >
+              <img
+                src="./assets/img/heroScrollDown.png"
+                alt="scroll down"
+                class="w-full h-full object-cover"
+              />
+            </a>
+            <img
+              src="./assets/svg/heroBelowRightArrow.svg"
+              alt="arrow right"
+              class="lg:pb-[29px] max-sm:max-w-16"
+            />
+            <div
+              class="flex flex-col items-center justify-center gap-[7vw] lg:gap-[104px]"
+            >
+              <div
+                class="w-full flex items-center justify-center gap-[10vw] lg:gap-20"
+              >
+                <div
+                  class="flex flex-col sm:max-w-[137px] w-full max-sm:text-center"
+                >
+                  <h3
+                    class="hero-number-text statsBannerCard__statistic invisible"
+                    data-number="14"
+                  >
+                    0
+                  </h3>
+                  <p
+                    class="text-[4.5vw] sm:text-[3vw] lg:text-[24px] font-medium leading-[5vw] sm:leading-[3.9vw] lg:leading-[32px] tracking-[1px]"
+                  >
+                    Years of experience
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col sm:max-w-[190px] w-full max-sm:text-center"
+                >
+                  <h3
+                    class="hero-number-text statsBannerCard__statistic invisible"
+                    data-number="300"
+                  >
+                    0
+                  </h3>
+                  <p
+                    class="text-[4.5vw] sm:text-[3vw] lg:text-[24px] font-medium leading-[5vw] sm:leading-[3.9vw] lg:leading-[32px] tracking-[1px]"
+                  >
+                    Projects completed
+                  </p>
+                </div>
+              </div>
+              <!-- Input area -->
+              <div
+                class="w-full flex flex-col gap-[4.5vw] lg:gap-[38px] items-center lg:items-start justify-center"
+              >
+                <h3
+                  class="text-[6vw] lg:text-[42px] font-bold leading-[46px] tracking-[-0.84px]"
+                >
+                  Start your project today.
+                </h3>
+                <form class="flex items-center justify-start h-10 sm:h-[66px]">
+                  <input
+                    required
+                    type="email"
+                    placeholder="Your email address"
+                    class="w-full lg:w-[358px] h-full bg-white px-3 sm:px-[26px] text-base sm:text-xl font-medium leading-[26px] outline-none"
+                  />
+                  <button
+                    type="submit"
+                    class="px-4 sm:px-[36px] text-base sm:text-lg md:text-xl font-black leading-[26px] text-white bg-deepCharcoal h-full whitespace-nowrap transition-all duration-300 ease-linear border border-deepCharcoal box-border hover:bg-transparent hover:text-deepCharcoal"
+                  >
+                    Let's Chat
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Yellow circle -->
+          <div
+            class="size-[304px] absolute -bottom-[135px] right-0 md:-right-[60px] xl:-right-[130px]"
           >
             <img
-              src="./assets/img/heroScrollDown.png"
-              alt="scroll down"
+              src="./assets/svg/yellowCircle.svg"
               class="w-full h-full object-cover"
+              alt="yellow orb"
             />
-          </a>
-          <img
-            src="./assets/svg/heroBelowRightArrow.svg"
-            alt="arrow right"
-            class="lg:pb-[29px] max-sm:max-w-16"
-          />
-          <div
-            class="flex flex-col items-center justify-center gap-[7vw] lg:gap-[104px]"
-          >
-            <div
-              class="w-full flex items-center justify-center gap-[10vw] lg:gap-20"
-            >
-              <div
-                class="flex flex-col sm:max-w-[137px] w-full max-sm:text-center"
-              >
-                <h3
-                  class="hero-number-text statsBannerCard__statistic invisible"
-                  data-number="14"
-                >
-                  0
-                </h3>
-                <p
-                  class="text-[4.5vw] sm:text-[3vw] lg:text-[24px] font-medium leading-[5vw] sm:leading-[3.9vw] lg:leading-[32px] tracking-[1px]"
-                >
-                  Years of experience
-                </p>
-              </div>
-              <div
-                class="flex flex-col sm:max-w-[190px] w-full max-sm:text-center"
-              >
-                <h3
-                  class="hero-number-text statsBannerCard__statistic invisible"
-                  data-number="300"
-                >
-                  0
-                </h3>
-                <p
-                  class="text-[4.5vw] sm:text-[3vw] lg:text-[24px] font-medium leading-[5vw] sm:leading-[3.9vw] lg:leading-[32px] tracking-[1px]"
-                >
-                  Projects completed
-                </p>
-              </div>
-            </div>
-            <!-- Input area -->
-            <div
-              class="w-full flex flex-col gap-[4.5vw] lg:gap-[38px] items-center lg:items-start justify-center"
-            >
-              <h3
-                class="text-[6vw] lg:text-[42px] font-bold leading-[46px] tracking-[-0.84px]"
-              >
-                Start your project today.
-              </h3>
-              <form class="flex items-center justify-start h-10 sm:h-[66px]">
-                <input
-                  required
-                  type="email"
-                  placeholder="Your email address"
-                  class="w-full lg:w-[358px] h-full bg-white px-3 sm:px-[26px] text-base sm:text-xl font-medium leading-[26px] outline-none"
-                />
-                <button
-                  type="submit"
-                  class="px-4 sm:px-[36px] text-base sm:text-lg md:text-xl font-black leading-[26px] text-white bg-deepCharcoal h-full whitespace-nowrap transition-all duration-300 ease-linear border border-deepCharcoal box-border hover:bg-transparent hover:text-deepCharcoal"
-                >
-                  Let's Chat
-                </button>
-              </form>
-            </div>
           </div>
         </div>
-        <!-- Yellow circle -->
+        <div class="max-md:hidden w-[65px] xl:w-[130px] flex-shrink-0"></div>
+        <!-- Vertical line -->
         <div
-          class="size-[304px] absolute -bottom-[135px] right-0 md:-right-[60px] xl:-right-[130px]"
-        >
-          <img
-            src="./assets/svg/yellowCircle.svg"
-            class="w-full h-full object-cover"
-            alt="yellow orb"
-          />
-        </div>
+          class="max-md:hidden w-[1px] h-[114px] bg-deepCharcoal flex-shrink-0 absolute top-[125px] right-[32px] xl:right-[65px]"
+        ></div>
       </div>
-      <div class="max-md:hidden w-[65px] xl:w-[130px] flex-shrink-0"></div>
-      <!-- Vertical line -->
-      <div
-        class="max-md:hidden w-[1px] h-[114px] bg-deepCharcoal flex-shrink-0 absolute top-[125px] right-[32px] xl:right-[65px]"
-      ></div>
+      <!-- Bottom hero section end -->
     </div>
-    <!-- Bottom hero section end -->
+
+    <!-- Hero section end -->
 
     <!-- About us section start -->
     <!-- Top about us start -->

@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         start: "top top",
         end: "top -500",
         scrub: 1,
-        pin: true,
+        pin: "#nav-hero-wrapper",
+        pinSpacing: false,
       },
     });
     gsap.set(".initial-pos", { opacity: 0 });
