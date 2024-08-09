@@ -2973,12 +2973,12 @@ body::-webkit-scrollbar {
 }
 
 @media (min-width: 1536px){
-  .\32xl\:right-\[100px\]{
-    right: 100px;
-  }
-
   .\32xl\:right-10{
     right: 2.5rem;
+  }
+
+  .\32xl\:right-\[100px\]{
+    right: 100px;
   }
 
   .\32xl\:mx-auto{
@@ -3001,10 +3001,6 @@ body::-webkit-scrollbar {
   .\32xl\:size-\[300px\]{
     width: 300px;
     height: 300px;
-  }
-
-  .\32xl\:w-\[41\.67vw\]{
-    width: 41.67vw;
   }
 
   .\32xl\:w-full{
