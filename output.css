@@ -798,10 +798,6 @@ video {
   top: 100px;
 }
 
-.top-\[160px\]{
-  top: 160px;
-}
-
 .top-\[3\.7vw\]{
   top: 3.7vw;
 }
@@ -1068,24 +1064,16 @@ video {
   height: 784px;
 }
 
+.h-\[804px\]{
+  height: 804px;
+}
+
 .h-full{
   height: 100%;
 }
 
 .h-screen{
   height: 100vh;
-}
-
-.h-1{
-  height: 0.25rem;
-}
-
-.h-20{
-  height: 5rem;
-}
-
-.h-\[804px\]{
-  height: 804px;
 }
 
 .max-h-\[223px\]{
@@ -1130,10 +1118,6 @@ video {
 
 .w-\[305px\]{
   width: 305px;
-}
-
-.w-\[46vw\]{
-  width: 46vw;
 }
 
 .w-\[540px\]{
@@ -1191,10 +1175,6 @@ video {
 
 .max-w-\[600px\]{
   max-width: 600px;
-}
-
-.max-w-\[670px\]{
-  max-width: 670px;
 }
 
 .max-w-\[738px\]{
@@ -1504,16 +1484,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-red-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
 .bg-contain{
@@ -2914,6 +2884,10 @@ body::-webkit-scrollbar {
 
   .xl\:max-w-\[1310px\]{
     max-width: 1310px;
+  }
+
+  .xl\:max-w-\[1320px\]{
+    max-width: 1320px;
   }
 
   .xl\:max-w-\[48\.4vw\]{
