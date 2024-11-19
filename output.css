@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 /*
-! tailwindcss v3.4.8 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -916,6 +916,14 @@ video {
   margin-top: 1rem;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
 .mt-\[25px\]{
   margin-top: 25px;
 }
@@ -1562,6 +1570,11 @@ video {
   padding-right: 65px;
 }
 
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1664,6 +1677,10 @@ video {
   font-size: 22px;
 }
 
+.text-\[28px\]{
+  font-size: 28px;
+}
+
 .text-\[32px\]{
   font-size: 32px;
 }
@@ -1721,6 +1738,10 @@ video {
 
 .leading-\[133\%\]{
   line-height: 133%;
+}
+
+.leading-\[162\.5\%\]{
+  line-height: 162.5%;
 }
 
 .leading-\[170\%\]{
@@ -2147,6 +2168,10 @@ body::-webkit-scrollbar {
     margin-top: 40px;
   }
 
+  .sm\:block{
+    display: block;
+  }
+
   .sm\:hidden{
     display: none;
   }
@@ -2259,6 +2284,10 @@ body::-webkit-scrollbar {
 
   .sm\:text-\[25px\]{
     font-size: 25px;
+  }
+
+  .sm\:text-\[32px\]{
+    font-size: 32px;
   }
 
   .sm\:text-\[3vw\]{
