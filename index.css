@@ -33,7 +33,7 @@
     @apply max-md:text-center font-medium text-[18px] md:text-[20px] leading-[150%] text-graphiteGray tracking-[1px] line-clamp-3;
   }
   .filter-buttons {
-    @apply p-2.5 text-lg font-bold leading-[150%] hover:rounded-xl duration-200 ease-in-out text-center border border-black;
+    @apply px-5 py-2 2xl:text-lg text-base font-bold leading-[150%] hover:rounded-xl duration-200 ease-in-out text-center border border-black font-inter text-black;
   }
 
   .filter-buttons.active {

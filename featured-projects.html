@@ -9,9 +9,11 @@
   </head>
   <body class="bg-ivoryMist">
     <!-- Filter Buttons -->
-    <section class="max-w-[1764px] w-full mx-auto px-4 mt-[76px] mb-[114px]">
+    <section
+      class="2xl:max-w-[1764px] max-w-[1322px] w-full mx-auto px-4 mt-[76px] mb-[114px]"
+    >
       <div
-        class="grid grid-cols-8 gap-2.5 justify-center mb-[55px] w-full"
+        class="flex xl:flex-nowrap flex-wrap xl:gap-3 gap-[35px] justify-between 2xl:mb-[55px] mb-8 w-full font-inter"
         id="filter-buttons"
       >
         <button class="filter-btn filter-buttons active" data-category="all">
@@ -51,7 +53,8 @@
           class="filter-btn filter-buttons border-black"
           data-category="commercial"
         >
-          Industrial Buildings
+          Industrial <br />
+          Buildings
         </button>
         <button
           class="filter-btn filter-buttons border-black"
@@ -75,7 +78,7 @@
       <div class="w-full">
         <div
           id="gallery"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-9 gap-y-[50px]"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-x-9 gap-y-[50px]"
         >
           <!-- Images will be dynamically inserted here -->
         </div>
@@ -83,105 +86,36 @@
     </section>
 
     <script>
-      // Image data
-      const images = [
-        {
-          id: 1,
-          src: "/assets/webp/card-1.webp",
-          category: "heritage",
-          alt: "Heritage building 1",
-        },
-        {
-          id: 2,
-          src: "/assets/webp/card-2.webp",
-          category: "museums",
-          alt: "Museum 1",
-        },
-        {
-          id: 3,
-          src: "/assets/webp/card-3.webp",
-          category: "service",
-          alt: "Service building 1",
-        },
-        {
-          id: 4,
-          src: "/assets/webp/card-4.webp",
-          category: "education",
-          alt: "Education building 1",
-        },
-        {
-          id: 5,
-          src: "/assets/webp/card-5.webp",
-          category: "commercial",
-          alt: "Commercial building 1",
-        },
-        {
-          id: 6,
-          src: "/assets/webp/card-6.webp",
-          category: "heritage",
-          alt: "Heritage building 2",
-        },
-        {
-          id: 7,
-          src: "/assets/webp/card-7.webp",
-          category: "museums",
-          alt: "Museum 2",
-        },
-        {
-          id: 8,
-          src: "/assets/webp/card-8.webp",
-          category: "service",
-          alt: "Service building 2",
-        },
-        {
-          id: 9,
-          src: "/assets/webp/card-9.webp",
-          category: "others",
-          alt: "Other building 1",
-        },
-        {
-          id: 10,
-          src: "/assets/webp/card-10.webp",
-          category: "commercial",
-          alt: "Commercial building 2",
-        },
-        {
-          id: 11,
-          src: "/assets/webp/card-11.webp",
-          category: "residential",
-          alt: "Residential building 1",
-        },
-        {
-          id: 12,
-          src: "/assets/webp/card-12.webp",
-          category: "others",
-          alt: "Other building 2",
-        },
-        {
-          id: 13,
-          src: "/assets/webp/card-13.webp",
-          category: "others",
-          alt: "Other building 2",
-        },
-        {
-          id: 14,
-          src: "/assets/webp/card-14.webp",
-          category: "others",
-          alt: "Other building 2",
-        },
-        {
-          id: 15,
-          src: "/assets/webp/card-15.webp",
-          category: "others",
-          alt: "Other building 2",
-        },
-        {
-          id: 16,
-          src: "/assets/webp/card-16.webp",
-          category: "others",
-          alt: "Other building 2",
-        },
-      ];
+      // Image data - Example of more items
+      const allImages = Array(64)
+        .fill(null)
+        .map((_, index) => ({
+          id: index + 1,
+          src: `/assets/webp/card-${(index % 16) + 1}.webp`,
+          category: getRandomCategory(),
+          alt: `Building ${index + 1}`,
+        }));
+
+      // Helper function to get random category
+      function getRandomCategory() {
+        const categories = [
+          "heritage",
+          "museums",
+          "service",
+          "education",
+          "commercial",
+          "residential",
+          "others",
+        ];
+        return categories[Math.floor(Math.random() * categories.length)];
+      }
+
+      // Variables for infinite scroll
+      let currentPage = 0;
+      const itemsPerPage = 16;
+      let isLoading = false;
+      let currentCategory = "all";
+      let filteredImages = allImages;
 
       // DOM Elements
       const gallery = document.getElementById("gallery");
@@ -191,49 +125,65 @@
       // Create image element
       function createImageElement(image) {
         return `
-                    <img  class="transition-transform hover:scale-105 cursor-pointer"
-                        src="${image.src}" 
-                        alt="${image.alt}" 
-                        class="w-full h-64 object-cover"
-                        loading="lazy"
-                    >
-            `;
+          <img class="transition-transform hover:scale-105 cursor-pointer w-full h-64 object-cover"
+              src="${image.src}" 
+              alt="${image.alt}" 
+              loading="lazy"
+          >
+        `;
+      }
+
+      // Load more images
+      function loadMoreImages() {
+        if (isLoading) return;
+
+        isLoading = true;
+        loadingSpinner.classList.remove("hidden");
+
+        setTimeout(() => {
+          const start = currentPage * itemsPerPage;
+          const end = start + itemsPerPage;
+          const nextImages = filteredImages.slice(start, end);
+
+          if (nextImages.length > 0) {
+            nextImages.forEach((image) => {
+              gallery.innerHTML += createImageElement(image);
+            });
+            currentPage++;
+          }
+
+          isLoading = false;
+          loadingSpinner.classList.add("hidden");
+        }, 800);
       }
 
       // Filter images
       function filterImages(category) {
-        // Show loading spinner
-        loadingSpinner.classList.remove("hidden");
+        // Reset pagination
+        currentPage = 0;
+        currentCategory = category;
 
-        // Simulate loading delay
-        setTimeout(() => {
-          const filteredImages =
-            category === "all"
-              ? images
-              : images.filter((img) => img.category === category);
+        // Filter images based on category
+        filteredImages =
+          category === "all"
+            ? allImages
+            : allImages.filter((img) => img.category === category);
 
-          // Clear gallery
-          gallery.innerHTML = "";
+        // Clear gallery
+        gallery.innerHTML = "";
 
-          // Add filtered images
-          filteredImages.forEach((image) => {
-            gallery.innerHTML += createImageElement(image);
-          });
-
-          // Hide loading spinner
-          loadingSpinner.classList.add("hidden");
-        }, 500);
+        // Load first page
+        loadMoreImages();
       }
 
-      // Event Listeners
+      // Event Listeners for buttons
       filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
           // Update active button
           filterButtons.forEach((btn) => {
             btn.classList.remove("active");
-            btn.classList.add("bg-transparent");
           });
-          button.classList.remove("bg-transparent");
+
           button.classList.add("active");
 
           // Filter images
@@ -241,6 +191,23 @@
           filterImages(category);
         });
       });
+
+      // Infinite scroll handler
+      function handleScroll() {
+        if (isLoading) return;
+
+        const endOfPage =
+          window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 100;
+
+        if (endOfPage) {
+          loadMoreImages();
+        }
+      }
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+
       // Initial load
       filterImages("all");
 
