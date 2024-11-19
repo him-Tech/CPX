@@ -32,6 +32,13 @@
   .service-para {
     @apply max-md:text-center font-medium text-[18px] md:text-[20px] leading-[150%] text-graphiteGray tracking-[1px] line-clamp-3;
   }
+  .filter-buttons {
+    @apply p-2.5 text-lg font-bold leading-[150%] hover:rounded-xl duration-200 ease-in-out text-center border border-black;
+  }
+
+  .filter-buttons.active {
+    @apply rounded-xl;
+  }
 }
 body::-webkit-scrollbar {
   display: none !important;

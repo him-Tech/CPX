@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Image Gallery with Filters</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+  </head>
+  <body class="bg-ivoryMist">
+    <!-- Filter Buttons -->
+    <section class="max-w-[1764px] w-full mx-auto px-4 mt-[76px] mb-[114px]">
+      <div
+        class="grid grid-cols-8 gap-2.5 justify-center mb-[55px] w-full"
+        id="filter-buttons"
+      >
+        <button class="filter-btn filter-buttons active" data-category="all">
+          All
+        </button>
+        <button
+          class="filter-btn filter-buttons border-black"
+          data-category="heritage"
+        >
+          Hospitals and Medical Buildings
+        </button>
+        <button
+          class="filter-btn filter-buttons border-black"
+          data-category="museums"
+        >
+          Museums
+        </button>
+        <button
+          class="filter-btn filter-buttons border-black"
+          data-category="service"
+        >
+          Service Buildings
+        </button>
+        <button
+          class="filter-btn filter-buttons border-black"
+          data-category="education"
+        >
+          Education facilities
+        </button>
+        <button
+          class="filter-btn filter-buttons border-black"
+          data-category="residential"
+        >
+          Residential Buildings
+        </button>
+        <button
+          class="filter-btn filter-buttons border-black"
+          data-category="commercial"
+        >
+          Industrial Buildings
+        </button>
+        <button
+          class="filter-btn filter-buttons border-black"
+          data-category="others"
+        >
+          Others
+        </button>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div
+        id="loading-spinner"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div
+          class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"
+        ></div>
+      </div>
+
+      <!-- Image Gallery Grid -->
+      <div class="w-full">
+        <div
+          id="gallery"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-9 gap-y-[50px]"
+        >
+          <!-- Images will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Image data
+      const images = [
+        {
+          id: 1,
+          src: "/assets/webp/card-1.webp",
+          category: "heritage",
+          alt: "Heritage building 1",
+        },
+        {
+          id: 2,
+          src: "/assets/webp/card-2.webp",
+          category: "museums",
+          alt: "Museum 1",
+        },
+        {
+          id: 3,
+          src: "/assets/webp/card-3.webp",
+          category: "service",
+          alt: "Service building 1",
+        },
+        {
+          id: 4,
+          src: "/assets/webp/card-4.webp",
+          category: "education",
+          alt: "Education building 1",
+        },
+        {
+          id: 5,
+          src: "/assets/webp/card-5.webp",
+          category: "commercial",
+          alt: "Commercial building 1",
+        },
+        {
+          id: 6,
+          src: "/assets/webp/card-6.webp",
+          category: "heritage",
+          alt: "Heritage building 2",
+        },
+        {
+          id: 7,
+          src: "/assets/webp/card-7.webp",
+          category: "museums",
+          alt: "Museum 2",
+        },
+        {
+          id: 8,
+          src: "/assets/webp/card-8.webp",
+          category: "service",
+          alt: "Service building 2",
+        },
+        {
+          id: 9,
+          src: "/assets/webp/card-9.webp",
+          category: "others",
+          alt: "Other building 1",
+        },
+        {
+          id: 10,
+          src: "/assets/webp/card-10.webp",
+          category: "commercial",
+          alt: "Commercial building 2",
+        },
+        {
+          id: 11,
+          src: "/assets/webp/card-11.webp",
+          category: "residential",
+          alt: "Residential building 1",
+        },
+        {
+          id: 12,
+          src: "/assets/webp/card-12.webp",
+          category: "others",
+          alt: "Other building 2",
+        },
+        {
+          id: 13,
+          src: "/assets/webp/card-13.webp",
+          category: "others",
+          alt: "Other building 2",
+        },
+        {
+          id: 14,
+          src: "/assets/webp/card-14.webp",
+          category: "others",
+          alt: "Other building 2",
+        },
+        {
+          id: 15,
+          src: "/assets/webp/card-15.webp",
+          category: "others",
+          alt: "Other building 2",
+        },
+        {
+          id: 16,
+          src: "/assets/webp/card-16.webp",
+          category: "others",
+          alt: "Other building 2",
+        },
+      ];
+
+      // DOM Elements
+      const gallery = document.getElementById("gallery");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const loadingSpinner = document.getElementById("loading-spinner");
+
+      // Create image element
+      function createImageElement(image) {
+        return `
+                    <img  class="transition-transform hover:scale-105 cursor-pointer"
+                        src="${image.src}" 
+                        alt="${image.alt}" 
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    >
+            `;
+      }
+
+      // Filter images
+      function filterImages(category) {
+        // Show loading spinner
+        loadingSpinner.classList.remove("hidden");
+
+        // Simulate loading delay
+        setTimeout(() => {
+          const filteredImages =
+            category === "all"
+              ? images
+              : images.filter((img) => img.category === category);
+
+          // Clear gallery
+          gallery.innerHTML = "";
+
+          // Add filtered images
+          filteredImages.forEach((image) => {
+            gallery.innerHTML += createImageElement(image);
+          });
+
+          // Hide loading spinner
+          loadingSpinner.classList.add("hidden");
+        }, 500);
+      }
+
+      // Event Listeners
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Update active button
+          filterButtons.forEach((btn) => {
+            btn.classList.remove("active");
+            btn.classList.add("bg-transparent");
+          });
+          button.classList.remove("bg-transparent");
+          button.classList.add("active");
+
+          // Filter images
+          const category = button.dataset.category;
+          filterImages(category);
+        });
+      });
+      // Initial load
+      filterImages("all");
+
+      // Add loading state for images
+      function handleImageLoading() {
+        const images = document.querySelectorAll("#gallery img");
+        images.forEach((img) => {
+          img.classList.add("opacity-0", "transition-opacity", "duration-300");
+          img.addEventListener("load", function () {
+            this.classList.remove("opacity-0");
+          });
+        });
+      }
+
+      // Observe gallery for changes and handle image loading
+      const observer = new MutationObserver(handleImageLoading);
+      observer.observe(gallery, { childList: true });
+    </script>
+  </body>
+</html>
