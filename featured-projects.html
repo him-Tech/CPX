@@ -4,84 +4,271 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css" />
-    <title>Image Gallery with Filters</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <title>Featured Projects</title>
   </head>
-  <body class="bg-ivoryMist">
-    <!-- Filter Buttons -->
-    <section
-      class="2xl:max-w-[1764px] max-w-[1322px] w-full mx-auto px-4 mt-[76px] mb-[114px]"
-    >
-      <div
-        class="flex xl:flex-nowrap flex-wrap xl:gap-3 gap-[35px] 2xl:justify-between 2xl:mb-[55px] mb-8 w-full font-inter"
-        id="filter-buttons"
-      >
-        <button class="filter-btn filter-buttons active" data-category="all">
-          All
-        </button>
-        <button
-          class="filter-btn filter-buttons border-black"
-          data-category="heritage"
-        >
-          Hospitals and Medical Buildings
-        </button>
-        <button
-          class="filter-btn filter-buttons border-black"
-          data-category="museums"
-        >
-          Museums
-        </button>
-        <button
-          class="filter-btn filter-buttons border-black"
-          data-category="service"
-        >
-          Service Buildings
-        </button>
-        <button
-          class="filter-btn filter-buttons border-black"
-          data-category="education"
-        >
-          Education facilities
-        </button>
-        <button
-          class="filter-btn filter-buttons border-black"
-          data-category="residential"
-        >
-          Residential Buildings
-        </button>
-        <button
-          class="filter-btn filter-buttons border-black"
-          data-category="commercial"
-        >
-          Industrial Buildings
-        </button>
-        <button
-          class="filter-btn filter-buttons border-black"
-          data-category="others"
-        >
-          Others
-        </button>
-      </div>
+  <body id="body" class="bg-ivoryMist font-inter">
+    <div
+      class="pointer-events-none w-10 h-10 fake-activity fixed bg-transparent"
+    ></div>
 
-      <!-- Loading Spinner -->
+    <button
+      id="scrollToTop"
+      class="hidden fixed bottom-6 right-6 size-12 bg-sunsetRed rounded-full shadow-xl z-[70] animate-bounce p-2"
+    >
+      <img
+        src="./assets/svg/backToTopArrow.svg"
+        alt="back to top"
+        class="w-full h-full object-cover"
+      />
+    </button>
+    <!-- Back to top btn end -->
+
+    <div id="nav-hero-wrapper" class="">
       <div
-        id="loading-spinner"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+        class="orange-moving-object ease-linear absolute z-[1004] opacity-0 pointer-events-none"
       >
+        <img src="./assets/img/orangeLogoIcon.png" class="w-full" alt="" />
+      </div>
+      <div
+        class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none"
+      >
+        <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
+      </div>
+      <!-- Navbar and sidebar start -->
+      <div
+        id="hero"
+        class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] relative z-[1003] navbar-wrapper w-full mx-auto px-4"
+      >
+        <!-- Navbar -->
+        <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
+          <!-- Logo -->
+          <div class="flex logo-wrappper">
+            <div class="final-pos">
+              <img
+                class="h-[70px] md:h-[90px]"
+                src="./assets/img/orangeLogoIcon.png"
+                alt="logo"
+              />
+            </div>
+            <img
+              class="h-[70px] logo-text md:h-[90px]"
+              src="./assets/img/logotext.png"
+              alt="logo-text"
+            />
+          </div>
+          <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
+            <a href="/" class="nav-link navbar-navlink"> Home </a>
+            <a href="#aboutus" class="nav-link navbar-navlink"> About us </a>
+            <a href="#services" class="nav-link navbar-navlink"> Services </a>
+            <a href="#portfolio" class="nav-link navbar-navlink">
+              Some of our work
+            </a>
+          </div>
+          <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
+            <button
+              class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
+              type="submit"
+            >
+              Contact Us
+            </button>
+            <div class="relative">
+              <button
+                id="languageDropdownButton"
+                class="flex items-center gap-1 w-[120px]"
+              >
+                <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
+                <p
+                  id="languageText"
+                  class="lg:text-graphiteGray text-white text-base font-medium leading-normal"
+                >
+                  English
+                </p>
+                <img src="/assets/svg/arrow.svg" alt="arrow" />
+              </button>
+              <div
+                id="languageDropdown"
+                class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg"
+              >
+                <a href="index.html" class="language-text" data-value="English"
+                  >English</a
+                >
+                <a
+                  href="portugues.html"
+                  class="language-text"
+                  data-value="Português"
+                  >Português</a
+                >
+              </div>
+            </div>
+          </div>
+          <img
+            id="navbtn"
+            class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
+            src="/assets/svg/HamburgerIcon.svg"
+            alt="HamburgerIcon"
+          />
+        </div>
+      </div>
+      <!-- Navbar and sidebar end -->
+    </div>
+    <!------------ sidebar start -------->
+    <div class="2xl:flex 2xl:items-center 2xl:justify-center">
+      <div class="2xl:flex-shrink-0">
         <div
-          class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"
+          id="sidebarbtn"
+          class="fixed z-[10000] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
+        >
+          <div class="flex flex-col gap-6">
+            <img
+              class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
+              id="cancel"
+              src="/assets/svg/Cross-Icon.svg"
+              alt="Cross-Icon"
+            />
+            <a href="/" class="sidebar-navlink"> Home </a>
+            <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
+            <a href="#services" class="nav-link sidebar-navlink"> Services </a>
+            <a href="#portfolio" class="nav-link sidebar-navlink">
+              Some of our work
+            </a>
+            <div class="flex gap-10 flex-col lg:hidden">
+              <button
+                class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
+                type="submit"
+              >
+                Contact Us
+              </button>
+              <div class="relative">
+                <button
+                  id="sidebarLanguageDropdownButton"
+                  class="flex items-center gap-3 max-w-[150px]"
+                >
+                  <img src="/assets/svg/language.svg" alt="language" />
+                  <p
+                    id="sidebarLanguageText"
+                    class="text-white text-xl font-medium leading-normal"
+                  >
+                    English
+                  </p>
+                  <img
+                    src="/assets/svg/sidebar-downward-icon.svg"
+                    alt="sidebar-downward-icon"
+                  />
+                </button>
+                <div
+                  id="sidebarLanguageDropdown"
+                  class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
+                >
+                  <a
+                    href="index.html"
+                    class="language-text"
+                    data-value="English"
+                    >English</a
+                  >
+                  <a
+                    href="portugues.html"
+                    class="language-text"
+                    data-value="Português"
+                    >Português</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="sidebar-overlay"
+          class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
         ></div>
       </div>
+    </div>
+    <!-- FILTER SECTION -->
+    <section
+      class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] w-full mx-auto px-4 flex flex-col items-center mb-[89px] h-[70dvh]"
+    >
+      <div class="lg:mt-[76px] mt-10 2xl:mb-[114px] mb-[82px] w-full">
+        <b class="sm:text-[82px] text-[60px] leading-[116%] text-deepCharcoal"
+          >Featured Projects</b
+        >
+        <p
+          class="sm:mt-[21px] mt-[21px] text-xl text-deepCharcoal 2xl:mb-[76px] xl:mb-[56px] sm:mb-[60px] mb-[71px]"
+        >
+          The portfolio below showcases the wide range of projects we deliver.
+          For bespoke projects, don’t hesitate to get in touch with us.
+        </p>
+        <!-- FILTER-BUTTONS -->
+        <div
+          class="flex flex-wrap gap-3 2xl:justify-between 2xl:mb-[55px] mb-8 w-full font-inter whitespace-nowrap"
+          id="filter-buttons"
+        >
+          <button class="filter-btn filter-buttons active" data-category="all">
+            All
+          </button>
+          <button
+            class="filter-btn filter-buttons border-black"
+            data-category="heritage"
+          >
+            Hospitals and Medical Buildings
+          </button>
+          <button
+            class="filter-btn filter-buttons border-black"
+            data-category="museums"
+          >
+            Museums
+          </button>
+          <button
+            class="filter-btn filter-buttons border-black"
+            data-category="service"
+          >
+            Service Buildings
+          </button>
+          <button
+            class="filter-btn filter-buttons border-black"
+            data-category="education"
+          >
+            Education facilities
+          </button>
+          <button
+            class="filter-btn filter-buttons border-black"
+            data-category="residential"
+          >
+            Residential Buildings
+          </button>
+          <button
+            class="filter-btn filter-buttons border-black"
+            data-category="commercial"
+          >
+            Industrial Buildings
+          </button>
+          <button
+            class="filter-btn filter-buttons border-black"
+            data-category="others"
+          >
+            Others
+          </button>
+        </div>
 
-      <!-- Image Gallery Grid -->
-      <div class="w-full">
+        <!-- Loading Spinner -->
+        <div
+          id="loading-spinner"
+          class="fixed flex items-center justify-center"
+        >
+          <div class="loader mx-auto"></div>
+        </div>
+
+        <!-- Image Gallery Grid -->
         <div
           id="gallery"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-x-9 gap-y-[50px]"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-9 gap-y-[50px]"
         >
           <!-- Images will be dynamically inserted here -->
         </div>
       </div>
+      <button
+        class="text-white text-[28px] leading-[92.857%] max-w-[425px] w-full mx-auto px-9 py-5 bg-deepCharcoal"
+      >
+        Let’s Chat
+      </button>
     </section>
 
     <script>
@@ -124,7 +311,7 @@
       // Create image element
       function createImageElement(image) {
         return `
-          <img class="transition-transform hover:scale-105 cursor-pointer w-full h-64 object-cover"
+          <img class="transition-transform hover:scale-105 cursor-pointer w-full min-h-[233px] max-h-[233px] object-center"
               src="${image.src}" 
               alt="${image.alt}" 
               loading="lazy"
@@ -225,5 +412,29 @@
       const observer = new MutationObserver(handleImageLoading);
       observer.observe(gallery, { childList: true });
     </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Include GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <!-- JS file -->
+    <script src="./index.js"></script>
+    <script src="./animation.js"></script>
   </body>
 </html>
