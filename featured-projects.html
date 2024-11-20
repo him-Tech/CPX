@@ -1,440 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./output.css" />
-    <title>Featured Projects</title>
-  </head>
-  <body id="body" class="bg-ivoryMist font-inter">
-    <div
-      class="pointer-events-none w-10 h-10 fake-activity fixed bg-transparent"
-    ></div>
 
-    <button
-      id="scrollToTop"
-      class="hidden fixed bottom-6 right-6 size-12 bg-sunsetRed rounded-full shadow-xl z-[70] animate-bounce p-2"
-    >
-      <img
-        src="./assets/svg/backToTopArrow.svg"
-        alt="back to top"
-        class="w-full h-full object-cover"
-      />
-    </button>
-    <!-- Back to top btn end -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./output.css" />
+  <title>Featured Projects</title>
+</head>
 
-    <div id="nav-hero-wrapper" class="">
-      <div
-        class="orange-moving-object ease-linear absolute z-[1004] opacity-0 pointer-events-none"
-      >
-        <img src="./assets/img/orangeLogoIcon.png" class="w-full" alt="" />
-      </div>
-      <div
-        class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none"
-      >
-        <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
-      </div>
-      <!-- Navbar and sidebar start -->
-      <div
-        id="hero"
-        class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] relative z-[1003] navbar-wrapper w-full mx-auto px-4"
-      >
-        <!-- Navbar -->
-        <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
-          <!-- Logo -->
-          <div class="flex logo-wrappper">
-            <div class="final-pos">
-              <img
-                class="h-[70px] md:h-[90px]"
-                src="./assets/img/orangeLogoIcon.png"
-                alt="logo"
-              />
+<body id="body" class="bg-ivoryMist font-inter">
+  <div class="pointer-events-none w-10 h-10 fake-activity fixed bg-transparent"></div>
+
+  <button id="scrollToTop"
+    class="hidden fixed bottom-6 right-6 size-12 bg-sunsetRed rounded-full shadow-xl z-[70] animate-bounce p-2">
+    <img src="./assets/svg/backToTopArrow.svg" alt="back to top" class="w-full h-full object-cover" />
+  </button>
+  <!-- Back to top btn end -->
+
+  <nav id="nav-hero-wrapper" class="">
+    <div class="orange-moving-object ease-linear absolute z-[1004] opacity-0 pointer-events-none">
+      <img src="./assets/img/orangeLogoIcon.png" class="w-full" alt="" />
+    </div>
+    <div class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none">
+      <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
+    </div>
+    <!-- Navbar and sidebar start -->
+    <div id="hero"
+      class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] relative z-[1003] navbar-wrapper w-full mx-auto px-4">
+      <!-- Navbar -->
+      <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
+        <!-- Logo -->
+        <div class="flex logo-wrappper">
+          <div class="final-pos">
+            <img class="h-[70px] md:h-[90px]" src="./assets/img/orangeLogoIcon.png" alt="logo" />
+          </div>
+          <img class="h-[70px] logo-text md:h-[90px]" src="./assets/img/logotext.png" alt="logo-text" />
+        </div>
+        <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
+          <a href="/" class="nav-link navbar-navlink"> Home </a>
+          <a href="#aboutus" class="nav-link navbar-navlink"> About us </a>
+          <a href="#services" class="nav-link navbar-navlink"> Services </a>
+          <a href="#portfolio" class="nav-link navbar-navlink">
+            Some of our work
+          </a>
+        </div>
+        <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
+          <button
+            class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
+            type="submit">
+            Contact Us
+          </button>
+          <div class="relative">
+            <button id="languageDropdownButton" class="flex items-center gap-1 w-[120px]">
+              <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
+              <p id="languageText" class="lg:text-graphiteGray text-white text-base font-medium leading-normal">
+                English
+              </p>
+              <img src="/assets/svg/arrow.svg" alt="arrow" />
+            </button>
+            <div id="languageDropdown"
+              class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg">
+              <a href="index.html" class="language-text" data-value="English">English</a>
+              <a href="portugues.html" class="language-text" data-value="Português">Português</a>
             </div>
-            <img
-              class="h-[70px] logo-text md:h-[90px]"
-              src="./assets/img/logotext.png"
-              alt="logo-text"
-            />
           </div>
-          <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
-            <a href="/" class="nav-link navbar-navlink"> Home </a>
-            <a href="#aboutus" class="nav-link navbar-navlink"> About us </a>
-            <a href="#services" class="nav-link navbar-navlink"> Services </a>
-            <a href="#portfolio" class="nav-link navbar-navlink">
-              Some of our work
-            </a>
-          </div>
-          <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
+        </div>
+        <img id="navbtn" class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
+          src="/assets/svg/HamburgerIcon.svg" alt="HamburgerIcon" />
+      </div>
+    </div>
+    <!-- Navbar and sidebar end -->
+  </nav>
+  <!------------ sidebar start -------->
+  <div class="2xl:flex 2xl:items-center 2xl:justify-center">
+    <div class="2xl:flex-shrink-0">
+      <div id="sidebarbtn"
+        class="fixed z-[10000] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl">
+        <div class="flex flex-col gap-6">
+          <img class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
+            id="cancel" src="/assets/svg/Cross-Icon.svg" alt="Cross-Icon" />
+          <a href="/" class="sidebar-navlink"> Home </a>
+          <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
+          <a href="#services" class="nav-link sidebar-navlink"> Services </a>
+          <a href="#portfolio" class="nav-link sidebar-navlink">
+            Some of our work
+          </a>
+          <div class="flex gap-10 flex-col lg:hidden">
             <button
-              class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
-              type="submit"
-            >
+              class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
+              type="submit">
               Contact Us
             </button>
             <div class="relative">
-              <button
-                id="languageDropdownButton"
-                class="flex items-center gap-1 w-[120px]"
-              >
-                <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
-                <p
-                  id="languageText"
-                  class="lg:text-graphiteGray text-white text-base font-medium leading-normal"
-                >
+              <button id="sidebarLanguageDropdownButton" class="flex items-center gap-3 max-w-[150px]">
+                <img src="/assets/svg/language.svg" alt="language" />
+                <p id="sidebarLanguageText" class="text-white text-xl font-medium leading-normal">
                   English
                 </p>
-                <img src="/assets/svg/arrow.svg" alt="arrow" />
+                <img src="/assets/svg/sidebar-downward-icon.svg" alt="sidebar-downward-icon" />
               </button>
-              <div
-                id="languageDropdown"
-                class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg"
-              >
-                <a href="index.html" class="language-text" data-value="English"
-                  >English</a
-                >
-                <a
-                  href="portugues.html"
-                  class="language-text"
-                  data-value="Português"
-                  >Português</a
-                >
-              </div>
-            </div>
-          </div>
-          <img
-            id="navbtn"
-            class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
-            src="/assets/svg/HamburgerIcon.svg"
-            alt="HamburgerIcon"
-          />
-        </div>
-      </div>
-      <!-- Navbar and sidebar end -->
-    </div>
-    <!------------ sidebar start -------->
-    <div class="2xl:flex 2xl:items-center 2xl:justify-center">
-      <div class="2xl:flex-shrink-0">
-        <div
-          id="sidebarbtn"
-          class="fixed z-[10000] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
-        >
-          <div class="flex flex-col gap-6">
-            <img
-              class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
-              id="cancel"
-              src="/assets/svg/Cross-Icon.svg"
-              alt="Cross-Icon"
-            />
-            <a href="/" class="sidebar-navlink"> Home </a>
-            <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
-            <a href="#services" class="nav-link sidebar-navlink"> Services </a>
-            <a href="#portfolio" class="nav-link sidebar-navlink">
-              Some of our work
-            </a>
-            <div class="flex gap-10 flex-col lg:hidden">
-              <button
-                class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
-                type="submit"
-              >
-                Contact Us
-              </button>
-              <div class="relative">
-                <button
-                  id="sidebarLanguageDropdownButton"
-                  class="flex items-center gap-3 max-w-[150px]"
-                >
-                  <img src="/assets/svg/language.svg" alt="language" />
-                  <p
-                    id="sidebarLanguageText"
-                    class="text-white text-xl font-medium leading-normal"
-                  >
-                    English
-                  </p>
-                  <img
-                    src="/assets/svg/sidebar-downward-icon.svg"
-                    alt="sidebar-downward-icon"
-                  />
-                </button>
-                <div
-                  id="sidebarLanguageDropdown"
-                  class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
-                >
-                  <a
-                    href="index.html"
-                    class="language-text"
-                    data-value="English"
-                    >English</a
-                  >
-                  <a
-                    href="portugues.html"
-                    class="language-text"
-                    data-value="Português"
-                    >Português</a
-                  >
-                </div>
+              <div id="sidebarLanguageDropdown"
+                class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg">
+                <a href="index.html" class="language-text" data-value="English">English</a>
+                <a href="portugues.html" class="language-text" data-value="Português">Português</a>
               </div>
             </div>
           </div>
         </div>
-        <div
-          id="sidebar-overlay"
-          class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
-        ></div>
       </div>
+      <div id="sidebar-overlay" class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"></div>
     </div>
-    <!-- FILTER SECTION -->
-    <section
-      class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] w-full mx-auto px-4 flex flex-col items-center mb-[89px] h-[70dvh]"
-    >
-      <div class="lg:mt-[76px] mt-10 2xl:mb-[114px] mb-[82px] w-full">
-        <b class="sm:text-[82px] text-[60px] leading-[116%] text-deepCharcoal"
-          >Featured Projects</b
-        >
-        <p
-          class="sm:mt-[21px] mt-[21px] text-xl text-deepCharcoal 2xl:mb-[76px] xl:mb-[56px] sm:mb-[60px] mb-[71px]"
-        >
-          The portfolio below showcases the wide range of projects we deliver.
-          For bespoke projects, don’t hesitate to get in touch with us.
-        </p>
-        <!-- FILTER-BUTTONS -->
-        <div
-          class="flex flex-wrap gap-3 2xl:justify-between 2xl:mb-[55px] mb-8 w-full font-inter whitespace-nowrap"
-          id="filter-buttons"
-        >
-          <button class="filter-btn filter-buttons active" data-category="all">
-            All
-          </button>
-          <button
-            class="filter-btn filter-buttons border-black"
-            data-category="heritage"
-          >
-            Hospitals and Medical Buildings
-          </button>
-          <button
-            class="filter-btn filter-buttons border-black"
-            data-category="museums"
-          >
-            Museums
-          </button>
-          <button
-            class="filter-btn filter-buttons border-black"
-            data-category="service"
-          >
-            Service Buildings
-          </button>
-          <button
-            class="filter-btn filter-buttons border-black"
-            data-category="education"
-          >
-            Education facilities
-          </button>
-          <button
-            class="filter-btn filter-buttons border-black"
-            data-category="residential"
-          >
-            Residential Buildings
-          </button>
-          <button
-            class="filter-btn filter-buttons border-black"
-            data-category="commercial"
-          >
-            Industrial Buildings
-          </button>
-          <button
-            class="filter-btn filter-buttons border-black"
-            data-category="others"
-          >
-            Others
-          </button>
-        </div>
-
-        <!-- Loading Spinner -->
-        <div
-          id="loading-spinner"
-          class="fixed flex items-center justify-center"
-        >
-          <div class="loader mx-auto"></div>
-        </div>
-
-        <!-- Image Gallery Grid -->
-        <div
-          id="gallery"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-9 gap-y-[50px]"
-        >
+  </div>
+  <!-- FILTER SECTION -->
+  <section
+    class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] w-full mx-auto px-4 flex flex-col items-center mb-[89px]">
+    <div class="lg:mt-[76px] mt-10 w-full">
+      <b class="sm:text-[82px] text-[60px] leading-[116%] text-deepCharcoal">Featured Projects</b>
+      <p class="sm:mt-[21px] mt-[21px] text-xl text-deepCharcoal 2xl:mb-[76px] xl:mb-[56px] sm:mb-[60px] mb-[71px]">
+        The portfolio below showcases the wide range of projects we deliver.
+        For bespoke projects, don’t hesitate to get in touch with us.
+      </p>
+      <!-- FILTER-BUTTONS -->
+      <div class="flex flex-wrap gap-3 2xl:justify-between 2xl:mb-[55px] mb-8 w-full font-inter whitespace-nowrap"
+        id="filter-buttons">
+        <button class="filter-btn filter-buttons active" data-category="all">
+          All
+        </button>
+        <button class="filter-btn filter-buttons border-black" data-category="heritage">
+          Hospitals and Medical Buildings
+        </button>
+        <button class="filter-btn filter-buttons border-black" data-category="museums">
+          Museums
+        </button>
+        <button class="filter-btn filter-buttons border-black" data-category="service">
+          Service Buildings
+        </button>
+        <button class="filter-btn filter-buttons border-black" data-category="education">
+          Education facilities
+        </button>
+        <button class="filter-btn filter-buttons border-black" data-category="residential">
+          Residential Buildings
+        </button>
+        <button class="filter-btn filter-buttons border-black" data-category="commercial">
+          Industrial Buildings
+        </button>
+        <button class="filter-btn filter-buttons border-black" data-category="others">
+          Others
+        </button>
+      </div>
+      <!-- Image Gallery Grid -->
+      <div class="flex flex-col items-center justify-center">
+        <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-9 gap-y-[50px]">
           <!-- Images will be dynamically inserted here -->
         </div>
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="flex items-center justify-center mt-10 z-50">
+          <div class="loader"></div>
+        </div>
+
+        <button
+          class="text-white text-[28px] leading-[92.857%] max-w-[425px] w-full mx-auto px-9 py-5 bg-deepCharcoal font-bold 2xl:mt-[114px] mt-[82px]">
+          Let’s Chat
+        </button>
       </div>
-      <button
-        class="text-white text-[28px] leading-[92.857%] max-w-[425px] w-full mx-auto px-9 py-5 bg-deepCharcoal"
-      >
-        Let’s Chat
-      </button>
-    </section>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="flex flex-col items-center">
+    <hr class="bg-deepCharcoal w-full opacity-[0.32]" />
+    <div
+      class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] w-full mx-auto px-4 pt-[65px] pb-[50px] flex items-center justify-between">
+      <p href="/" class="text-graphiteGray text-sm md:text-[15px] font-medium">
+        © Copyright 2024 CPX, Lda. - Consulting and Engineering Projects -
+        <a href="mailto:geral@cpx.com.pt"
+          class="underline text-graphiteGray text-sm md:text-[15px]">geral@cpx.com.pt</a>
+      </p>
+      <div class="flex items-center gap-[75px]">
+        <div class="flex items-center text-graphiteGray text-sm md:text-[15px] font-medium gap-1">
+          <p>website:</p>
+          <a href="mailto:www.mariaoliveira.co.uk"
+            class="underline text-graphiteGray text-sm md:text-[15px] font-medium">www.mariaoliveira.co.uk</a>
 
-    <script>
-      // Image data - Example of more items
-      const allImages = Array(64)
-        .fill(null)
-        .map((_, index) => ({
-          id: index + 1,
-          src: `/assets/webp/card-${(index % 16) + 1}.webp`,
-          category: getRandomCategory(),
-          alt: `Building ${index + 1}`,
-        }));
+        </div>
+        <a class="textgraphiteGray text-graphiteGray text-sm md:text-[15px] font-medium underline" href="">Terms &
+          Policies</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Simple array of images with categories
+    const allImages = [{
+        id: 1,
+        src: "/assets/webp/card-1.webp",
+        category: "heritage",
+        alt: "Heritage Building 1",
+      },
+      {
+        id: 2,
+        src: "/assets/webp/card-2.webp",
+        category: "museums",
+        alt: "Museum 1",
+      },
+      {
+        id: 3,
+        src: "/assets/webp/card-3.webp",
+        category: "heritage",
+        alt: "Heritage Building 2",
+      },
+      {
+        id: 4,
+        src: "/assets/webp/card-4.webp",
+        category: "education",
+        alt: "Education Building 1",
+      },
+      {
+        id: 5,
+        src: "/assets/webp/card-5.webp",
+        category: "commercial",
+        alt: "Commercial Building 1",
+      },
+      {
+        id: 6,
+        src: "/assets/webp/card-6.webp",
+        category: "residential",
+        alt: "Residential Building 1",
+      },
+      {
+        id: 7,
+        src: "/assets/webp/card-7.webp",
+        category: "museums",
+        alt: "Museum 2",
+      },
+      {
+        id: 8,
+        src: "/assets/webp/card-8.webp",
+        category: "service",
+        alt: "Service Building 1",
+      },
+      {
+        id: 9,
+        src: "/assets/webp/card-9.webp",
+        category: "education",
+        alt: "Education Building 2",
+      },
+      {
+        id: 10,
+        src: "/assets/webp/card-10.webp",
+        category: "commercial",
+        alt: "Commercial Building 2",
+      },
+      {
+        id: 11,
+        src: "/assets/webp/card-11.webp",
+        category: "residential",
+        alt: "Residential Building 2",
+      },
+      {
+        id: 12,
+        src: "/assets/webp/card-12.webp",
+        category: "others",
+        alt: "Other Building 1",
+      },
+      {
+        id: 13,
+        src: "/assets/webp/card-13.webp",
+        category: "heritage",
+        alt: "Heritage Building 3",
+      },
+      {
+        id: 14,
+        src: "/assets/webp/card-14.webp",
+        category: "museums",
+        alt: "Museum 3",
+      },
+      {
+        id: 15,
+        src: "/assets/webp/card-15.webp",
+        category: "service",
+        alt: "Service Building 2",
+      },
+      {
+        id: 16,
+        src: "/assets/webp/card-16.webp",
+        category: "others",
+        alt: "Other Building 2",
+      },
+      {
+        id: 17,
+        src: "/assets/webp/card-1.webp",
+        category: "heritage",
+        alt: "Heritage Building 1",
+      },
+      {
+        id: 18,
+        src: "/assets/webp/card-2.webp",
+        category: "museums",
+        alt: "Museum 1",
+      },
+      {
+        id: 19,
+        src: "/assets/webp/card-3.webp",
+        category: "heritage",
+        alt: "Heritage Building 2",
+      },
+      {
+        id: 20,
+        src: "/assets/webp/card-4.webp",
+        category: "education",
+        alt: "Education Building 1",
+      },
+      {
+        id: 21,
+        src: "/assets/webp/card-5.webp",
+        category: "commercial",
+        alt: "Commercial Building 1",
+      },
+      {
+        id: 22,
+        src: "/assets/webp/card-6.webp",
+        category: "residential",
+        alt: "Residential Building 1",
+      },
+      {
+        id: 23,
+        src: "/assets/webp/card-7.webp",
+        category: "museums",
+        alt: "Museum 2",
+      },
+      {
+        id: 24,
+        src: "/assets/webp/card-8.webp",
+        category: "service",
+        alt: "Service Building 1",
+      },
+      {
+        id: 25,
+        src: "/assets/webp/card-9.webp",
+        category: "education",
+        alt: "Education Building 2",
+      },
+      {
+        id: 26,
+        src: "/assets/webp/card-10.webp",
+        category: "commercial",
+        alt: "Commercial Building 2",
+      },
+      {
+        id: 27,
+        src: "/assets/webp/card-11.webp",
+        category: "residential",
+        alt: "Residential Building 2",
+      },
+      {
+        id: 28,
+        src: "/assets/webp/card-12.webp",
+        category: "others",
+        alt: "Other Building 1",
+      },
+      {
+        id: 29,
+        src: "/assets/webp/card-13.webp",
+        category: "heritage",
+        alt: "Heritage Building 3",
+      },
+      {
+        id: 30,
+        src: "/assets/webp/card-14.webp",
+        category: "museums",
+        alt: "Museum 3",
+      },
+      {
+        id: 31,
+        src: "/assets/webp/card-15.webp",
+        category: "service",
+        alt: "Service Building 2",
+      },
+      {
+        id: 32,
+        src: "/assets/webp/card-16.webp",
+        category: "others",
+        alt: "Other Building 2",
+      },
 
-      // Helper function to get random category
-      function getRandomCategory() {
-        const categories = [
-          "heritage",
-          "museums",
-          "service",
-          "education",
-          "commercial",
-          "residential",
-          "others",
-        ];
-        return categories[Math.floor(Math.random() * categories.length)];
+      {
+        id: 33,
+        src: "/assets/webp/card-1.webp",
+        category: "heritage",
+        alt: "Heritage Building 1",
+      },
+      {
+        id: 34,
+        src: "/assets/webp/card-2.webp",
+        category: "museums",
+        alt: "Museum 1",
+      },
+      {
+        id: 35,
+        src: "/assets/webp/card-3.webp",
+        category: "heritage",
+        alt: "Heritage Building 2",
+      },
+      {
+        id: 36,
+        src: "/assets/webp/card-4.webp",
+        category: "education",
+        alt: "Education Building 1",
+      },
+      {
+        id: 37,
+        src: "/assets/webp/card-5.webp",
+        category: "commercial",
+        alt: "Commercial Building 1",
+      },
+      {
+        id: 38,
+        src: "/assets/webp/card-6.webp",
+        category: "residential",
+        alt: "Residential Building 1",
+      },
+      {
+        id: 39,
+        src: "/assets/webp/card-7.webp",
+        category: "museums",
+        alt: "Museum 2",
+      },
+      {
+        id: 40,
+        src: "/assets/webp/card-8.webp",
+        category: "service",
+        alt: "Service Building 1",
+      },
+      {
+        id: 41,
+        src: "/assets/webp/card-9.webp",
+        category: "education",
+        alt: "Education Building 2",
+      },
+      {
+        id: 42,
+        src: "/assets/webp/card-10.webp",
+        category: "commercial",
+        alt: "Commercial Building 2",
+      },
+      {
+        id: 43,
+        src: "/assets/webp/card-11.webp",
+        category: "residential",
+        alt: "Residential Building 2",
+      },
+      {
+        id: 44,
+        src: "/assets/webp/card-12.webp",
+        category: "others",
+        alt: "Other Building 1",
+      },
+      {
+        id: 45,
+        src: "/assets/webp/card-13.webp",
+        category: "heritage",
+        alt: "Heritage Building 3",
+      },
+      {
+        id: 46,
+        src: "/assets/webp/card-14.webp",
+        category: "museums",
+        alt: "Museum 3",
+      },
+      {
+        id: 47,
+        src: "/assets/webp/card-15.webp",
+        category: "service",
+        alt: "Service Building 2",
+      },
+      {
+        id: 48,
+        src: "/assets/webp/card-16.webp",
+        category: "others",
+        alt: "Other Building 2",
+      },
+      {
+        id: 49,
+        src: "/assets/webp/card-1.webp",
+        category: "heritage",
+        alt: "Heritage Building 1",
+      },
+      {
+        id: 50,
+        src: "/assets/webp/card-2.webp",
+        category: "museums",
+        alt: "Museum 1",
+      },
+      {
+        id: 51,
+        src: "/assets/webp/card-3.webp",
+        category: "heritage",
+        alt: "Heritage Building 2",
+      },
+      {
+        id: 52,
+        src: "/assets/webp/card-4.webp",
+        category: "education",
+        alt: "Education Building 1",
+      },
+      {
+        id: 53,
+        src: "/assets/webp/card-5.webp",
+        category: "commercial",
+        alt: "Commercial Building 1",
+      },
+      {
+        id: 54,
+        src: "/assets/webp/card-6.webp",
+        category: "residential",
+        alt: "Residential Building 1",
+      },
+      {
+        id: 55,
+        src: "/assets/webp/card-7.webp",
+        category: "museums",
+        alt: "Museum 2",
+      },
+      {
+        id: 56,
+        src: "/assets/webp/card-8.webp",
+        category: "service",
+        alt: "Service Building 1",
+      },
+      {
+        id: 57,
+        src: "/assets/webp/card-9.webp",
+        category: "education",
+        alt: "Education Building 2",
+      },
+      {
+        id: 58,
+        src: "/assets/webp/card-10.webp",
+        category: "commercial",
+        alt: "Commercial Building 2",
+      },
+      {
+        id: 59,
+        src: "/assets/webp/card-11.webp",
+        category: "residential",
+        alt: "Residential Building 2",
+      },
+      {
+        id: 60,
+        src: "/assets/webp/card-12.webp",
+        category: "others",
+        alt: "Other Building 1",
+      },
+      {
+        id: 61,
+        src: "/assets/webp/card-13.webp",
+        category: "heritage",
+        alt: "Heritage Building 3",
+      },
+      {
+        id: 62,
+        src: "/assets/webp/card-14.webp",
+        category: "museums",
+        alt: "Museum 3",
+      },
+      {
+        id: 63,
+        src: "/assets/webp/card-15.webp",
+        category: "service",
+        alt: "Service Building 2",
+      },
+      {
+        id: 64,
+        src: "/assets/webp/card-16.webp",
+        category: "others",
+        alt: "Other Building 2",
+      },
+    ];
+
+    let currentPage = 0;
+    const itemsPerPage = 8;
+    let isLoading = false;
+    let currentCategory = 'all';
+    let filteredImages = allImages;
+
+    // DOM Elements
+    const gallery = document.getElementById('gallery');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const loadingSpinner = document.getElementById('loading-spinner');
+
+    // Add new element for end message
+    const endMessage = document.createElement('div');
+    endMessage.className = 'text-center text-xl text-gray-600 mt-8 mb-4';
+    endMessage.textContent = 'All items have been loaded';
+    endMessage.style.display = 'none';
+    gallery.parentNode.insertBefore(endMessage, loadingSpinner);
+
+    // Create image element
+    function createImageElement(image) {
+      return `
+    <img class="transition-transform hover:scale-105 cursor-pointer w-full min-h-[233px] max-h-[233px] object-center"
+      src="${image.src}" alt="${image.alt}" loading="lazy">
+  `;
+    }
+
+    // Load more images
+    function loadMoreImages() {
+      if (isLoading) return;
+
+      const start = currentPage * itemsPerPage;
+      const end = start + itemsPerPage;
+      const nextImages = filteredImages.slice(start, end);
+
+      // Check if we've reached the end of our images
+      if (nextImages.length === 0) {
+        loadingSpinner.classList.add('hidden');
+        endMessage.style.display = 'block';
+        return;
       }
 
-      // Variables for infinite scroll
-      let currentPage = 0;
-      const itemsPerPage = 16;
-      let isLoading = false;
-      let currentCategory = "all";
-      let filteredImages = allImages;
+      isLoading = true;
+      loadingSpinner.classList.remove('hidden');
+      endMessage.style.display = 'none';
 
-      // DOM Elements
-      const gallery = document.getElementById("gallery");
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const loadingSpinner = document.getElementById("loading-spinner");
+      setTimeout(() => {
+        nextImages.forEach(image => {
+          gallery.innerHTML += createImageElement(image);
+        });
+        currentPage++;
 
-      // Create image element
-      function createImageElement(image) {
-        return `
-          <img class="transition-transform hover:scale-105 cursor-pointer w-full min-h-[233px] max-h-[233px] object-center"
-              src="${image.src}" 
-              alt="${image.alt}" 
-              loading="lazy"
-          >
-        `;
-      }
+        isLoading = false;
+        loadingSpinner.classList.add('hidden');
 
-      // Load more images
-      function loadMoreImages() {
-        if (isLoading) return;
+        // Check if we've loaded all images
+        if ((currentPage * itemsPerPage) >= filteredImages.length) {
+          endMessage.style.display = 'block';
+        }
+      }, 800);
+    }
+    // Filter images
+    function filterImages(category) {
+      currentPage = 0;
+      currentCategory = category;
+      endMessage.style.display = 'none';
 
-        isLoading = true;
-        loadingSpinner.classList.remove("hidden");
+      filteredImages = category === 'all' ?
+        allImages :
+        allImages.filter(img => img.category === category);
 
-        setTimeout(() => {
-          const start = currentPage * itemsPerPage;
-          const end = start + itemsPerPage;
-          const nextImages = filteredImages.slice(start, end);
+      gallery.innerHTML = '';
+      loadMoreImages();
+    }
 
-          if (nextImages.length > 0) {
-            nextImages.forEach((image) => {
-              gallery.innerHTML += createImageElement(image);
-            });
-            currentPage++;
-          }
+    // Event Listeners for buttons
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const category = button.dataset.category;
+        filterImages(category);
+      });
+    });
 
-          isLoading = false;
-          loadingSpinner.classList.add("hidden");
-        }, 800);
-      }
+    // Infinite scroll handler
+    function handleScroll() {
+      if (isLoading) return;
 
-      // Filter images
-      function filterImages(category) {
-        // Reset pagination
-        currentPage = 0;
-        currentCategory = category;
+      const endOfPage = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
 
-        // Filter images based on category
-        filteredImages =
-          category === "all"
-            ? allImages
-            : allImages.filter((img) => img.category === category);
-
-        // Clear gallery
-        gallery.innerHTML = "";
-
-        // Load first page
+      if (endOfPage && currentPage * itemsPerPage < filteredImages.length) {
         loadMoreImages();
       }
+    }
 
-      // Event Listeners for buttons
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          // Update active button
-          filterButtons.forEach((btn) => {
-            btn.classList.remove("active");
-          });
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
 
-          button.classList.add("active");
+    // Initial load
+    filterImages('all');
 
-          // Filter images
-          const category = button.dataset.category;
-          filterImages(category);
+    // Add loading state for images
+    function handleImageLoading() {
+      const images = document.querySelectorAll('#gallery img');
+      images.forEach(img => {
+        img.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+        img.addEventListener('load', function () {
+          this.classList.remove('opacity-0');
         });
       });
+    }
 
-      // Infinite scroll handler
-      function handleScroll() {
-        if (isLoading) return;
+    // Observe gallery for changes and handle image loading
+    const observer = new MutationObserver(handleImageLoading);
+    observer.observe(gallery, {
+      childList: true
+    });
+  </script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Include GSAP and ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <!-- JS file -->
+  <script src="./index.js"></script>
+  <script src="./animation.js"></script>
+</body>
 
-        const endOfPage =
-          window.innerHeight + window.scrollY >=
-          document.documentElement.scrollHeight - 100;
-
-        if (endOfPage) {
-          loadMoreImages();
-        }
-      }
-
-      // Add scroll event listener
-      window.addEventListener("scroll", handleScroll);
-
-      // Initial load
-      filterImages("all");
-
-      // Add loading state for images
-      function handleImageLoading() {
-        const images = document.querySelectorAll("#gallery img");
-        images.forEach((img) => {
-          img.classList.add("opacity-0", "transition-opacity", "duration-300");
-          img.addEventListener("load", function () {
-            this.classList.remove("opacity-0");
-          });
-        });
-      }
-
-      // Observe gallery for changes and handle image loading
-      const observer = new MutationObserver(handleImageLoading);
-      observer.observe(gallery, { childList: true });
-    </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- Include GSAP and ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <!-- JS file -->
-    <script src="./index.js"></script>
-    <script src="./animation.js"></script>
-  </body>
 </html>
