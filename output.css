@@ -3214,6 +3214,10 @@ body::-webkit-scrollbar {
     justify-content: center;
   }
 
+  .\32xl\:justify-between{
+    justify-content: space-between;
+  }
+
   .\32xl\:gap-\[70px\]{
     gap: 70px;
   }
