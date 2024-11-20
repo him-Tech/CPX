@@ -1008,6 +1008,18 @@ video {
   margin-top: 82px;
 }
 
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mt-14{
+  margin-top: 3.5rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1160,10 +1172,6 @@ video {
   max-height: 233px;
 }
 
-.max-h-screen{
-  max-height: 100vh;
-}
-
 .min-h-\[233px\]{
   min-height: 233px;
 }
@@ -1174,10 +1182,6 @@ video {
 
 .min-h-full{
   min-height: 100%;
-}
-
-.min-h-screen{
-  min-height: 100vh;
 }
 
 .w-10{
@@ -1283,6 +1287,10 @@ video {
 
 .max-w-\[880px\]{
   max-width: 880px;
+}
+
+.max-w-\[400px\]{
+  max-width: 400px;
 }
 
 .flex-shrink-0{
@@ -1415,12 +1423,12 @@ video {
   gap: 5vw;
 }
 
-.gap-\[7vw\]{
-  gap: 7vw;
-}
-
 .gap-\[75px\]{
   gap: 75px;
+}
+
+.gap-\[7vw\]{
+  gap: 7vw;
 }
 
 .gap-x-9{
@@ -1430,10 +1438,6 @@ video {
 
 .gap-y-\[50px\]{
   row-gap: 50px;
-}
-
-.overflow-auto{
-  overflow: auto;
 }
 
 .overflow-hidden{
@@ -1501,10 +1505,6 @@ video {
   border-width: 1px;
 }
 
-.border-2{
-  border-width: 2px;
-}
-
 .border-x{
   border-left-width: 1px;
   border-right-width: 1px;
@@ -1540,11 +1540,6 @@ video {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-red-900{
-  --tw-border-opacity: 1;
-  border-color: rgb(127 29 29 / var(--tw-border-opacity));
 }
 
 .border-x-mistGreen{
@@ -1737,6 +1732,15 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.\!pb-\[100px\]{
+  padding-bottom: 100px !important;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -1751,6 +1755,10 @@ video {
 
 .pb-\[500px\]{
   padding-bottom: 500px;
+}
+
+.pb-\[50px\]{
+  padding-bottom: 50px;
 }
 
 .pl-1{
@@ -1791,10 +1799,6 @@ video {
 
 .pt-\[30px\]{
   padding-top: 30px;
-}
-
-.pb-\[50px\]{
-  padding-bottom: 50px;
 }
 
 .pt-\[65px\]{
@@ -1960,6 +1964,11 @@ video {
   color: rgb(92 94 94 / var(--tw-text-opacity));
 }
 
+.text-gray-600{
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
 .text-sunsetRed{
   --tw-text-opacity: 1;
   color: rgb(226 99 43 / var(--tw-text-opacity));
@@ -1968,11 +1977,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -2626,6 +2630,10 @@ body::-webkit-scrollbar {
     margin-top: 60px;
   }
 
+  .md\:mb-\[50px\]{
+    margin-bottom: 50px;
+  }
+
   .md\:block{
     display: block;
   }
@@ -2896,6 +2904,10 @@ body::-webkit-scrollbar {
     margin-top: 76px;
   }
 
+  .lg\:mb-\[60px\]{
+    margin-bottom: 60px;
+  }
+
   .lg\:hidden{
     display: none;
   }
@@ -3152,6 +3164,14 @@ body::-webkit-scrollbar {
     margin-bottom: 56px;
   }
 
+  .xl\:mb-\[70px\]{
+    margin-bottom: 70px;
+  }
+
+  .xl\:mt-\[82px\]{
+    margin-top: 82px;
+  }
+
   .xl\:h-\[418px\]{
     height: 418px;
   }
@@ -3180,6 +3200,11 @@ body::-webkit-scrollbar {
     width: 960px;
   }
 
+  .xl\:w-fit{
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .xl\:max-w-\[1310px\]{
     max-width: 1310px;
   }
@@ -3194,6 +3219,10 @@ body::-webkit-scrollbar {
 
   .xl\:max-w-\[48\.4vw\]{
     max-width: 48.4vw;
+  }
+
+  .xl\:flex-row{
+    flex-direction: row;
   }
 
   .xl\:gap-10{
@@ -3230,6 +3259,11 @@ body::-webkit-scrollbar {
   .xl\:py-12{
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .xl\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .xl\:pb-\[48px\]{
@@ -3300,6 +3334,10 @@ body::-webkit-scrollbar {
     margin-top: 114px;
   }
 
+  .\32xl\:mb-\[89px\]{
+    margin-bottom: 89px;
+  }
+
   .\32xl\:flex{
     display: flex;
   }
@@ -3349,6 +3387,10 @@ body::-webkit-scrollbar {
     max-width: 960px;
   }
 
+  .\32xl\:max-w-\[425px\]{
+    max-width: 425px;
+  }
+
   .\32xl\:flex-shrink-0{
     flex-shrink: 0;
   }
@@ -3377,6 +3419,10 @@ body::-webkit-scrollbar {
     gap: 70px;
   }
 
+  .\32xl\:gap-\[75px\]{
+    gap: 75px;
+  }
+
   .\32xl\:rounded-tr-\[500px\]{
     border-top-right-radius: 500px;
   }
@@ -3388,6 +3434,16 @@ body::-webkit-scrollbar {
   .\32xl\:px-0{
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .\32xl\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .\32xl\:px-9{
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 
   .\32xl\:pb-\[66px\]{
@@ -3408,5 +3464,9 @@ body::-webkit-scrollbar {
 
   .\32xl\:pr-\[75px\]{
     padding-right: 75px;
+  }
+
+  .\32xl\:text-\[28px\]{
+    font-size: 28px;
   }
 }
