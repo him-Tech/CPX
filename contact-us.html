@@ -359,70 +359,75 @@
         </article>
       </div>
     </section>
-    <!-- FORM-FIELD -->
-    <form
-      id="contactForm"
-      class="flex flex-col items-center space-y-[22px] max-w-[836px] w-full mx-auto px-4 pt-[50px] pb-[72px] rounded-lg mb-14 cc"
-    >
-      <!-- Name Field -->
-      <div class="relative flex items-center gap-1 w-full">
-        <label
-          for="name"
-          class="block text-black text-base leading-[144.444%] w-[112px] text-end font-medium"
-        >
-          Name:
-        </label>
-        <input
-          required
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your name"
-          class="w-full px-4 py-3 font-medium leading-[162.5%] text-graphiteGray placeholder-graphiteGray bg-transparent rounded-md outline-none focus-within:outline-vividCoral"
-        />
-      </div>
-
-      <!-- Email Field -->
-      <div class="relative flex items-center gap-1 w-full">
-        <label
-          for="email"
-          class="block text-black text-base leading-[144.444%] w-[112px] text-end font-medium"
-        >
-          Email:
-        </label>
-        <input
-          required
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your email address"
-          class="w-full px-4 py-3 font-medium leading-[162.5%] text-graphiteGray transition duration-200 placeholder-graphiteGray bg-transparent rounded-md outline-none focus-within:outline-vividCoral"
-        />
-      </div>
-      <!-- Message Field -->
-      <div class="relative flex items-start gap-1 w-full">
-        <label
-          for="message"
-          class="block text-black text-base leading-[144.444%] w-[112px] text-end font-medium mt-2"
-        >
-          Message:
-        </label>
-        <textarea
-          required
-          id="message"
-          name="message"
-          rows="4"
-          placeholder="Tell a bit about the project"
-          class="w-full px-3 py-2 placeholder-graphiteGray bg-transparent resize-none rounded-md outline-none focus-within:outline-vividCoral"
-        ></textarea>
-      </div>
-      <button
-        class="text-white 2xl:text-[28px] xl:text-xl text-base leading-[92.857%] 2xl:max-w-[425px] max-w-[400px] w-full mx-auto 2xl:px-9 px-6 py-3 bg-deepCharcoal font-bold mt-[33px]"
-        type="submit"
+    <!-- FORM-FILL -->
+    <section class="max-w-[1112px] w-full mx-auto px-4">
+      <b
+        class="text-[42px] leading-[109.524%] tracking-[-0.84px] text-deepCharcoal"
       >
-        Let’s Chat
-      </button>
-    </form>
+        Fill this form and we’ll get back to you
+      </b>
+      <!-- FORM-FIELD -->
+      <form
+        id="contactForm"
+        class="flex flex-col items-center space-y-[22px] max-w-[836px] w-full mx-auto px-4 pt-[50px] pb-[72px] rounded-lg mb-14"
+      >
+        <!-- Name Field -->
+        <div class="flex items-center gap-2 w-full">
+          <label
+            for="name"
+            class="block text-black text-base leading-[144.444%] w-[112px] text-end font-medium"
+          >
+            Name:
+          </label>
+          <input
+            required
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            class="w-full px-4 py-3 font-medium leading-[162.5%] text-graphiteGray placeholder-graphiteGray bg-white rounded-md outline-none focus-within:outline-graphiteGray border-graphiteGray border focus-within:border-transparent"
+          />
+        </div>
+
+        <!-- Email Field -->
+        <div class="flex items-center gap-2 w-full">
+          <label
+            for="email"
+            class="block text-black text-base leading-[144.444%] w-[112px] text-end font-medium"
+          >
+            Email:
+          </label>
+          <input
+            required
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email address"
+            class="w-full px-4 py-3 font-medium leading-[162.5%] text-graphiteGray transition duration-200 placeholder-graphiteGray bg-white rounded-md outline-none focus-within:outline-graphiteGray border-graphiteGray border focus-within:border-transparent"
+          />
+        </div>
+        <!-- Message Field -->
+        <div class="flex items-start gap-2 w-full">
+          <label
+            for="message"
+            class="block text-black text-base leading-[144.444%] w-[112px] text-end font-medium mt-2"
+          >
+            Message:
+          </label>
+          <textarea
+            required
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Tell a bit about the project"
+            class="w-full px-3 py-2 placeholder-graphiteGray bg-white rounded-md outline-none focus-within:outline-graphiteGray border-graphiteGray border focus-within:border-transparent"
+          ></textarea>
+        </div>
+        <button class="primary-button mt-[33px]" type="submit">
+          Let’s Chat
+        </button>
+      </form>
+    </section>
 
     <!-- FOOTER -->
     <footer>

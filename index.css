@@ -40,6 +40,12 @@
   .filter-buttons.active {
     @apply rounded-xl text-ivoryMist bg-vividCoral border-transparent;
   }
+  .primary-button {
+    @apply text-white 2xl:text-[28px] xl:text-xl text-base leading-[92.857%] 2xl:max-w-[425px] max-w-[400px] w-full mx-auto 2xl:px-9 px-6 py-3 bg-deepCharcoal font-bold;
+  }
+  .heading {
+    @apply 3xl:text-[82px] 2xl:text-[60px] xl:text-5xl text-4xl leading-[116%] text-deepCharcoal;
+  }
 }
 
 body::-webkit-scrollbar {
