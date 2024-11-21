@@ -34,7 +34,7 @@
   }
 
   .filter-buttons {
-    @apply px-5 py-2 2xl:text-lg text-base font-bold leading-[150%] hover:rounded-xl duration-200 ease-in-out text-center border border-black font-inter text-black ;
+    @apply px-5 py-2 2xl:text-lg text-base font-bold leading-[150%] hover:rounded-xl duration-200 ease-in-out text-center border border-black font-inter text-black;
   }
 
   .filter-buttons.active {
