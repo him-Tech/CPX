@@ -34,14 +34,14 @@
   }
 
   .filter-buttons {
-    @apply px-5 py-2 2xl:text-lg text-base font-bold leading-[150%] hover:rounded-xl duration-200 ease-in-out text-center border border-black font-inter text-black;
+    @apply 3xl:px-5 2xl:px-4 sm:px-3 px-2 py-2 2xl:text-lg text-sm sm:text-base font-bold leading-[150%] hover:rounded-xl duration-200 ease-in-out text-center border border-black font-inter text-black;
   }
 
   .filter-buttons.active {
     @apply rounded-xl text-ivoryMist bg-vividCoral border-transparent;
   }
   .primary-button {
-    @apply text-white 2xl:text-[28px] xl:text-xl text-base leading-[92.857%] 2xl:max-w-[425px] max-w-[400px] w-full mx-auto 2xl:px-9 px-6 py-3 bg-deepCharcoal font-bold;
+    @apply hover:bg-transparent border border-deepCharcoal hover:text-deepCharcoal transition-all duration-200 ease-in-out text-white 3xl:text-[28px] 2xl:text-[26px] xl:text-xl text-base leading-[92.857%] 2xl:max-w-[425px] max-w-[400px] w-full mx-auto 2xl:px-9 px-6 py-3 bg-deepCharcoal font-bold;
   }
   .heading {
     @apply 3xl:text-[82px] 2xl:text-[60px] xl:text-5xl text-4xl leading-[116%] text-deepCharcoal;
