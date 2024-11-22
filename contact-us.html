@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css" />
     <title>CPX Contact us</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
 
   <body id="body" class="bg-ivoryMist font-inter">
@@ -396,6 +400,63 @@
         </div>
       </div>
     </footer>
+
+    <!-- EmailJS Script -->
+    <script>
+      // Initialize EmailJS
+      emailjs.init("fJz4xQY6rBeICSp93"); // Replace with your EmailJS public key
+
+      // Add form submission handler
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Prepare form data
+          const formData = {
+            name: this.name.value,
+            email: this.email.value,
+            message: this.message.value,
+          };
+
+          // Disable button while sending email
+          const submitButton = this.querySelector("button");
+          submitButton.disabled = true;
+          submitButton.textContent = "Sending...";
+
+          // Send email to admin
+          const adminPromise = emailjs.send(
+            "service_t4yc0uk",
+            "template_g8mzp78",
+            formData
+          );
+
+          // Send confirmation email to user
+          const userPromise = emailjs.send(
+            "service_t4yc0uk",
+            "template_4qyzejt",
+            {
+              name: formData.name,
+              message: formData.message,
+              email: formData.email,
+            }
+          );
+
+          // Wait for both emails to complete
+          Promise.all([adminPromise, userPromise])
+            .then(() => {
+              submitButton.disabled = false;
+              submitButton.textContent = "Let’s Chat";
+              this.reset(); // Reset the form
+            })
+            .catch((error) => {
+              console.error("Email sending error:", error);
+              alert("Failed to send message. Please try again later.");
+              submitButton.disabled = false;
+              submitButton.textContent = "Let’s Chat";
+            });
+        });
+    </script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
