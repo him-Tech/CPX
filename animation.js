@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const finalelement = document.querySelector(".final-pos");
     const finalPos = finalelement.getBoundingClientRect();
-    console.log(finalPos);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "body",
