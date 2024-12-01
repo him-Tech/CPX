@@ -211,16 +211,20 @@ body::-webkit-scrollbar {
 }
 
 .modal-content {
-  background: white;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  border-radius: 8px;
   transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   position: relative;
   top: 0;
+  max-width: 800px;
+  margin: auto;
+}
+.modal-main {
+  background: white;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
 }
 
 .modal-overlay.active .modal-content {
@@ -232,7 +236,6 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -251,30 +254,11 @@ body::-webkit-scrollbar {
   color: #6b7280;
 }
 
-.modal-body {
-  padding: 24px;
-}
-
 .modal-image {
   width: 100%;
   height: auto;
   border-radius: 4px;
   margin-bottom: 20px;
-}
-
-.modal-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.modal-subtitle {
-  color: #6b7280;
-  margin-bottom: 4px;
-}
-
-.modal-location {
-  color: #6b7280;
 }
 
 .swiper-container {
