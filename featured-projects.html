@@ -68,7 +68,7 @@
             <div id="languageDropdown"
               class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg">
               <a href="/featured-projects.html" class="language-text" data-value="English">English</a>
-              <a href="/Projectos-em-destaque.html" class="language-text" data-value="Português">Português</a>
+              <a href="/projectos-em-destaque.html" class="language-text" data-value="Português">Português</a>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@
               <div id="sidebarLanguageDropdown"
                 class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg">
                 <a href="/featured-projects.html" class="language-text" data-value="English">English</a>
-                <a href="/Projectos-em-destaque.html" class="language-text" data-value="Português">Português</a>
+                <a href="/projectos-em-destaque.html" class="language-text" data-value="Português">Português</a>
               </div>
             </div>
           </div>
@@ -180,16 +180,16 @@
       <!------------ modal--------------- -->
       <div id="imageModal" class="modal-overlay">
         <div class="modal-content px-4 !z-[2000]">
-          <div class=" modal-main">
+          <div class=" modal-main bg-white rounded-lg">
 
         
-          <div class="modal-header px-4 py-2 sm:py-4">
+          <div class="modal-header px-4">
             <h2>Project Details</h2>
             <button id="closeModal" class="modal-close-btn">×</button>
           </div>
           <div class="modal-body  p-3 sm:p-6">
             <swiper-container class="mySwiper !h-[250px] sm:!h-[340px]" pagination="false" loop="true" space-between="30"
-              centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+              centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false"  slidesPerView="1">
               <swiper-slide><img class="object-cover" src="" alt=""></swiper-slide>
             </swiper-container>
             <div class="modal-text">
@@ -1244,6 +1244,7 @@
       const imageData = allImages.find(img => img.alt === alt);
 
       if (imageData) {
+        
         // Clear existing slides
         swiperContainer.innerHTML = '';
 
