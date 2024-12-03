@@ -1032,6 +1032,10 @@ video {
   z-index: 70;
 }
 
+.z-\[-1\]{
+  z-index: -1;
+}
+
 .float-start{
   float: inline-start;
 }
@@ -1383,6 +1387,10 @@ video {
   width: 100%;
 }
 
+.w-\[140px\]{
+  width: 140px;
+}
+
 .max-w-20{
   max-width: 5rem;
 }
@@ -1473,6 +1481,10 @@ video {
 
 .max-w-\[951px\]{
   max-width: 951px;
+}
+
+.max-w-\[1322px\]{
+  max-width: 1322px;
 }
 
 .flex-shrink-0{
@@ -1730,6 +1742,11 @@ video {
   border-right-width: 1px;
 }
 
+.\!border-white{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
+}
+
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -1774,6 +1791,22 @@ video {
 .border-r-mistGreen{
   --tw-border-opacity: 1;
   border-right-color: rgb(170 173 172 / var(--tw-border-opacity));
+}
+
+.border-opacity-55{
+  --tw-border-opacity: 0.55;
+}
+
+.\!border-opacity-55{
+  --tw-border-opacity: 0.55 !important;
+}
+
+.\!border-opacity-80{
+  --tw-border-opacity: 0.8 !important;
+}
+
+.\!border-opacity-75{
+  --tw-border-opacity: 0.75 !important;
 }
 
 .\!bg-deepCharcoal{
@@ -2235,6 +2268,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-sunshineYellow{
+  --tw-text-opacity: 1;
+  color: rgb(255 212 118 / var(--tw-text-opacity));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -2644,7 +2682,6 @@ body::-webkit-scrollbar {
 .custom-pagination-bullet {
   width: 60px;
   height: 40px;
-  border: 2px solid transparent;
   border-radius: 4px;
   cursor: pointer;
   background-size: cover;
@@ -2679,7 +2716,7 @@ body::-webkit-scrollbar {
 }
 
 .swiper-pagination-custom {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.147);
   padding: 8px;
   border-radius: 20px;
   bottom: 10px;
@@ -2698,6 +2735,16 @@ body::-webkit-scrollbar {
     opacity: 0.6;
     margin: 0 4px;
   }
+}
+
+.no-pointer {
+  cursor: not-allowed;
+}
+
+.bg-fade {
+  background-color: #e0e0e0;
+  /* Light gray background for disabled state */
+  opacity: 0.6;
 }
 
 .focus-within\:border-transparent:focus-within{

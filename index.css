@@ -300,7 +300,6 @@ body::-webkit-scrollbar {
 .custom-pagination-bullet {
   width: 60px;
   height: 40px;
-  border: 2px solid transparent;
   border-radius: 4px;
   cursor: pointer;
   background-size: cover;
@@ -335,7 +334,7 @@ body::-webkit-scrollbar {
 }
 
 .swiper-pagination-custom {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.147);
   padding: 8px;
   border-radius: 20px;
   bottom: 10px;
@@ -354,4 +353,11 @@ body::-webkit-scrollbar {
     opacity: 0.6;
     margin: 0 4px;
   }
+}
+.no-pointer {
+  cursor: not-allowed;
+}
+.bg-fade {
+  background-color: #e0e0e0; /* Light gray background for disabled state */
+  opacity: 0.6;
 }

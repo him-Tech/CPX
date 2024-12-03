@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./output.css" />
-  <title>CPX Featured projects</title>
+  <title>CPX Projectos em Destaque</title>
 </head>
 
 <body id="body" class="bg-ivoryMist font-inter">
@@ -24,103 +24,261 @@
     <div class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none">
       <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
     </div>
-    <!-- Navbar and sidebar start -->
-    <div id="hero"
-      class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[951px] relative  navbar-wrapper w-full mx-auto px-4 md:px-8 2xl:px-12">
-      <!-- Navbar -->
-      <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
-        <!-- Logo -->
-        <div class="flex logo-wrappper">
-          <div class="final-pos">
-            <a href="/">
-              <img class="h-[70px] md:h-[90px]" src="./assets/img/orangeLogoIcon.png" alt="logo" />
-            </a>
-          </div>
+     <!-- Navbar and sidebar start -->
+      <div
+        id="hero"
+        class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[951px] relative  navbar-wrapper w-full mx-auto px-4 "
+      >
+        <!-- Navbar -->
+        <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
+          <!-- Logo -->
           <a href="/">
-            <img class="h-[70px] logo-text md:h-[90px]" src="./assets/img/logotext.png" alt="logo-text" />
-          </a>
-        </div>
-        <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
-          <a href="/" class="nav-link navbar-navlink"> Home </a>
-          <a href="#aboutus" class="nav-link navbar-navlink"> About us </a>
-          <a href="#services" class="nav-link navbar-navlink"> Services </a>
-          <a href="#portfolio" class="nav-link navbar-navlink">
-            Projects
-          </a>
-        </div>
-        <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
-          <a href="contact-us.html">
-              <button
-                class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
-                type="submit"
-              >
-                Contact Us
-              </button>
-            </a>
-          <div class="relative">
-            <button id="languageDropdownButton" class="flex items-center gap-1 w-[120px]">
-              <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
-              <p id="languageText" class="lg:text-graphiteGray text-white text-base font-medium leading-normal">
-                English
-              </p>
-              <img src="/assets/svg/arrow.svg" alt="arrow" />
-            </button>
-            <div id="languageDropdown"
-              class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg">
-              <a href="/featured-projects.html" class="language-text" data-value="English">English</a>
-              <a href="/projectos-em-destaque.html" class="language-text" data-value="Português">Português</a>
+            <div class="flex logo-wrappper">
+              <div class="final-pos">
+                <img
+                  class="h-[70px] md:h-[90px]"
+                  src="./assets/img/orangeLogoIcon.png"
+                  alt="logo"
+                />
+              </div>
+              <img
+                class="h-[70px] logo-text md:h-[90px]"
+                src="./assets/img/logotext.png"
+                alt="logo-text"
+              />
             </div>
-          </div>
-        </div>
-        <img id="navbtn" class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
-          src="/assets/svg/HamburgerIcon.svg" alt="HamburgerIcon" />
-      </div>
-    </div>
-    <!-- Navbar and sidebar end -->
-  </nav>
-  <!------------ sidebar start -------->
-  <div class="2xl:flex 2xl:items-center 2xl:justify-center">
-    <div class="2xl:flex-shrink-0">
-      <div id="sidebarbtn"
-        class="fixed z-[10000] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl">
-        <div class="flex flex-col gap-6">
-          <img class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
-            id="cancel" src="/assets/svg/Cross-Icon.svg" alt="Cross-Icon" />
-          <a href="/" class="sidebar-navlink"> Home </a>
-          <a href="#aboutus" class="nav-link sidebar-navlink"> About Us </a>
-          <a href="#services" class="nav-link sidebar-navlink"> Services </a>
-          <a href="#portfolio" class="nav-link sidebar-navlink">
-            Projects
           </a>
-          <div class="flex gap-10 flex-col lg:hidden">
-               <a href="contact-us.html">
+          <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
+            <a href="/" class="nav-link navbar-navlink"> Início </a>
+            <a href="#aboutus" class="nav-link navbar-navlink"> Conceito </a>
+            <a href="#services" class="nav-link navbar-navlink"> Serviços </a>
+            <a href="featured-projects.html" class="nav-link navbar-navlink">
+              Projectos
+            </a>
+          </div>
+          <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
+            <a href="/fale-connosco.html">
               <button
                 class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
                 type="submit"
               >
-                Contact Us
+                Contacte-nos
               </button>
             </a>
             <div class="relative">
-              <button id="sidebarLanguageDropdownButton" class="flex items-center gap-3 max-w-[150px]">
-                <img src="/assets/svg/language.svg" alt="language" />
-                <p id="sidebarLanguageText" class="text-white text-xl font-medium leading-normal">
-                  English
+              <button
+                id="languageDropdownButton"
+                class="flex items-center gap-1 w-[140px]"
+              >
+                <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
+                <p
+                  id="languageText"
+                  class="lg:text-graphiteGray text-white text-base font-medium leading-normal"
+                >
+                  Português
                 </p>
-                <img src="/assets/svg/sidebar-downward-icon.svg" alt="sidebar-downward-icon" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M19.92 8.94995L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.94995"
+                    stroke="#494341"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </button>
-              <div id="sidebarLanguageDropdown"
-                class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg">
-                <a href="/featured-projects.html" class="language-text" data-value="English">English</a>
-                <a href="/projectos-em-destaque.html" class="language-text" data-value="Português">Português</a>
+              <div
+                id="languageDropdown"
+                class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg"
+              >
+                <a
+                  href="/featured-projects.html"
+                  class="language-text"
+                  data-value="English"
+                  >English</a
+                >
+                <a
+                  href="/projectos-em-destaque.html"
+                  class="language-text"
+                  data-value="Português"
+                  >Português</a
+                >
+              </div>
+            </div>
+          </div>
+          <svg
+            id="navbtn"
+            class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="#FB923C"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect y="4" width="24" height="2" />
+            <rect y="11" width="24" height="2" />
+            <rect y="18" width="24" height="2" />
+          </svg>
+        </div>
+
+        <!-- Sidebar -->
+      </div>
+    </nav>
+      <!-- Navbar and sidebar end -->
+    <!------------ sidebar start -------->
+    <div class="2xl:flex 2xl:items-center 2xl:justify-center">
+      <div class="2xl:flex-shrink-0">
+        <div
+          id="sidebarbtn"
+          class="fixed z-[10000] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
+        >
+          <div class="flex flex-col gap-6">
+            <svg
+              class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
+              id="cancel"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                y1="5"
+                x2="19"
+                y2="19"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="5"
+                y1="19"
+                x2="19"
+                y2="5"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+            <a href="/" class="sidebar-navlink"> Início </a>
+            <a href="#aboutus" class="nav-link sidebar-navlink"> Conceito </a>
+            <a href="#services" class="nav-link sidebar-navlink"> Serviços </a>
+            <a href="featured-projects.html" class="nav-link sidebar-navlink">
+              Projectos
+            </a>
+            <div class="flex gap-10 flex-col lg:hidden">
+              <a href="/fale-connosco.html">
+                <button
+                  class="bg-white px-5 xl:px-7 py-4 text-sunsetRed text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
+                  type="submit"
+                >
+                  Contacte-nos
+                </button>
+              </a>
+              <div class="relative">
+                <button
+                  id="sidebarLanguageDropdownButton"
+                  class="flex items-center gap-3 max-w-[150px]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 3C16.95 8.84 16.95 15.16 15 21"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p
+                    id="sidebarLanguageText"
+                    class="text-white text-xl font-medium leading-normal"
+                  >
+                    Português
+                  </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M19.92 8.94995L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.94995"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id="sidebarLanguageDropdown"
+                  class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
+                >
+                  <a
+                    href="/featured-projects.html"
+                    class="language-text"
+                    data-value="English"
+                    >English</a
+                  >
+                  <a
+                    href="política-de-privacidade.html"
+                    class="language-text"
+                    data-value="Português"
+                    >Português</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div
+          id="sidebar-overlay"
+          class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
+        ></div>
       </div>
-      <div id="sidebar-overlay" class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"></div>
     </div>
-  </div>
   <!-- FILTER SECTION -->
   <section class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[951px] w-full mx-auto  px-4 md:px-8 2xl:px-12 flex flex-col
     items-center 2xl:mb-[89px] xl:mb-[70px] lg:mb-[60px] md:mb-[50px] mb-10">
@@ -178,11 +336,11 @@
       </div>
       <!------------ modal--------------- -->
       <!-- Modal Structure -->
-      <div id="imageModal" class="modal-overlay">
+       <div id="imageModal" class="modal-overlay">
         <div class="modal-content px-4 !z-[2000]">
           <div class="modal-main bg-white rounded-lg">
             <div class="modal-header px-4">
-              <h2>Detalhes do Projeto</h2>
+              <h2>Project Details</h2>
               <button id="closeModal" class="modal-close-btn">×</button>
             </div>
             <div class="modal-body p-3 sm:p-6">
@@ -212,7 +370,7 @@
                 <!-- Custom Pagination -->
                 <div class="flex items-center justify-center">
                   <div
-                    class="swiper-pagination-custom absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2 border border-black">
+                    class="swiper-pagination-custom absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2 border  !border-white !border-opacity-75">
                   </div>
                 </div>
               </div>
@@ -1438,103 +1596,116 @@
   <!-- JS file -->
   <script src="./index.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script>
-    function openModal(src, alt) {
-      const modal = document.getElementById('imageModal');
-      const swiperContainer = modal.querySelector('swiper-container');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalArchitect = document.getElementById('modalArchitect');
-      const modalLocation = document.getElementById('modalLocation');
-      const paginationContainer = modal.querySelector('.swiper-pagination-custom');
+ <script>
+  function openModal(src, alt) {
+    const modal = document.getElementById('imageModal');
+    const swiperContainer = modal.querySelector('swiper-container');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalArchitect = document.getElementById('modalArchitect');
+    const modalLocation = document.getElementById('modalLocation');
+    const paginationContainer = modal.querySelector('.swiper-pagination-custom');
 
-      const imageData = allImages.find(img => img.alt === alt);
+    const imageData = allImages.find(img => img.alt === alt);
 
-      if (imageData) {
-        // Clear existing slides
-        swiperContainer.innerHTML = '';
-        paginationContainer.innerHTML = '';
+    if (imageData) {
+      // Clear existing slides
+      swiperContainer.innerHTML = '';
+      paginationContainer.innerHTML = '';
 
-        // Add slides for each image
-        imageData.images.forEach((imgSrc, index) => {
-          swiperContainer.innerHTML += `
-        <swiper-slide>
-          <img src="${imgSrc}" alt="${imageData.alt}" class="w-full h-full rounded-lg object-cover">
-        </swiper-slide>
-      `;
+      // Add slides for each image
+      imageData.images.forEach((imgSrc, index) => {
+        swiperContainer.innerHTML += `
+          <swiper-slide>
+            <img src="${imgSrc}" alt="${imageData.alt}" class="w-full h-full rounded-lg object-cover">
+          </swiper-slide>
+        `;
 
-          // Add thumbnail pagination bullets
-          paginationContainer.innerHTML += `
-        <button 
-          class="custom-pagination-bullet ${index === 0 ? 'active' : ''}"
-          data-index="${index}"
-          style="background-image: url('${imgSrc}')">
-        </button>
-      `;
+        // Add thumbnail pagination bullets
+        paginationContainer.innerHTML += `
+          <button 
+            class="custom-pagination-bullet ${index === 0 ? 'active' : ''}"
+            data-index="${index}"
+            style="background-image: url('${imgSrc}')">
+          </button>
+        `;
+      });
+
+      modalTitle.textContent = imageData.title;
+      modalArchitect.textContent = `${imageData.architect}, ${imageData.year}`;
+      modalLocation.textContent = imageData.location;
+
+      // Navigation buttons
+      const prevBtn = modal.querySelector('.swiper-btn-prev');
+      const nextBtn = modal.querySelector('.swiper-btn-next');
+
+      const updateButtonState = () => {
+        const swiperInstance = swiperContainer.swiper;
+        const isBeginning = swiperInstance.isBeginning;
+        const isEnd = swiperInstance.isEnd;
+
+        // Update 'prev' button
+        prevBtn.disabled = isBeginning;
+        prevBtn.classList.toggle('no-pointer', isBeginning);
+        prevBtn.classList.toggle('bg-fade', isBeginning);
+
+        // Update 'next' button
+        nextBtn.disabled = isEnd;
+        nextBtn.classList.toggle('no-pointer', isEnd);
+        nextBtn.classList.toggle('bg-fade', isEnd);
+      };
+
+      const updatePagination = () => {
+        const activeIndex = swiperContainer.swiper.realIndex;
+        paginationContainer.querySelectorAll('.custom-pagination-bullet').forEach((bullet, index) => {
+          bullet.classList.toggle('active', index === activeIndex);
         });
+      };
 
-        modalTitle.textContent = imageData.title;
-        modalArchitect.textContent = `${imageData.architect}, ${imageData.year}`;
-        modalLocation.textContent = imageData.location;
-
-        // Initialize navigation and pagination
-        const prevBtn = modal.querySelector('.swiper-btn-prev');
-        const nextBtn = modal.querySelector('.swiper-btn-next');
+      const initializePagination = () => {
         const bullets = paginationContainer.querySelectorAll('.custom-pagination-bullet');
+        bullets.forEach((bullet) => {
+          const index = parseInt(bullet.dataset.index, 10);
+          bullet.addEventListener('click', () => {
+            swiperContainer.swiper.slideTo(index);
+          });
+        });
+      };
 
-        // Remove existing event listeners if any
-        prevBtn.replaceWith(prevBtn.cloneNode(true));
-        nextBtn.replaceWith(nextBtn.cloneNode(true));
+      // Wait for Swiper to be ready
+      const initializeSwiper = () => {
+        if (swiperContainer.swiper) {
+          const swiperInstance = swiperContainer.swiper;
 
-        // Get fresh references
-        const newPrevBtn = modal.querySelector('.swiper-btn-prev');
-        const newNextBtn = modal.querySelector('.swiper-btn-next');
+          // Add navigation listeners
+          prevBtn.addEventListener('click', () => swiperInstance.slidePrev());
+          nextBtn.addEventListener('click', () => swiperInstance.slideNext());
 
-        // Wait for Swiper to be ready
-        const initializeSwiper = () => {
-          if (swiperContainer.swiper) {
-            // Navigation
-            newPrevBtn.addEventListener('click', () => {
-              swiperContainer.swiper.slidePrev();
-            });
+          // Update states on slide change
+          swiperInstance.on('slideChange', () => {
+            updateButtonState();
+            updatePagination();
+          });
 
-            newNextBtn.addEventListener('click', () => {
-              swiperContainer.swiper.slideNext();
-            });
+          // Initialize pagination
+          initializePagination();
 
-            // Pagination
-            bullets.forEach((bullet, index) => {
-              // Remove existing listeners
-              const newBullet = bullet.cloneNode(true);
-              bullet.parentNode.replaceChild(newBullet, bullet);
+          // Initial state update
+          updateButtonState();
+          updatePagination();
+        } else {
+          // If swiper isn't ready yet, try again
+          setTimeout(initializeSwiper, 100);
+        }
+      };
 
-              // Add fresh click listener
-              newBullet.addEventListener('click', () => {
-                swiperContainer.swiper.slideTo(index);
-              });
-            });
-
-            // Update active bullet on slide change
-            swiperContainer.swiper.on('slideChange', () => {
-              const activeIndex = swiperContainer.swiper.realIndex;
-              paginationContainer.querySelectorAll('.custom-pagination-bullet').forEach((bullet, index) => {
-                bullet.classList.toggle('active', index === activeIndex);
-              });
-            });
-          } else {
-            // If swiper isn't ready yet, try again
-            setTimeout(initializeSwiper, 100);
-          }
-        };
-
-        // Start initialization
-        initializeSwiper();
-      }
-
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      // Start initialization
+      initializeSwiper();
     }
 
-  </script>
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+</script>
 </body>
 
 </html>
