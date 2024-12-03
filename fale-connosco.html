@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>CPX Fale connoscos</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+
+  <body id="body" class="bg-ivoryMist font-inter">
+    <div
+      class="pointer-events-none w-10 h-10 fake-activity fixed bg-transparent"
+    ></div>
+
+    <button
+      id="scrollToTop"
+      class="hidden fixed bottom-6 right-6 size-12 bg-sunsetRed rounded-full shadow-xl z-[70] animate-bounce p-2"
+    >
+      <img
+        src="./assets/svg/backToTopArrow.svg"
+        alt="back to top"
+        class="w-full h-full object-cover"
+      />
+    </button>
+    <!-- Back to top btn end -->
+
+    <nav id="nav-hero-wrapper" class="">
+      <div
+        class="orange-moving-object ease-linear absolute z-[1004] opacity-0 pointer-events-none"
+      >
+        <img src="./assets/img/orangeLogoIcon.png" class="w-full" alt="" />
+      </div>
+      <div
+        class="white-moving-object ease-linear z-[1005] fixed opacity-0 pointer-events-none"
+      >
+        <img src="./assets/img/whiteLogoIcon.png" class="w-full" alt="" />
+      </div>
+      <!-- Navbar and sidebar start -->
+      <div
+        id="hero"
+        class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] relative z-[1003] navbar-wrapper w-full mx-auto px-4"
+      >
+        <!-- Navbar -->
+        <div class="flex justify-between items-center gap-5 pt-4 md:pt-4">
+          <!-- Logo -->
+          <a href="/">
+            <div class="flex logo-wrappper">
+              <div class="final-pos">
+                <img
+                  class="h-[70px] md:h-[90px]"
+                  src="./assets/img/orangeLogoIcon.png"
+                  alt="logo"
+                />
+              </div>
+              <img
+                class="h-[70px] logo-text md:h-[90px]"
+                src="./assets/img/logotext.png"
+                alt="logo-text"
+              />
+            </div>
+          </a>
+          <div class="flex items-center gap-5 xl:gap-8 max-lg:hidden">
+            <a href="/" class="nav-link navbar-navlink"> Início </a>
+            <a href="#aboutus" class="nav-link navbar-navlink">Conceito </a>
+            <a href="#services" class="nav-link navbar-navlink"> Serviços </a>
+            <a
+              href="/projectos-em-destaque.html"
+              class="nav-link navbar-navlink"
+            >
+              Projectos
+            </a>
+          </div>
+          <div class="flex items-center gap-5 xl:gap-10 max-lg:hidden">
+            <button
+              class="bg-sunsetRed px-5 xl:px-7 py-4 text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-sunsetRed hover:text-sunsetRed transition-all duration-300 ease-in-out"
+              type="submit"
+            >
+              Contacte-nos
+            </button>
+            <div class="relative">
+              <button
+                id="languageDropdownButton"
+                class="flex items-center gap-1 w-[140px]"
+              >
+                <img src="./assets/svg/languageicon.svg" alt="Language Icon" />
+                <p
+                  id="languageText"
+                  class="lg:text-graphiteGray text-white text-base font-medium leading-normal"
+                >
+                  Português
+                </p>
+                <img src="/assets/svg/arrow.svg" alt="arrow" />
+              </button>
+              <div
+                id="languageDropdown"
+                class="hidden overflow-hidden absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg"
+              >
+                <a
+                  href="contact-us.html"
+                  class="language-text"
+                  data-value="English"
+                  >English</a
+                >
+                <a
+                  href="fale-connosco.html"
+                  class="language-text"
+                  data-value="Português"
+                  >Português</a
+                >
+              </div>
+            </div>
+          </div>
+          <img
+            id="navbtn"
+            class="lg:hidden cursor-pointer hover:scale-110 ease-in-out duration-300 transition-all"
+            src="/assets/svg/HamburgerIcon.svg"
+            alt="HamburgerIcon"
+          />
+        </div>
+      </div>
+      <!-- Navbar and sidebar end -->
+    </nav>
+    <!------------ sidebar start -------->
+    <div class="2xl:flex 2xl:items-center 2xl:justify-center">
+      <div class="2xl:flex-shrink-0">
+        <div
+          id="sidebarbtn"
+          class="fixed z-[10000] bg-sunsetRed top-0 w-full sm:w-[50%] left-[-105%] h-screen p-6 duration-300 ease-in-out lg:hidden shadow-2xl"
+        >
+          <div class="flex flex-col gap-6">
+            <img
+              class="absolute right-3 hover:rotate-90 duration-300 ease-in-out transition-all cursor-pointer"
+              id="cancel"
+              src="/assets/svg/Cross-Icon.svg"
+              alt="Cross-Icon"
+            />
+            <a href="/" class="sidebar-navlink"> Início </a>
+            <a href="#aboutus" class="nav-link sidebar-navlink"> Conceito </a>
+            <a href="#services" class="nav-link sidebar-navlink"> Serviços </a>
+            <a
+              href="/projectos-em-destaque.html"
+              class="nav-link sidebar-navlink"
+            >
+              Projectos
+            </a>
+            <div class="flex gap-10 flex-col lg:hidden">
+              <button
+                class="bg-white md:px-7 py-2 md:py-4 text-sunsetRed hover:text-white text-base font-medium leading-[133%] hover:bg-transparent border-[1px] border-white transition-all duration-300 ease-in-out max-w-[200px] w-full"
+                type="submit"
+              >
+                Contacte-nos
+              </button>
+              <div class="relative">
+                <button
+                  id="sidebarLanguageDropdownButton"
+                  class="flex items-center gap-3 max-w-[150px]"
+                >
+                  <img src="/assets/svg/language.svg" alt="language" />
+                  <p
+                    id="sidebarLanguageText"
+                    class="text-white text-xl font-medium leading-normal"
+                  >
+                    Português
+                  </p>
+                  <img
+                    src="/assets/svg/sidebar-downward-icon.svg"
+                    alt="sidebar-downward-icon"
+                  />
+                </button>
+                <div
+                  id="sidebarLanguageDropdown"
+                  class="hidden overflow-hidden absolute mt-2 w-32 bg-white rounded-lg shadow-lg"
+                >
+                  <a
+                    href="contact-us.html"
+                    class="language-text"
+                    data-value="English"
+                    >English</a
+                  >
+                  <a
+                    href="fale-connosco.html"
+                    class="language-text"
+                    data-value="Português"
+                    >Português</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="sidebar-overlay"
+          class="fixed bg-black/30 backdrop-blur-sm inset-0 z-[60] hidden"
+        ></div>
+      </div>
+    </div>
+    <div class="relative overflow-hidden">
+      <!-- CONTACT-US -->
+      <section
+        class="max-w-[1112px] w-full mx-auto px-4 md:mt-[59px] sm:mt-10 mt-6 3xl:mb-[122px] 2xl:mb-24 xl:mb-20 md:mb-16 mb-10"
+      >
+        <b class="heading 3xl:mb-14 xl:mb-10 sm:mb-6 mb-4 inline-flex"
+          >Fale connosco</b
+        >
+        <div
+          id="contact"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        >
+          <article
+            class="flex flex-col items-center 3xl:px-[60px] xl:px-12 p-8 3xl:py-12 xl:py-8 py-6"
+          >
+            <img
+              class="object-cover 3xl:max-w-[146px] 2xl:max-w-[118px] sm:max-w-[100px] max-w-20 w-full"
+              src="/assets/svg/location.svg"
+              alt="location"
+            />
+            <h2
+              class="text-xl lg:text-[24px] xl:text-[28px] 2xl:text-[32px] font-black text-black md:pt-7 pt-2"
+            >
+              Sede
+            </h2>
+            <p
+              class="xl:text-xl lg:text-lg text-base font-medium text-[#5C5E5E] text-center pt-4"
+            >
+              Porto, Portugal
+            </p>
+            <p
+              class="3xl:text-xl lg:text-lg text-base font-medium text-[#5C5E5E] text-center py-4"
+            >
+              Rua do Revilão, 550 R/C <br class="hidden md:block" />
+              4100-626 Porto
+            </p>
+            <a
+              href="tel:+351 220 169 315"
+              class="flex items-center 3xl:text-[24px] lg:text-xl text-lg text-black font-medium"
+            >
+              <img
+                class="object-cover"
+                src="/assets/svg/calling.svg"
+                alt="calling"
+              />
+              +351 220 169 315
+            </a>
+          </article>
+          <article class="flex flex-col items-center h-full relative">
+            <div
+              class="flex flex-col items-center bg-white relative 3xl:px-[60px] xl:px-12 p-8 3xl:py-12 xl:py-8 py-6 w-full"
+            >
+              <img
+                class="object-cover 3xl:max-w-[146px] 2xl:max-w-[118px] sm:max-w-[100px] max-w-20"
+                src="/assets/svg/email.svg"
+                alt="email"
+              />
+              <h2
+                class="text-xl lg:text-[24px] xl:text-[28px] 2xl:text-[32px] font-black text-black md:mt-7 mt-2"
+              >
+                Email
+              </h2>
+              <a
+                href="mailto:geral@cpx.com.pt"
+                class="flex items-center xl:text-[24px] md:text-xl text-lg text-black font-medium md:mt-8 mt-6"
+              >
+                geral@cpx.com.pt
+              </a>
+            </div>
+            <div
+              class="bg-[#03060514] blur-[67px] absolute h-[266px] max-w-[312px] w-full bottom-0 z-[-10] pointer-events-none"
+            ></div>
+          </article>
+          <article
+            class="flex flex-col items-center 3xl:px-[60px] xl:px-12 p-8 3xl:py-12 xl:py-8 py-6"
+          >
+            <img
+              class="object-cover 3xl:max-w-[146px] 2xl:max-w-[118px] sm:max-w-[100px] max-w-20"
+              src="/assets/svg/location.svg"
+              alt="location"
+            />
+            <h1
+              class="text-xl lg:text-[24px] xl:text-[28px] 2xl:text-[32px] font-black text-black md:pt-7 pt-2"
+            >
+              Filial
+            </h1>
+            <p
+              class="3xl:text-xl lg:text-lg text-base font-medium text-deepCharcoal text-center pt-4"
+            >
+              Lisbon, Portugal
+            </p>
+            <p
+              class="3xl:text-xl lg:text-lg text-base font-medium text-deepCharcoal text-center py-4 max-w-[230px]"
+            >
+              Largo Adelino Amaro da Costa, 8, 2º esq., 1100-006 Lisboa
+            </p>
+            <a
+              href="tel:+351 220 169 315"
+              class="flex items-center 3xl:text-[24px] lg:text-xl text-lg text-black font-medium"
+            >
+              <img
+                class="object-cover"
+                src="/assets/svg/calling.svg"
+                alt="calling"
+              />
+              +351 211 514 357
+            </a>
+          </article>
+        </div>
+      </section>
+      <!-- FORM-FILL -->
+      <div
+        class="rounded-full opacity-[0.1] blur-[67px] rotate-[-15deg] bg-vividCoral max-w-[511px] h-[511px] w-full absolute right-0 translate-x-1/2 top-1/2 z-[-20] pointer-events-none"
+      ></div>
+      <section class="max-w-[1060px] overflow-hidden w-full mx-auto px-4">
+        <b
+          class="3xl:text-[42px] 2xl:text-4xl sm:text-3xl text-2xl leading-[109.524%] tracking-[-0.84px] text-deepCharcoal"
+        >
+          Preencha o formulário de contacto e entraremos em contacto
+        </b>
+        <!-- FORM-FIELD -->
+        <form
+          id="contactForm"
+          class="flex flex-col items-center space-y-[16px] sm:space-y-[22px] max-w-[836px] w-full mx-auto xl:pt-[50px] md:pt-10 pt-6 xl:pb-[72px] lg:pb-12 pb-8 rounded-lg xl:mb-14 md:mb-10"
+        >
+          <!-- Name Field -->
+          <div class="flex md:flex-row flex-col md:items-center gap-2 w-full">
+            <label
+              for="name"
+              class="block text-black md:text-base text-sm leading-[144.444%] md:w-[112px] md:text-end font-medium"
+            >
+              Nome:
+            </label>
+            <input
+              required
+              type="text"
+              id="name"
+              name="name"
+              placeholder="O seu nome"
+              class="w-full lg:px-4 px-3 lg:py-4 py-2 md:text-base text-sm font-medium leading-[162.5%] text-graphiteGray placeholder-graphiteGray bg-white rounded-md outline-none focus-within:outline-graphiteGray focus-within:border-transparent"
+            />
+          </div>
+
+          <!-- Email Field -->
+          <div class="flex md:flex-row flex-col md:items-center gap-2 w-full">
+            <label
+              for="email"
+              class="block text-black md:text-base text-sm leading-[144.444%] md:w-[112px] md:text-end font-medium"
+            >
+              Email:
+            </label>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              placeholder="O seu email"
+              class="w-full lg:px-4 px-3 lg:py-4 py-2 md:text-base text-sm font-medium leading-[162.5%] text-graphiteGray transition duration-200 placeholder-graphiteGray bg-white rounded-md outline-none focus-within:outline-graphiteGray focus-within:border-transparent"
+            />
+          </div>
+          <!-- Message Field -->
+          <div class="flex md:flex-row flex-col gap-2 w-full">
+            <label
+              for="message"
+              class="block text-black md:text-base text-sm leading-[144.444%] md:w-[112px] md:text-end font-medium md:mt-1.5"
+            >
+              Messagem:
+            </label>
+            <textarea
+              required
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Informação do projecto"
+              class="w-full px-3 py-2 placeholder-graphiteGray bg-white rounded-md outline-none focus-within:outline-graphiteGray focus-within:border-transparent"
+            ></textarea>
+          </div>
+          <button class="primary-button mt-[33px]" type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <span class="!bg-deepCharcoal opacity-[0.32] w-full flex h-[1px]"></span>
+      <div
+        class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] w-full mx-auto px-4 lg:pt-[65px] md:pt-14 pt-10 !pb-[22px] sm:!pb-[100px] flex xl:flex-row flex-col gap-4 items-center justify-between"
+      >
+        <div
+          class="text-graphiteGray text-sm md:text-[15px] font-medium xl:w-fit w-full text-center"
+        >
+          © Copyright 2024 CPX, Lda. - Consulting and Engineering Projects -
+          <a
+            href="mailto:geral@cpx.com.pt"
+            class="underline text-graphiteGray text-sm md:text-[15px]"
+            >geral@cpx.com.pt</a
+          >
+        </div>
+        <div
+          class="flex flex-wrap items-center justify-between xm:gap-10 gap-4 2xl:gap-[75px] xl:w-fit w-full text-center"
+        >
+          <div
+            class="flex items-center text-graphiteGray text-sm md:text-[15px] font-medium gap-1 mx-auto"
+          >
+            <p>website:</p>
+            <a
+              href="mailto:www.mariaoliveira.co.uk"
+              class="underline text-graphiteGray text-sm md:text-[15px] font-medium"
+              >www.mariaoliveira.co.uk</a
+            >
+          </div>
+          <a
+            class="textgraphiteGray text-graphiteGray text-sm md:text-[15px] font-medium underline mx-auto"
+            href="política-de-privacidade.html"
+            >Politica & Privacidade</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- EmailJS Script -->
+    <script>
+      // Toast notification function
+      function showToast(message, type = "success") {
+        // Remove existing toast if any
+        const existingToast = document.querySelector(".toast");
+        if (existingToast) {
+          existingToast.remove();
+        }
+
+        // Create toast element
+        const toast = document.createElement("div");
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `
+                <span>${message}</span>
+                <button class="toast-close">&times;</button>
+            `;
+
+        // Add toast to document
+        document.body.appendChild(toast);
+
+        // Handle close button
+        const closeButton = toast.querySelector(".toast-close");
+        closeButton.addEventListener("click", () => {
+          toast.style.animation = "slideOut 0.3s ease-in-out forwards";
+          setTimeout(() => toast.remove(), 300);
+        });
+
+        // Auto remove after 3 seconds
+        setTimeout(() => {
+          if (toast.parentElement) {
+            toast.style.animation = "slideOut 0.3s ease-in-out forwards";
+            setTimeout(() => toast.remove(), 300);
+          }
+        }, 3000);
+      }
+
+      // Initialize EmailJS
+      emailjs.init("_WzKV0pX073zlzt9K");
+
+      // Form submission handler
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const submitButton = this.querySelector("button");
+          submitButton.disabled = true;
+          submitButton.textContent = "Sending...";
+
+          // Prepare form data
+          const formData = {
+            name: this.name.value,
+            email: this.email.value,
+            message: this.message.value,
+          };
+
+          try {
+            // Send emails
+            await Promise.all([
+              emailjs.send("service_dke0v1s", "template_8tymq2o", formData),
+              emailjs.send("service_dke0v1s", "template_nlv41t9", {
+                name: formData.name,
+                message: formData.message,
+                email: formData.email,
+              }),
+            ]);
+
+            // Show success message
+            showToast("Message sent successfully!", "success");
+            this.reset();
+          } catch (error) {
+            console.error("Email sending error:", error);
+            showToast(
+              "Failed to send message. Please try again later.",
+              "error"
+            );
+          } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = "Let's Chat";
+          }
+        });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Include GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!-- JS file -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./index.js"></script>
+    <div class="toast-overlay" id="toast-overlay"></div>
+  </body>
+</html>
