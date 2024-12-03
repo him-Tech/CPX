@@ -176,28 +176,54 @@
         </button>
       </a>
       </div>
-       <!------------ modal--------------- -->
+      <!------------ modal--------------- -->
+      <!-- Modal Structure -->
       <div id="imageModal" class="modal-overlay">
-        <div class="modal-content px-4 z-40">
-          <div class=" modal-main">
+        <div class="modal-content px-4 !z-[2000]">
+          <div class="modal-main bg-white rounded-lg">
+            <div class="modal-header px-4">
+              <h2>Detalhes do Projeto</h2>
+              <button id="closeModal" class="modal-close-btn">×</button>
+            </div>
+            <div class="modal-body p-3 sm:p-6">
+              <div class="relative">
+                <!-- Swiper Container -->
+                <swiper-container class="mySwiper !h-[250px] sm:!h-[340px]" loop="false" space-between="30"
+                  centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false"
+                  navigation="false" slides-per-view="1">
+                </swiper-container>
 
-        
-          <div class="modal-header px-4 py-2 sm:py-4">
-            <h2>Project Details</h2>
-            <button id="closeModal" class="modal-close-btn">×</button>
-          </div>
-          <div class="modal-body  p-3 sm:p-6">
-            <swiper-container class="mySwiper !h-[250px] sm:!h-[340px]" pagination="false" loop="true" space-between="30"
-              centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
-              <swiper-slide><img class="object-cover" src="" alt=""></swiper-slide>
-            </swiper-container>
-            <div class="modal-text">
-              <h3 id="modalTitle" class="text-xl  font-semibold mb-1 mt-2 lg:text-[24px]"></h3>
-              <div id="modalArchitect" class="modal-architect text-base sm:text-lg text-[#6b7280] mb-2"></div>
-              <div id="modalLocation" class="modal-location text-base sm:text-lg text-[#6b7280]"></div>
+                <!-- Custom Navigation Buttons - Now always visible -->
+                <button
+                  class="swiper-btn-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 !h-[30px] !w-[30px] sm:!h-[40px] sm:!w-[40px] bg-white p-1 rounded-full flex justify-center items-center shadow-md hover:bg-gray-100 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6" />
+                  </svg>
+                </button>
+                <button
+                  class="swiper-btn-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-1 !h-[30px] !w-[30px] sm:!h-[40px] sm:!w-[40px] flex justify-center items-center  hover:bg-gray-100 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+
+                <!-- Custom Pagination -->
+                <div class="flex items-center justify-center">
+                  <div
+                    class="swiper-pagination-custom absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2 border border-black">
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-text">
+                <h3 id="modalTitle" class="text-xl font-semibold mb-1 mt-2 lg:text-[24px]"></h3>
+                <div id="modalArchitect" class="modal-architect text-base sm:text-lg text-[#6b7280] mb-2"></div>
+                <div id="modalLocation" class="modal-location text-base sm:text-lg text-[#6b7280]"></div>
+              </div>
             </div>
           </div>
-            </div>
         </div>
       </div>
     </div>
@@ -227,986 +253,995 @@
   </footer>
   <script>
     // Simple array of images with categories
-    const allImages = [{
-        id: 1,
-        src: "/assets/webp/card-1.webp",
-        category: "heritage",
-        alt: "Heritage Building 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-1.webp"
-        ]
-
-      },
-      {
-        id: 2,
-        category: "museums",
-        alt: "Museum 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-3.webp"
-        ]
-
-      },
-      {
-        id: 3,
-        src: "/assets/webp/card-3.webp",
-        category: "heritage",
-        alt: "Heritage Building 2",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-      },
-      {
-        id: 4,
-        src: "/assets/webp/card-4.webp",
-        category: "education",
-        alt: "Education Building 1",
-        title: "Colonial Architecture",
-        architect: "An exemplary representation of colonial-era architectural design and craftsmanship.",
-        year: "2010",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-4.webp",
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-
-      },
-      {
-        id: 5,
-        src: "/assets/webp/card-5.webp",
-        category: "commercial",
-        alt: "Commercial Building 1",
-         title: "Corporate Headquarters",
-        architect: "A sleek and modern commercial building representing corporate excellence.",
-        year: "2016",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-3.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 6,
-        src: "/assets/webp/card-6.webp",
-        category: "residential",
-        alt: "Residential Building 1",
-           title: "Urban Living Space",
-        architect: "A cozy and contemporary residential building located in the heart of the city.",
-        year: "2020",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-6.webp",
-        ]
-      },
-      {
-        id: 7,
-        src: "/assets/webp/card-7.webp",
-        category: "museums",
-        alt: "Museum 2",
-           title: "Natural History Museum",
-        architect: "A fascinating museum showcasing the wonders of natural history and biodiversity.",
-        year: "2009",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-7.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 8,
-        src: "/assets/webp/card-8.webp",
-        category: "service",
-        alt: "Service Building 1",
-        title: "Community Center",
-        architect: "A vibrant hub for community activities and social gatherings.",
-        year: "2023",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 9,
-        src: "/assets/webp/card-9.webp",
-        category: "education",
-        alt: "Education Building 2",
-         title: "Research Institute",
-        architect: "A pioneering institute dedicated to cutting-edge research and development.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 10,
-        src: "/assets/webp/card-10.webp",
-        category: "commercial",
-        alt: "Commercial Building 2",
-          title: "Retail Complex",
-        architect: "A bustling commercial center offering a variety of retail and dining options.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 11,
-        src: "/assets/webp/card-11.webp",
-        category: "residential",
-        alt: "Residential Building 2",
-        title: "Suburban Homes",
-        architect: "A serene residential complex nestled in a quiet suburban neighborhood.",
-        year: "2005",
-        location: "London",
-         images: [
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-        
-      },
-      {
-        id: 12,
-        src: "/assets/webp/card-12.webp",
-        category: "others",
-        alt: "Other Building 1",
-        title: "Multipurpose Facility",
-        architect: "A versatile facility designed for various events and functions.",
-        year: "2001",
-        location: "London",
-         images: [
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-11.webp",
-        ]
-      },
-      {
-        id: 13,
-        src: "/assets/webp/card-13.webp",
-        category: "heritage",
-        alt: "Heritage Building 3",
-         title: "Art Gallery",
-        architect: "An inspiring gallery featuring works of art from renowned artists worldwide.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-13.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 14,
-        src: "/assets/webp/card-14.webp",
-        category: "museums",
-        alt: "Museum 3",
-        title: "Historic Theater",
-        architect: "An iconic theater preserving the grandeur of early 20th-century entertainment.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-14.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 15,
-        src: "/assets/webp/card-15.webp",
-        category: "service",
-        alt: "Service Building 2",
-        title: "Healthcare Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-15.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
-      {
-        id: 16,
-        src: "/assets/webp/card-16.webp",
-        category: "others",
-        alt: "Other Building 2",
-        title: "Gym Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-16.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
-      {
-        id: 17,
-        src: "/assets/webp/card-1.webp",
-        category: "heritage",
-        alt: "Heritage Building 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-1.webp"
-        ]
-      },
-      {
-        id: 18,
-        src: "/assets/webp/card-2.webp",
-        category: "museums",
-         alt: "Museum 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-3.webp"
-        ]
-      },
-      {
-        id: 19,
-         src: "/assets/webp/card-3.webp",
-        category: "heritage",
-        alt: "Heritage Building 2",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-      },
-      {
-        id: 20,
-           src: "/assets/webp/card-4.webp",
-        category: "education",
-        alt: "Education Building 2",
-        title: "Colonial Architecture",
-        architect: "An exemplary representation of colonial-era architectural design and craftsmanship.",
-        year: "2010",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-4.webp",
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-      },
-      {
-        id: 21,
-        src: "/assets/webp/card-5.webp",
-        category: "commercial",
-        alt: "Commercial Building 1",
-         title: "Corporate Headquarters",
-        architect: "A sleek and modern commercial building representing corporate excellence.",
-        year: "2016",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-3.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 22,
-          src: "/assets/webp/card-6.webp",
-        category: "residential",
-        alt: "Residential Building 1",
-           title: "Urban Living Space",
-        architect: "A cozy and contemporary residential building located in the heart of the city.",
-        year: "2020",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-6.webp",
-        ]
-      },
-      {
-        id: 23,
-         src: "/assets/webp/card-7.webp",
-        category: "museums",
-        alt: "Museum 2",
-           title: "Natural History Museum",
-        architect: "A fascinating museum showcasing the wonders of natural history and biodiversity.",
-        year: "2009",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-7.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 24,
-         src: "/assets/webp/card-8.webp",
-        category: "service",
-        alt: "Service Building 1",
-        title: "Community Center",
-        architect: "A vibrant hub for community activities and social gatherings.",
-        year: "2023",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 25,
-        src: "/assets/webp/card-9.webp",
-        category: "education",
-        alt: "Education Building 2",
-         title: "Research Institute",
-        architect: "A pioneering institute dedicated to cutting-edge research and development.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 26,
-       src: "/assets/webp/card-10.webp",
-        category: "commercial",
-        alt: "Commercial Building 2",
-          title: "Retail Complex",
-        architect: "A bustling commercial center offering a variety of retail and dining options.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 27,
-       src: "/assets/webp/card-11.webp",
-        category: "residential",
-        alt: "Residential Building 2",
-        title: "Suburban Homes",
-        architect: "A serene residential complex nestled in a quiet suburban neighborhood.",
-        year: "2005",
-        location: "London",
-         images: [
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 28,
-         src: "/assets/webp/card-12.webp",
-        category: "others",
-        alt: "Other Building 1",
-        title: "Multipurpose Facility",
-        architect: "A versatile facility designed for various events and functions.",
-        year: "2001",
-        location: "London",
-         images: [
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-11.webp",
-        ]
-      },
-      {
-        id: 29,
-        src: "/assets/webp/card-13.webp",
-        category: "heritage",
-        alt: "Heritage Building 3",
-         title: "Art Gallery",
-        architect: "An inspiring gallery featuring works of art from renowned artists worldwide.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-13.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 30,
-         src: "/assets/webp/card-14.webp",
-        category: "museums",
-        alt: "Museum 3",
-        title: "Historic Theater",
-        architect: "An iconic theater preserving the grandeur of early 20th-century entertainment.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-14.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 31,
-       src: "/assets/webp/card-15.webp",
-        category: "service",
-        alt: "Service Building 2",
-        title: "Healthcare Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-15.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
-      {
-        id: 32,
-         src: "/assets/webp/card-16.webp",
-        category: "others",
-        alt: "Other Building 2",
-        title: "Gym Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-16.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
-
-      {
-        id: 33,
-      src: "/assets/webp/card-1.webp",
-        category: "heritage",
-        alt: "Heritage Building 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-1.webp"
-        ]
-      },
-      {
-        id: 34,
-        src: "/assets/webp/card-2.webp",
-        category: "museums",
-         alt: "Museum 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-3.webp"
-        ]
-      },
-      {
-        id: 35,
-        src: "/assets/webp/card-3.webp",
-        category: "heritage",
-        alt: "Heritage Building 2",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-      },
-      {
-        id: 36,
-         src: "/assets/webp/card-4.webp",
-        category: "education",
-        alt: "Education Building 2",
-        title: "Colonial Architecture",
-        architect: "An exemplary representation of colonial-era architectural design and craftsmanship.",
-        year: "2010",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-4.webp",
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-      },
-      {
-        id: 37,
-         src: "/assets/webp/card-5.webp",
-        category: "commercial",
-        alt: "Commercial Building 1",
-         title: "Corporate Headquarters",
-        architect: "A sleek and modern commercial building representing corporate excellence.",
-        year: "2016",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-3.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 38,
-          src: "/assets/webp/card-6.webp",
-        category: "residential",
-        alt: "Residential Building 1",
-           title: "Urban Living Space",
-        architect: "A cozy and contemporary residential building located in the heart of the city.",
-        year: "2020",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-6.webp",
-        ]
-      },
-      {
-        id: 39,
-        src: "/assets/webp/card-7.webp",
-        category: "museums",
-        alt: "Museum 2",
-           title: "Natural History Museum",
-        architect: "A fascinating museum showcasing the wonders of natural history and biodiversity.",
-        year: "2009",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-7.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 40,
-      src: "/assets/webp/card-8.webp",
-        category: "service",
-        alt: "Service Building 1",
-        title: "Community Center",
-        architect: "A vibrant hub for community activities and social gatherings.",
-        year: "2023",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 41,
-         src: "/assets/webp/card-9.webp",
-        category: "education",
-        alt: "Education Building 2",
-         title: "Research Institute",
-        architect: "A pioneering institute dedicated to cutting-edge research and development.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 42,
-        src: "/assets/webp/card-10.webp",
-        category: "commercial",
-        alt: "Commercial Building 2",
-          title: "Retail Complex",
-        architect: "A bustling commercial center offering a variety of retail and dining options.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 43,
-        src: "/assets/webp/card-11.webp",
-        category: "residential",
-        alt: "Residential Building 2",
-        title: "Suburban Homes",
-        architect: "A serene residential complex nestled in a quiet suburban neighborhood.",
-        year: "2005",
-        location: "London",
-         images: [
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 44,
-        src: "/assets/webp/card-12.webp",
-        category: "others",
-        alt: "Other Building 1",
-        title: "Multipurpose Facility",
-        architect: "A versatile facility designed for various events and functions.",
-        year: "2001",
-        location: "London",
-         images: [
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-11.webp",
-        ]
-      },
-      {
-        id: 45,
-         src: "/assets/webp/card-13.webp",
-        category: "heritage",
-        alt: "Heritage Building 3",
-         title: "Art Gallery",
-        architect: "An inspiring gallery featuring works of art from renowned artists worldwide.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-13.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 46,
-         src: "/assets/webp/card-14.webp",
-        category: "museums",
-        alt: "Museum 3",
-        title: "Historic Theater",
-        architect: "An iconic theater preserving the grandeur of early 20th-century entertainment.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-14.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 47,
-        src: "/assets/webp/card-15.webp",
-        category: "service",
-        alt: "Service Building 2",
-        title: "Healthcare Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-15.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
-      {
-        id: 48,
-         src: "/assets/webp/card-16.webp",
-        category: "others",
-        alt: "Other Building 2",
-        title: "Gym Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-16.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
-      {
-        id: 49,
-        src: "/assets/webp/card-1.webp",
-        category: "heritage",
-        alt: "Heritage Building 1",
-      },
-      {
-        id: 50,
-        src: "/assets/webp/card-2.webp",
-        category: "museums",
-        alt: "Museum 1",
-      },
+    const allImages = [ {
+    id: 1,
+    src: "/assets/webp/card-1.webp",
+    category: "heritage",
+    alt: "Heritage Building 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-1.webp"
+    ]
+  },
+  {
+    id: 2,
+    category: "museums",
+    alt: "Museum 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-3.webp"
+    ]
+  },
+  {
+    id: 3,
+    src: "/assets/webp/card-3.webp",
+    category: "heritage",
+    alt: "Heritage Building 2",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 4,
+    src: "/assets/webp/card-4.webp",
+    category: "education",
+    alt: "Education Building 1",
+    title: "Arquitetura Colonial",
+    architect: "Uma representação exemplar do design e artesanato arquitetônico da era colonial.",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-4.webp",
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 5,
+    src: "/assets/webp/card-5.webp",
+    category: "commercial",
+    alt: "Commercial Building 1",
+    title: "Sede Corporativa",
+    architect: "Um edifício comercial elegante e moderno que representa a excelência corporativa.",
+    year: "2016",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-3.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 6,
+    src: "/assets/webp/card-6.webp",
+    category: "residential",
+    alt: "Residential Building 1",
+    title: "Espaço Urbano",
+    architect: "Um edifício residencial aconchegante e contemporâneo localizado no coração da cidade.",
+    year: "2020",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-6.webp"
+    ]
+  },
+  {
+    id: 7,
+    src: "/assets/webp/card-7.webp",
+    category: "museums",
+    alt: "Museum 2",
+    title: "Museu de História Natural",
+    architect: "Um museu fascinante que mostra as maravilhas da história natural e da biodiversidade.",
+    year: "2009",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-7.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 8,
+    src: "/assets/webp/card-8.webp",
+    category: "service",
+    alt: "Service Building 1",
+    title: "Centro Comunitário",
+    architect: "Um vibrante centro para atividades comunitárias e encontros sociais.",
+    year: "2023",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 9,
+    src: "/assets/webp/card-9.webp",
+    category: "education",
+    alt: "Education Building 2",
+    title: "Instituto de Pesquisa",
+    architect: "Um instituto pioneiro dedicado a pesquisas e desenvolvimentos inovadores.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 10,
+    src: "/assets/webp/card-10.webp",
+    category: "commercial",
+    alt: "Commercial Building 2",
+    title: "Complexo Comercial",
+    architect: "Um centro comercial movimentado que oferece várias opções de varejo e gastronomia.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 11,
+    src: "/assets/webp/card-11.webp",
+    category: "residential",
+    alt: "Residential Building 2",
+    title: "Casas Suburbanas",
+    architect: "Um complexo residencial tranquilo situado em um bairro suburbano calmo.",
+    year: "2005",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 12,
+    src: "/assets/webp/card-12.webp",
+    category: "others",
+    alt: "Other Building 1",
+    title: "Instalação Multiuso",
+    architect: "Uma instalação versátil projetada para diversos eventos e funções.",
+    year: "2001",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-11.webp"
+    ]
+  },
+  {
+    id: 13,
+    src: "/assets/webp/card-13.webp",
+    category: "heritage",
+    alt: "Heritage Building 3",
+    title: "Galeria de Arte",
+    architect: "Uma galeria inspiradora com obras de artistas renomados mundialmente.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-13.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 14,
+    src: "/assets/webp/card-14.webp",
+    category: "museums",
+    alt: "Museum 3",
+    title: "Teatro Histórico",
+    architect: "Um teatro icônico que preserva a grandiosidade do entretenimento do início do século XX.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-14.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 15,
+    src: "/assets/webp/card-15.webp",
+    category: "service",
+    alt: "Service Building 2",
+    title: "Centro de Saúde",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-15.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
+  {
+    id: 16,
+    src: "/assets/webp/card-16.webp",
+    category: "others",
+    alt: "Other Building 2",
+    title: "Centro de Academia",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-16.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
+    {
+    id: 17,
+    src: "/assets/webp/card-1.webp",
+    category: "heritage",
+    alt: "Heritage Building 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-1.webp"
+    ]
+  },
+  {
+    id: 18,
+    category: "museums",
+    alt: "Museum 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-3.webp"
+    ]
+  },
+  {
+    id: 19,
+    src: "/assets/webp/card-3.webp",
+    category: "heritage",
+    alt: "Heritage Building 2",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 20,
+    src: "/assets/webp/card-4.webp",
+    category: "education",
+    alt: "Education Building 1",
+    title: "Arquitetura Colonial",
+    architect: "Uma representação exemplar do design e artesanato arquitetônico da era colonial.",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-4.webp",
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 21,
+    src: "/assets/webp/card-5.webp",
+    category: "commercial",
+    alt: "Commercial Building 1",
+    title: "Sede Corporativa",
+    architect: "Um edifício comercial elegante e moderno que representa a excelência corporativa.",
+    year: "2016",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-3.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 22,
+    src: "/assets/webp/card-6.webp",
+    category: "residential",
+    alt: "Residential Building 1",
+    title: "Espaço Urbano",
+    architect: "Um edifício residencial aconchegante e contemporâneo localizado no coração da cidade.",
+    year: "2020",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-6.webp"
+    ]
+  },
+  {
+    id: 23,
+    src: "/assets/webp/card-7.webp",
+    category: "museums",
+    alt: "Museum 2",
+    title: "Museu de História Natural",
+    architect: "Um museu fascinante que mostra as maravilhas da história natural e da biodiversidade.",
+    year: "2009",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-7.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 24,
+    src: "/assets/webp/card-8.webp",
+    category: "service",
+    alt: "Service Building 1",
+    title: "Centro Comunitário",
+    architect: "Um vibrante centro para atividades comunitárias e encontros sociais.",
+    year: "2023",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 25,
+    src: "/assets/webp/card-9.webp",
+    category: "education",
+    alt: "Education Building 2",
+    title: "Instituto de Pesquisa",
+    architect: "Um instituto pioneiro dedicado a pesquisas e desenvolvimentos inovadores.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 26,
+    src: "/assets/webp/card-10.webp",
+    category: "commercial",
+    alt: "Commercial Building 2",
+    title: "Complexo Comercial",
+    architect: "Um centro comercial movimentado que oferece várias opções de varejo e gastronomia.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 27,
+    src: "/assets/webp/card-11.webp",
+    category: "residential",
+    alt: "Residential Building 2",
+    title: "Casas Suburbanas",
+    architect: "Um complexo residencial tranquilo situado em um bairro suburbano calmo.",
+    year: "2005",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 28,
+    src: "/assets/webp/card-12.webp",
+    category: "others",
+    alt: "Other Building 1",
+    title: "Instalação Multiuso",
+    architect: "Uma instalação versátil projetada para diversos eventos e funções.",
+    year: "2001",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-11.webp"
+    ]
+  },
+  {
+    id: 29,
+    src: "/assets/webp/card-13.webp",
+    category: "heritage",
+    alt: "Heritage Building 3",
+    title: "Galeria de Arte",
+    architect: "Uma galeria inspiradora com obras de artistas renomados mundialmente.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-13.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 30,
+    src: "/assets/webp/card-14.webp",
+    category: "museums",
+    alt: "Museum 3",
+    title: "Teatro Histórico",
+    architect: "Um teatro icônico que preserva a grandiosidade do entretenimento do início do século XX.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-14.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 31,
+    src: "/assets/webp/card-15.webp",
+    category: "service",
+    alt: "Service Building 2",
+    title: "Centro de Saúde",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-15.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
+  {
+    id: 32,
+    src: "/assets/webp/card-16.webp",
+    category: "others",
+    alt: "Other Building 2",
+    title: "Centro de Academia",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-16.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
+     {
+    id: 33,
+    src: "/assets/webp/card-1.webp",
+    category: "heritage",
+    alt: "Heritage Building 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-1.webp"
+    ]
+  },
+  {
+    id: 34,
+    category: "museums",
+    alt: "Museum 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-3.webp"
+    ]
+  },
+  {
+    id: 35,
+    src: "/assets/webp/card-3.webp",
+    category: "heritage",
+    alt: "Heritage Building 2",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 36,
+    src: "/assets/webp/card-4.webp",
+    category: "education",
+    alt: "Education Building 1",
+    title: "Arquitetura Colonial",
+    architect: "Uma representação exemplar do design e artesanato arquitetônico da era colonial.",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-4.webp",
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 37,
+    src: "/assets/webp/card-5.webp",
+    category: "commercial",
+    alt: "Commercial Building 1",
+    title: "Sede Corporativa",
+    architect: "Um edifício comercial elegante e moderno que representa a excelência corporativa.",
+    year: "2016",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-3.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 38,
+    src: "/assets/webp/card-6.webp",
+    category: "residential",
+    alt: "Residential Building 1",
+    title: "Espaço Urbano",
+    architect: "Um edifício residencial aconchegante e contemporâneo localizado no coração da cidade.",
+    year: "2020",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-6.webp"
+    ]
+  },
+  {
+    id: 39,
+    src: "/assets/webp/card-7.webp",
+    category: "museums",
+    alt: "Museum 2",
+    title: "Museu de História Natural",
+    architect: "Um museu fascinante que mostra as maravilhas da história natural e da biodiversidade.",
+    year: "2009",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-7.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 40,
+    src: "/assets/webp/card-8.webp",
+    category: "service",
+    alt: "Service Building 1",
+    title: "Centro Comunitário",
+    architect: "Um vibrante centro para atividades comunitárias e encontros sociais.",
+    year: "2023",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 41,
+    src: "/assets/webp/card-9.webp",
+    category: "education",
+    alt: "Education Building 2",
+    title: "Instituto de Pesquisa",
+    architect: "Um instituto pioneiro dedicado a pesquisas e desenvolvimentos inovadores.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 42,
+    src: "/assets/webp/card-10.webp",
+    category: "commercial",
+    alt: "Commercial Building 2",
+    title: "Complexo Comercial",
+    architect: "Um centro comercial movimentado que oferece várias opções de varejo e gastronomia.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 43,
+    src: "/assets/webp/card-11.webp",
+    category: "residential",
+    alt: "Residential Building 2",
+    title: "Casas Suburbanas",
+    architect: "Um complexo residencial tranquilo situado em um bairro suburbano calmo.",
+    year: "2005",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 44,
+    src: "/assets/webp/card-12.webp",
+    category: "others",
+    alt: "Other Building 1",
+    title: "Instalação Multiuso",
+    architect: "Uma instalação versátil projetada para diversos eventos e funções.",
+    year: "2001",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-11.webp"
+    ]
+  },
+  {
+    id: 45,
+    src: "/assets/webp/card-13.webp",
+    category: "heritage",
+    alt: "Heritage Building 3",
+    title: "Galeria de Arte",
+    architect: "Uma galeria inspiradora com obras de artistas renomados mundialmente.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-13.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 46,
+    src: "/assets/webp/card-14.webp",
+    category: "museums",
+    alt: "Museum 3",
+    title: "Teatro Histórico",
+    architect: "Um teatro icônico que preserva a grandiosidade do entretenimento do início do século XX.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-14.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 47,
+    src: "/assets/webp/card-15.webp",
+    category: "service",
+    alt: "Service Building 2",
+    title: "Centro de Saúde",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-15.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
+  {
+    id: 48,
+    src: "/assets/webp/card-16.webp",
+    category: "others",
+    alt: "Other Building 2",
+    title: "Centro de Academia",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-16.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
+       {
+    id: 49,
+    src: "/assets/webp/card-1.webp",
+    category: "heritage",
+    alt: "Heritage Building 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-1.webp"
+    ]
+  },
+  {
+    id: 50,
+    category: "museums",
+    alt: "Museum 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-3.webp"
+    ]
+  },
        {
         id: 51,
-      src: "/assets/webp/card-1.webp",
-        category: "heritage",
-        alt: "Heritage Building 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-1.webp"
-        ]
+     src: "/assets/webp/card-1.webp",
+    category: "heritage",
+    alt: "Heritage Building 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-1.webp"
+    ]
       },
       {
         id: 52,
-        src: "/assets/webp/card-2.webp",
-        category: "museums",
-         alt: "Museum 1",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-3.webp"
-        ]
+          category: "museums",
+    alt: "Museum 1",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-3.webp"
+    ]
       },
       {
-        id: 53,
-        src: "/assets/webp/card-3.webp",
-        category: "heritage",
-        alt: "Heritage Building 2",
-        title: "Lisboa Oriental New Hospital",
-        architect: "Arq. Eduardo Souto Moura",
-        year: "2010",
-        location: "Lisbon, Portugal",
-        images: [
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-      },
-      {
-        id: 54,
-         src: "/assets/webp/card-4.webp",
-        category: "education",
-        alt: "Education Building 2",
-        title: "Colonial Architecture",
-        architect: "An exemplary representation of colonial-era architectural design and craftsmanship.",
-        year: "2010",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-4.webp",
-          "/assets/webp/card-1.webp",
-          "/assets/webp/card-2.webp",
-        ]
-      },
-      {
-        id: 56,
-         src: "/assets/webp/card-5.webp",
-        category: "commercial",
-        alt: "Commercial Building 1",
-         title: "Corporate Headquarters",
-        architect: "A sleek and modern commercial building representing corporate excellence.",
-        year: "2016",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-3.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 57,
-          src: "/assets/webp/card-6.webp",
-        category: "residential",
-        alt: "Residential Building 1",
-           title: "Urban Living Space",
-        architect: "A cozy and contemporary residential building located in the heart of the city.",
-        year: "2020",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-5.webp",
-          "/assets/webp/card-6.webp",
-        ]
-      },
-      {
-        id: 58,
-        src: "/assets/webp/card-7.webp",
-        category: "museums",
-        alt: "Museum 2",
-           title: "Natural History Museum",
-        architect: "A fascinating museum showcasing the wonders of natural history and biodiversity.",
-        year: "2009",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-7.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-4.webp",
-        ]
-      },
-      {
-        id: 59,
-      src: "/assets/webp/card-8.webp",
-        category: "service",
-        alt: "Service Building 1",
-        title: "Community Center",
-        architect: "A vibrant hub for community activities and social gatherings.",
-        year: "2023",
-        location: "Lisbon, Portugal",
-         images: [
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 60,
-         src: "/assets/webp/card-9.webp",
-        category: "education",
-        alt: "Education Building 2",
-         title: "Research Institute",
-        architect: "A pioneering institute dedicated to cutting-edge research and development.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-6.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 61,
-        src: "/assets/webp/card-10.webp",
-        category: "commercial",
-        alt: "Commercial Building 2",
-          title: "Retail Complex",
-        architect: "A bustling commercial center offering a variety of retail and dining options.",
-        year: "2024",
-        location: "London",
-         images: [
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 62,
-        src: "/assets/webp/card-11.webp",
-        category: "residential",
-        alt: "Residential Building 2",
-        title: "Suburban Homes",
-        architect: "A serene residential complex nestled in a quiet suburban neighborhood.",
-        year: "2005",
-        location: "London",
-         images: [
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-9.webp",
-          "/assets/webp/card-8.webp",
-        ]
-      },
-      {
-        id: 63,
-        src: "/assets/webp/card-12.webp",
-        category: "others",
-        alt: "Other Building 1",
-        title: "Multipurpose Facility",
-        architect: "A versatile facility designed for various events and functions.",
-        year: "2001",
-        location: "London",
-         images: [
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-          "/assets/webp/card-8.webp",
-          "/assets/webp/card-11.webp",
-        ]
-      },
-      {
-        id: 64,
-         src: "/assets/webp/card-13.webp",
-        category: "heritage",
-        alt: "Heritage Building 3",
-         title: "Art Gallery",
-        architect: "An inspiring gallery featuring works of art from renowned artists worldwide.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-13.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-2.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 65,
-         src: "/assets/webp/card-14.webp",
-        category: "museums",
-        alt: "Museum 3",
-        title: "Historic Theater",
-        architect: "An iconic theater preserving the grandeur of early 20th-century entertainment.",
-        year: "2003",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-14.webp",
-          "/assets/webp/card-11.webp",
-          "/assets/webp/card-12.webp",
-          "/assets/webp/card-10.webp",
-        ]
-      },
-      {
-        id: 66,
-        src: "/assets/webp/card-15.webp",
-        category: "service",
-        alt: "Service Building 2",
-        title: "Healthcare Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-15.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
-      {
-        id: 67,
-         src: "/assets/webp/card-16.webp",
-        category: "others",
-        alt: "Other Building 2",
-        title: "Gym Center",
-        architect: "A modern healthcare facility providing comprehensive medical services.",
-        year: "2010",
-        location: "America/Los_Angeles",
-         images: [
-          "/assets/webp/card-16.webp",
-          "/assets/webp/card-13.webp",
-        ]
-      },
+    id: 53,
+    src: "/assets/webp/card-3.webp",
+    category: "heritage",
+    alt: "Heritage Building 2",
+    title: "Novo Hospital Oriental de Lisboa",
+    architect: "Arq. Eduardo Souto Moura",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 54,
+    src: "/assets/webp/card-4.webp",
+    category: "education",
+    alt: "Education Building 1",
+    title: "Arquitetura Colonial",
+    architect: "Uma representação exemplar do design e artesanato arquitetônico da era colonial.",
+    year: "2010",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-4.webp",
+      "/assets/webp/card-1.webp",
+      "/assets/webp/card-2.webp"
+    ]
+  },
+  {
+    id: 55,
+    src: "/assets/webp/card-5.webp",
+    category: "commercial",
+    alt: "Commercial Building 1",
+    title: "Sede Corporativa",
+    architect: "Um edifício comercial elegante e moderno que representa a excelência corporativa.",
+    year: "2016",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-3.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 56,
+    src: "/assets/webp/card-6.webp",
+    category: "residential",
+    alt: "Residential Building 1",
+    title: "Espaço Urbano",
+    architect: "Um edifício residencial aconchegante e contemporâneo localizado no coração da cidade.",
+    year: "2020",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-5.webp",
+      "/assets/webp/card-6.webp"
+    ]
+  },
+  {
+    id: 57,
+    src: "/assets/webp/card-7.webp",
+    category: "museums",
+    alt: "Museum 2",
+    title: "Museu de História Natural",
+    architect: "Um museu fascinante que mostra as maravilhas da história natural e da biodiversidade.",
+    year: "2009",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-7.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-4.webp"
+    ]
+  },
+  {
+    id: 58,
+    src: "/assets/webp/card-8.webp",
+    category: "service",
+    alt: "Service Building 1",
+    title: "Centro Comunitário",
+    architect: "Um vibrante centro para atividades comunitárias e encontros sociais.",
+    year: "2023",
+    location: "Lisboa, Portugal",
+    images: [
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 59,
+    src: "/assets/webp/card-9.webp",
+    category: "education",
+    alt: "Education Building 2",
+    title: "Instituto de Pesquisa",
+    architect: "Um instituto pioneiro dedicado a pesquisas e desenvolvimentos inovadores.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-6.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 60,
+    src: "/assets/webp/card-10.webp",
+    category: "commercial",
+    alt: "Commercial Building 2",
+    title: "Complexo Comercial",
+    architect: "Um centro comercial movimentado que oferece várias opções de varejo e gastronomia.",
+    year: "2024",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 61,
+    src: "/assets/webp/card-11.webp",
+    category: "residential",
+    alt: "Residential Building 2",
+    title: "Casas Suburbanas",
+    architect: "Um complexo residencial tranquilo situado em um bairro suburbano calmo.",
+    year: "2005",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-9.webp",
+      "/assets/webp/card-8.webp"
+    ]
+  },
+  {
+    id: 62,
+    src: "/assets/webp/card-12.webp",
+    category: "others",
+    alt: "Other Building 1",
+    title: "Instalação Multiuso",
+    architect: "Uma instalação versátil projetada para diversos eventos e funções.",
+    year: "2001",
+    location: "Londres",
+    images: [
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp",
+      "/assets/webp/card-8.webp",
+      "/assets/webp/card-11.webp"
+    ]
+  },
+  {
+    id: 63,
+    src: "/assets/webp/card-13.webp",
+    category: "heritage",
+    alt: "Heritage Building 3",
+    title: "Galeria de Arte",
+    architect: "Uma galeria inspiradora com obras de artistas renomados mundialmente.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-13.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-2.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 64,
+    src: "/assets/webp/card-14.webp",
+    category: "museums",
+    alt: "Museum 3",
+    title: "Teatro Histórico",
+    architect: "Um teatro icônico que preserva a grandiosidade do entretenimento do início do século XX.",
+    year: "2003",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-14.webp",
+      "/assets/webp/card-11.webp",
+      "/assets/webp/card-12.webp",
+      "/assets/webp/card-10.webp"
+    ]
+  },
+  {
+    id: 65,
+    src: "/assets/webp/card-15.webp",
+    category: "service",
+    alt: "Service Building 2",
+    title: "Centro de Saúde",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-15.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
+  {
+    id: 66,
+    src: "/assets/webp/card-16.webp",
+    category: "others",
+    alt: "Other Building 2",
+    title: "Centro de Academia",
+    architect: "Uma instalação de saúde moderna que oferece serviços médicos abrangentes.",
+    year: "2010",
+    location: "América/Los_Angeles",
+    images: [
+      "/assets/webp/card-16.webp",
+      "/assets/webp/card-13.webp"
+    ]
+  },
   
     ];
 
@@ -1403,6 +1438,103 @@
   <!-- JS file -->
   <script src="./index.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+    function openModal(src, alt) {
+      const modal = document.getElementById('imageModal');
+      const swiperContainer = modal.querySelector('swiper-container');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalArchitect = document.getElementById('modalArchitect');
+      const modalLocation = document.getElementById('modalLocation');
+      const paginationContainer = modal.querySelector('.swiper-pagination-custom');
+
+      const imageData = allImages.find(img => img.alt === alt);
+
+      if (imageData) {
+        // Clear existing slides
+        swiperContainer.innerHTML = '';
+        paginationContainer.innerHTML = '';
+
+        // Add slides for each image
+        imageData.images.forEach((imgSrc, index) => {
+          swiperContainer.innerHTML += `
+        <swiper-slide>
+          <img src="${imgSrc}" alt="${imageData.alt}" class="w-full h-full rounded-lg object-cover">
+        </swiper-slide>
+      `;
+
+          // Add thumbnail pagination bullets
+          paginationContainer.innerHTML += `
+        <button 
+          class="custom-pagination-bullet ${index === 0 ? 'active' : ''}"
+          data-index="${index}"
+          style="background-image: url('${imgSrc}')">
+        </button>
+      `;
+        });
+
+        modalTitle.textContent = imageData.title;
+        modalArchitect.textContent = `${imageData.architect}, ${imageData.year}`;
+        modalLocation.textContent = imageData.location;
+
+        // Initialize navigation and pagination
+        const prevBtn = modal.querySelector('.swiper-btn-prev');
+        const nextBtn = modal.querySelector('.swiper-btn-next');
+        const bullets = paginationContainer.querySelectorAll('.custom-pagination-bullet');
+
+        // Remove existing event listeners if any
+        prevBtn.replaceWith(prevBtn.cloneNode(true));
+        nextBtn.replaceWith(nextBtn.cloneNode(true));
+
+        // Get fresh references
+        const newPrevBtn = modal.querySelector('.swiper-btn-prev');
+        const newNextBtn = modal.querySelector('.swiper-btn-next');
+
+        // Wait for Swiper to be ready
+        const initializeSwiper = () => {
+          if (swiperContainer.swiper) {
+            // Navigation
+            newPrevBtn.addEventListener('click', () => {
+              swiperContainer.swiper.slidePrev();
+            });
+
+            newNextBtn.addEventListener('click', () => {
+              swiperContainer.swiper.slideNext();
+            });
+
+            // Pagination
+            bullets.forEach((bullet, index) => {
+              // Remove existing listeners
+              const newBullet = bullet.cloneNode(true);
+              bullet.parentNode.replaceChild(newBullet, bullet);
+
+              // Add fresh click listener
+              newBullet.addEventListener('click', () => {
+                swiperContainer.swiper.slideTo(index);
+              });
+            });
+
+            // Update active bullet on slide change
+            swiperContainer.swiper.on('slideChange', () => {
+              const activeIndex = swiperContainer.swiper.realIndex;
+              paginationContainer.querySelectorAll('.custom-pagination-bullet').forEach((bullet, index) => {
+                bullet.classList.toggle('active', index === activeIndex);
+              });
+            });
+          } else {
+            // If swiper isn't ready yet, try again
+            setTimeout(initializeSwiper, 100);
+          }
+        };
+
+        // Start initialization
+        initializeSwiper();
+      }
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+  </script>
 </body>
 
 </html>

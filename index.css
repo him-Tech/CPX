@@ -264,6 +264,7 @@ body::-webkit-scrollbar {
   background: none;
   border: none;
   font-size: 36px;
+  font-weight: 500;
   cursor: pointer;
   padding: 4px 4px;
   color: #6b7280;
@@ -337,6 +338,20 @@ body::-webkit-scrollbar {
   background: rgba(0, 0, 0, 0.3);
   padding: 8px;
   border-radius: 20px;
-  bottom: 10px;  
+  bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .custom-pagination-bullet {
+    width: 55px;
+    height: 35px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    margin: 0 4px;
+  }
+}
