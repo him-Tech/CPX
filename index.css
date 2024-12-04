@@ -336,7 +336,6 @@ body::-webkit-scrollbar {
 .swiper-pagination-custom {
   background: rgba(0, 0, 0, 0.147);
   padding: 8px;
-  border-radius: 20px;
   bottom: 10px;
 }
 
