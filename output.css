@@ -1045,11 +1045,6 @@ video {
   margin-right: auto;
 }
 
-.my-3{
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
 .-mb-\[333px\]{
   margin-bottom: -333px;
 }
@@ -1381,6 +1376,26 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.min-w-\[218px\]{
+  min-width: 218px;
+}
+
+.min-w-\[145px\]{
+  min-width: 145px;
+}
+
+.min-w-\[178px\]{
+  min-width: 178px;
+}
+
+.min-w-\[120px\]{
+  min-width: 120px;
+}
+
+.min-w-\[125px\]{
+  min-width: 125px;
 }
 
 .max-w-20{
@@ -2977,11 +2992,6 @@ body::-webkit-scrollbar {
 }
 
 @media (min-width: 640px){
-  .sm\:my-\[30px\]{
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
   .sm\:-ml-3{
     margin-left: -0.75rem;
   }
@@ -3073,6 +3083,22 @@ body::-webkit-scrollbar {
 
   .sm\:w-\[50\%\]{
     width: 50%;
+  }
+
+  .sm\:min-w-\[218px\]{
+    min-width: 218px;
+  }
+
+  .sm\:min-w-\[178px\]{
+    min-width: 178px;
+  }
+
+  .sm\:min-w-\[180px\]{
+    min-width: 180px;
+  }
+
+  .sm\:min-w-\[220px\]{
+    min-width: 220px;
   }
 
   .sm\:max-w-\[100px\]{
@@ -3231,11 +3257,6 @@ body::-webkit-scrollbar {
 
   .md\:left-\[235px\]{
     left: 235px;
-  }
-
-  .md\:my-\[45px\]{
-    margin-top: 45px;
-    margin-bottom: 45px;
   }
 
   .md\:-mt-\[273px\]{
@@ -3553,10 +3574,6 @@ body::-webkit-scrollbar {
     margin-top: -702px;
   }
 
-  .lg\:mb-\[50px\]{
-    margin-bottom: 50px;
-  }
-
   .lg\:mb-\[60px\]{
     margin-bottom: 60px;
   }
@@ -3591,10 +3608,6 @@ body::-webkit-scrollbar {
 
   .lg\:mt-\[60px\]{
     margin-top: 60px;
-  }
-
-  .lg\:mt-\[63px\]{
-    margin-top: 63px;
   }
 
   .lg\:mt-\[76px\]{
@@ -4097,10 +4110,6 @@ body::-webkit-scrollbar {
 
   .\32xl\:flex{
     display: flex;
-  }
-
-  .\32xl\:hidden{
-    display: none;
   }
 
   .\32xl\:size-\[300px\]{

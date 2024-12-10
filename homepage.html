@@ -385,7 +385,7 @@
                   />
                   <button
                     type="submit"
-                    class="px-4 sm:px-[36px] text-base sm:text-lg md:text-xl font-black leading-[26px] text-white bg-deepCharcoal h-full whitespace-nowrap transition-all duration-300 ease-linear border border-deepCharcoal box-border hover:bg-transparent hover:text-deepCharcoal"
+                    class="px-4 sm:px-[36px] text-base min-w-[125px] sm:min-w-[180px] sm:text-lg md:text-xl font-black leading-[26px] text-white bg-deepCharcoal h-full whitespace-nowrap transition-all duration-300 ease-linear border border-deepCharcoal box-border hover:bg-transparent hover:text-deepCharcoal"
                   >
                     Let's Chat
                   </button>
@@ -981,19 +981,20 @@
       <!-- Hr line -->
       <div class="w-full flex items-center">
         <div
-          class="w-full h-[1px] bg-deepCharcoal opacity-[0.32] lg:mt-[76px] md:mt-[55px] sm:mt-[40px] mt-[35px]"
+          class="w-full lg:mt-[76px] md:mt-[55px] sm:mt-[40px] mt-[35px]"
         ></div>
         <div class="max-md:hidden w-[65px] xl:w-[130px]"></div>
       </div>
-      <!-- Footer copyright -->
-      <div class="w-full flex items-center max-md:px-4">
-        <div class="w-[65px] xl:w-[130px] max-md:hidden 2xl:hidden"></div>
+      <!-- FOOTER -->
+      <footer>
+        <span
+          class="!bg-deepCharcoal opacity-[0.32] w-full flex h-[1px]"
+        ></span>
         <div
-          class="2xl:max-w-[1276px] w-full 2xl:mx-auto lg:mt-[63px] md:my-[45px] sm:my-[30px] my-3 lg:mb-[50px] max-md:text-center"
+          class="2xl:max-w-[1764px] xl:max-w-[1322px] max-w-[880px] w-full mx-auto px-4 lg:pt-[65px] md:pt-14 pt-10 !pb-[22px] sm:!pb-[100px] flex xl:flex-row flex-col gap-4 items-center justify-between"
         >
-          <p
-            href="/"
-            class="text-graphiteGray text-sm md:text-[15px] font-medium"
+          <div
+            class="text-graphiteGray text-sm md:text-[15px] font-medium xl:w-fit w-full text-center"
           >
             © Copyright 2024 CPX, Lda. - Consulting and Engineering Projects -
             <a
@@ -1001,9 +1002,29 @@
               class="underline text-graphiteGray text-sm md:text-[15px]"
               >geral@cpx.com.pt</a
             >
-          </p>
+          </div>
+          <div
+            class="flex flex-wrap items-center justify-between xm:gap-10 gap-4 2xl:gap-[75px] xl:w-fit w-full text-center"
+          >
+            <div
+              class="flex items-center text-graphiteGray text-sm md:text-[15px] font-medium gap-1 mx-auto"
+            >
+              <p>website:</p>
+              <a
+                href="https://www.mariaoliveira.co.uk/"
+                target="_blank"
+                class="underline text-graphiteGray text-sm md:text-[15px] font-medium"
+                >www.mariaoliveira.co.uk</a
+              >
+            </div>
+            <a
+              class="textgraphiteGray text-graphiteGray text-sm md:text-[15px] font-medium underline mx-auto"
+              href="/política-de-privacidade.html"
+              >Terms & Policies</a
+            >
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
     <!-- Footer end -->
     <!-- EmailJS Script -->
