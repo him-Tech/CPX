@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CPX Home</title>
     <link rel="stylesheet" href="./output.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
 
   <body id="body" class="bg-ivoryMist overflow-hidden font-inter">
@@ -367,10 +371,15 @@
                 >
                   Start your project today.
                 </h3>
-                <form class="flex items-center justify-start h-10 sm:h-[66px]">
+                <form
+                  id="contactForm"
+                  class="flex items-center justify-start h-10 sm:h-[66px]"
+                >
                   <input
                     required
                     type="email"
+                    id="email"
+                    name="email"
                     placeholder="Your email address"
                     class="w-full lg:w-[358px] h-full bg-white px-3 sm:px-[26px] text-base sm:text-xl font-medium leading-[26px] outline-none"
                   />
@@ -997,7 +1006,85 @@
       </div>
     </div>
     <!-- Footer end -->
+    <!-- EmailJS Script -->
+    <script>
+      // Toast notification function
+      function showToast(message, type = "success") {
+        // Remove existing toast if any
+        const existingToast = document.querySelector(".toast");
+        if (existingToast) {
+          existingToast.remove();
+        }
 
+        // Create toast element
+        const toast = document.createElement("div");
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `
+                <span>${message}</span>
+                <button class="toast-close">&times;</button>
+            `;
+
+        // Add toast to document
+        document.body.appendChild(toast);
+
+        // Handle close button
+        const closeButton = toast.querySelector(".toast-close");
+        closeButton.addEventListener("click", () => {
+          toast.style.animation = "slideOut 0.3s ease-in-out forwards";
+          setTimeout(() => toast.remove(), 300);
+        });
+
+        // Auto remove after 3 seconds
+        setTimeout(() => {
+          if (toast.parentElement) {
+            toast.style.animation = "slideOut 0.3s ease-in-out forwards";
+            setTimeout(() => toast.remove(), 300);
+          }
+        }, 3000);
+      }
+
+      // Initialize EmailJS
+      emailjs.init("_WzKV0pX073zlzt9K");
+
+      // Form submission handler
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const submitButton = this.querySelector("button");
+          submitButton.disabled = true;
+          submitButton.textContent = "Sending...";
+
+          // Prepare form data
+          const formData = {
+            email: this.email.value,
+          };
+
+          try {
+            // Send emails
+            await Promise.all([
+              emailjs.send("service_dke0v1s", "template_8tymq2o", formData),
+              emailjs.send("service_dke0v1s", "template_nlv41t9", {
+                email: formData.email,
+              }),
+            ]);
+
+            // Show success message
+            showToast("Thank you for your email", "success");
+            this.reset();
+          } catch (error) {
+            console.error("Email sending error:", error);
+            showToast(
+              "Failed to send message. Please try again later.",
+              "error"
+            );
+          } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = "Let's Chat";
+          }
+        });
+    </script>
     <!-- JS for sidebar -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -1023,5 +1110,6 @@
     <!-- JS file -->
     <script src="./index.js"></script>
     <script src="./animation.js"></script>
+    <div class="toast-overlay" id="toast-overlay"></div>
   </body>
 </html>
