@@ -13,30 +13,6 @@ const languageHandler = {
     "MO",
   ],
 
-  // Store current language preference
-  currentLanguage: null,
-
-  // Get user's preferred language from various sources
-  async detectUserPreference() {
-    try {
-      const savedLanguage = localStorage.getItem("preferredLanguage");
-      if (savedLanguage) {
-        return savedLanguage === "pt";
-      }
-
-      const browserLang = navigator.language || navigator.userLanguage;
-      if (browserLang.startsWith("pt")) {
-        return true;
-      }
-
-      const countryCode = await this.detectUserCountry();
-      return this.portugueseCountries.includes(countryCode);
-    } catch (error) {
-      console.error("Error detecting language preference:", error);
-      return false;
-    }
-  },
-
   // Get user's country code using geolocation
   async detectUserCountry() {
     try {
@@ -71,24 +47,87 @@ const languageHandler = {
     }
   },
 
-  // Update all language UI elements
+  // Update UI elements
   updateLanguageUI(isPortuguese) {
     const language = isPortuguese ? "Português" : "English";
+    document.querySelectorAll(".language-display").forEach((element) => {
+      element.textContent = language;
+    });
+  },
 
-    // Update main dropdown text if it exists
-    const mainLanguageText = document.getElementById("languageText");
-    if (mainLanguageText) {
-      mainLanguageText.textContent = language;
-    }
+  // Save history to localStorage
+  saveToHistory(page, language, timestamp) {
+    try {
+      // Get existing history or initialize new array
+      const history = JSON.parse(
+        localStorage.getItem("languageHistory") || "[]"
+      );
 
-    // Update sidebar dropdown text if it exists
-    const sidebarLanguageText = document.getElementById("sidebarLanguageText");
-    if (sidebarLanguageText) {
-      sidebarLanguageText.textContent = language;
+      // Add new entry
+      history.push({
+        page,
+        language,
+        timestamp,
+        countryCode: localStorage.getItem("userCountry") || "unknown",
+      });
+
+      // Keep only last 10 entries
+      if (history.length > 10) {
+        history.shift();
+      }
+
+      // Save back to localStorage
+      localStorage.setItem("languageHistory", JSON.stringify(history));
+    } catch (error) {
+      console.error("Error saving history:", error);
     }
   },
 
-  // Update page content based on selected language
+  // Set default page based on country
+  async setDefaultPage() {
+    // Only proceed if we're on the root path
+    if (window.location.pathname === "/" || window.location.pathname === "") {
+      try {
+        const countryCode = await this.detectUserCountry();
+        // Save country code to localStorage
+        localStorage.setItem("userCountry", countryCode);
+
+        const isPortugueseCountry =
+          this.portugueseCountries.includes(countryCode);
+
+        // Save initial visit to history
+        const defaultPage = isPortugueseCountry
+          ? "index.html"
+          : "homepage.html";
+        const defaultLanguage = isPortugueseCountry ? "pt" : "en";
+        this.saveToHistory(
+          defaultPage,
+          defaultLanguage,
+          new Date().toISOString()
+        );
+
+        // Redirect based on country
+        if (isPortugueseCountry) {
+          window.location.href = "/index.html"; // Portuguese version
+        } else {
+          window.location.href = "/homepage.html"; // English version
+        }
+      } catch (error) {
+        console.error("Error setting default page:", error);
+        // Default to English version if there's an error
+        this.saveToHistory("homepage.html", "en", new Date().toISOString());
+        window.location.href = "/homepage.html";
+      }
+    }
+  },
+
+  // Get current page name from path
+  getCurrentPage() {
+    const path = window.location.pathname;
+    return path.split("/").pop() || "index.html";
+  },
+
+  // Update content based on selected language
   updateContent(isPortuguese) {
     const lang = isPortuguese ? "pt" : "en";
     document.documentElement.lang = lang;
@@ -101,72 +140,37 @@ const languageHandler = {
     // Update UI elements
     this.updateLanguageUI(isPortuguese);
 
-    // Save preference
+    // Save language preference
     localStorage.setItem("preferredLanguage", lang);
-    this.currentLanguage = lang;
 
-    // Update URL if needed
+    // Handle redirects and save history
     const currentPath = window.location.pathname;
-    if (isPortuguese && currentPath.includes("homepage.html")) {
-      window.location.href = "index.html";
-    } else if (!isPortuguese && !currentPath.includes("homepage.html")) {
-      window.location.href = "homepage.html";
+    if (isPortuguese && currentPath === "/homepage.html") {
+      this.saveToHistory("index.html", "pt", new Date().toISOString());
+      window.location.href = "/index.html";
+    } else if (!isPortuguese && currentPath === "/index.html") {
+      this.saveToHistory("homepage.html", "en", new Date().toISOString());
+      window.location.href = "/homepage.html";
+    } else {
+      // Save history even if no redirect
+      this.saveToHistory(this.getCurrentPage(), lang, new Date().toISOString());
     }
   },
 
-  // Set up dropdown event listeners
-  setupDropdownListeners() {
-    // Main dropdown handler
-    document.addEventListener("click", (event) => {
-      // Handle main dropdown
-      const mainDropdown = document.getElementById("languageDropdown");
-      const isMainDropdownButton = event.target.closest(
-        "#languageDropdownButton"
-      );
-
-      if (isMainDropdownButton && mainDropdown) {
-        mainDropdown.classList.toggle("hidden");
-      } else if (!event.target.closest("#languageDropdown") && mainDropdown) {
-        mainDropdown.classList.add("hidden");
-      }
-
-      // Handle sidebar dropdown
-      const sidebarDropdown = document.getElementById(
-        "sidebarLanguageDropdown"
-      );
-      const isSidebarDropdownButton = event.target.closest(
-        "#sidebarLanguageDropdownButton"
-      );
-
-      if (isSidebarDropdownButton && sidebarDropdown) {
-        sidebarDropdown.classList.toggle("hidden");
-      } else if (
-        !event.target.closest("#sidebarLanguageDropdown") &&
-        sidebarDropdown
-      ) {
-        sidebarDropdown.classList.add("hidden");
-      }
-
-      // Handle language selection from either dropdown
-      const link = event.target.closest(".language-text");
-      if (link) {
-        event.preventDefault();
-        const isPortuguese = link.getAttribute("data-value") === "Português";
-        this.updateContent(isPortuguese);
-
-        // Hide both dropdowns
-        if (mainDropdown) mainDropdown.classList.add("hidden");
-        if (sidebarDropdown) sidebarDropdown.classList.add("hidden");
-      }
-    });
+  // Get language history
+  getHistory() {
+    try {
+      return JSON.parse(localStorage.getItem("languageHistory") || "[]");
+    } catch (error) {
+      console.error("Error getting history:", error);
+      return [];
+    }
   },
 
   // Initialize language handling
   async init() {
+    await this.setDefaultPage();
     await this.loadBilingualContent();
-    const isPortuguese = await this.detectUserPreference();
-    this.updateContent(isPortuguese);
-    this.setupDropdownListeners();
   },
 };
 
