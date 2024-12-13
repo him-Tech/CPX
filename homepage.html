@@ -585,12 +585,14 @@
           <!-- Main content -->
           <div class="w-full pt-5 xl:pt-[30px] sm:max-lg:pl-[65px]">
             <div
+              style="z-index: 35; position: relative"
               class="w-full pr-4 md:pr-[65px] xl:pr-[130px] 2xl:pr-0 z-[1] relative"
             >
               <div
                 class="w-full 2xl:max-w-[960px] h-[50vw] md:h-[428px] rounded-br-[30vw] lg:rounded-br-[300px] overflow-hidden"
               >
                 <img
+                  style="z-index: 50; position: relative"
                   src="./assets/img/home.png"
                   class="w-full h-full object-cover home-image-animation"
                   alt="about-us"
@@ -602,9 +604,10 @@
             >
               <div
                 class="2xl:max-w-[1015px] w-full md:h-[784px] bg-seafoamWhite rounded-tr-[15vw] sm:rounded-tr-[30vw] lg:rounded-tr-[400px] 2xl:rounded-tr-none sm:-mt-[90px] md:-mt-[273px] max-sm:pr-10 max-md:pr-10 max-lg:pr-[70px] pl-6 lg:pl-[8.681vw] 2xl:pl-[125px] pb-[4.583vw] 2xl:pb-[66px] max-sm:pt-5 max-md:pt-[16vw] flex flex-col items-start justify-end gap-[5.903vw] 2xl:gap-[70px]"
+                style="z-index: 30; position: relative"
               >
                 <p
-                  class="lg:max-w-[55.4vw] xl:max-w-[48.4vw] 2xl:max-w-[697px] w-full text-base sm:text-xl leading-[28px] sm:leading-[34px] text-deepCharcoal"
+                  class="lg:max-w-[55.4vw] xl:max-w-[48.4vw] 2xl:max-w-[697px] w-full text-base sm:text-xl leading-[28px] sm:leading-[34px] text-deepCharcoal relative"
                 >
                   Founded in 2011, CPX is a Portugal-based Engineering company
                   renowned for excellence and innovation in consulting and
@@ -1131,6 +1134,7 @@
     <!-- JS file -->
     <script src="./index.js"></script>
     <script src="./animation.js"></script>
+    <script src="/language-handler.js"></script>
     <div class="toast-overlay" id="toast-overlay"></div>
   </body>
 </html>

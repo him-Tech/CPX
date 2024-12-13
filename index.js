@@ -75,50 +75,8 @@ $(document).ready(function () {
   // Handle sidebar end
 
   // Language dropdown start
-  document.addEventListener("click", (event) => {
-    const dropdownMenu = document.getElementById("languageDropdown");
-    const isDropdownButton = event.target.closest("#languageDropdownButton");
-
-    if (isDropdownButton) {
-      dropdownMenu.classList.toggle("hidden");
-    } else if (!event.target.closest("#languageDropdown")) {
-      dropdownMenu.classList.add("hidden");
-    }
-
-    const link = event.target.closest("#languageDropdown a");
-    if (link) {
-      event.preventDefault();
-      document.getElementById("languageText").textContent =
-        link.getAttribute("data-value");
-      dropdownMenu.classList.add("hidden");
-      window.location.href = link.href;
-    }
-  });
 
   // Sidebar language dropdown start
-  document.addEventListener("click", (event) => {
-    const sidebarDropdownMenu = document.getElementById(
-      "sidebarLanguageDropdown"
-    );
-    const isSidebarDropdownButton = event.target.closest(
-      "#sidebarLanguageDropdownButton"
-    );
-
-    if (isSidebarDropdownButton) {
-      sidebarDropdownMenu.classList.toggle("hidden");
-    } else if (!event.target.closest("#sidebarLanguageDropdown")) {
-      sidebarDropdownMenu.classList.add("hidden");
-    }
-
-    const sidebarLink = event.target.closest("#sidebarLanguageDropdown a");
-    if (sidebarLink) {
-      event.preventDefault();
-      document.getElementById("sidebarLanguageText").textContent =
-        sidebarLink.getAttribute("data-value");
-      sidebarDropdownMenu.classList.add("hidden");
-      window.location.href = sidebarLink.href;
-    }
-  });
 
   // To scroll window to top
   let scrollToTopBtn = document.getElementById("scrollToTop");
