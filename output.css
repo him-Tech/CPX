@@ -662,10 +662,6 @@ video {
 }
 
 .service-para{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
@@ -1378,24 +1374,12 @@ video {
   width: 100%;
 }
 
-.min-w-\[218px\]{
-  min-width: 218px;
+.min-w-\[125px\]{
+  min-width: 125px;
 }
 
 .min-w-\[145px\]{
   min-width: 145px;
-}
-
-.min-w-\[178px\]{
-  min-width: 178px;
-}
-
-.min-w-\[120px\]{
-  min-width: 120px;
-}
-
-.min-w-\[125px\]{
-  min-width: 125px;
 }
 
 .min-w-\[162px\]{
@@ -1529,6 +1513,10 @@ video {
 
 .scale-y-0{
   --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3087,14 +3075,6 @@ body::-webkit-scrollbar {
 
   .sm\:w-\[50\%\]{
     width: 50%;
-  }
-
-  .sm\:min-w-\[218px\]{
-    min-width: 218px;
-  }
-
-  .sm\:min-w-\[178px\]{
-    min-width: 178px;
   }
 
   .sm\:min-w-\[180px\]{
