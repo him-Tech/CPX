@@ -5,7 +5,7 @@ const allImages = [
     alt: "Heritage Building 1",
     title: "Lisboa Oriental New Hospital",
     architect: "Arq. Eduardo Souto Moura",
-    year: "2010",
+    year: "2013",
     location: "Lisbon, Portugal",
     images: [
       "/assets/webp/card-1.webp",
